@@ -6,8 +6,27 @@
  */
 
 
+$grid-gutter-width: 30px;
+$spacer: 3rem;
 
-$primary : #593FF4;
+$primary: #593FF4;
+
+
+$secondary: #9E9E9E;
+
+$nav-link-color: $secondary;
+
+$font-size-base: 1.1rem;
+$font-family-sans-serif: proxima-soft, sans-serif;
+$line-height-base: 1.35;
+$headings-font-weight: 700;
+$headings-line-height: 1;
+
+$border-radius: 1.5rem;
+$border-radius-lg: 2.5rem;
+
+//$btn-padding-y:               .5rem !default;
+$btn-padding-x: 1rem;
 
 
 // scss-docs-start import-stack
@@ -34,12 +53,12 @@ $primary : #593FF4;
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/accordion";
-@import "~bootstrap/scss/breadcrumb";
-@import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/progress";
-@import "~bootstrap/scss/list-group";
+//@import "~bootstrap/scss/breadcrumb";
+//@import "~bootstrap/scss/pagination";
+//@import "~bootstrap/scss/badge";
+//@import "~bootstrap/scss/alert";
+//@import "~bootstrap/scss/progress";
+//@import "~bootstrap/scss/list-group";
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal";
@@ -55,3 +74,23 @@ $primary : #593FF4;
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+
+
+.nav-link.active {
+  color: $black;
+}
+
+.hero-section {
+  min-height: 75vh;
+
+  & > .row {
+    height: 100%;
+    align-items: center;
+  }
+}
+
+
+.card-grid {
+  @include make-row(40);
+  @extend .px-5;
+}
