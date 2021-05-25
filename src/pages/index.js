@@ -72,7 +72,7 @@ export default function Home() {
           <div className="col-12">
             <Card>
               <div className="row">
-                <div className="col-6">Video</div>
+                <div className="col-6" />
                 <div className="col-6">
                   <h2>Prova subito un'attività</h2>
                   <p className="lead">

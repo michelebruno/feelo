@@ -76,6 +76,10 @@ $btn-padding-x: 1rem;
 // scss-docs-end import-stack
 
 
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";
+
+
 .nav-link.active {
   color: $black;
 }
