@@ -1,8 +1,9 @@
 import { Link } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Navbar from '../components/Navbar';
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
-import Card from '../components/Card';
 import Download from '../components/Download';
 
 function Hero() {
@@ -26,18 +27,24 @@ function Hero() {
 }
 
 export default function Home() {
+  useEffect(() => {
+    gsap.to('#filo_svg__animami', {
+      drawSvg: '10%',
+    });
+  }, []);
   return (
     <Layout fixedHeader hideFooter>
-      <div className="container-fluid">
-        <div className="row">
+      <div className="container-fluid px-0">
+        <div className="row g-0">
           <div className="col-12">
 
             <Swiper
-              className="home-slider"
+              className="home-slider position-relative"
               pagination
               direction="vertical"
               mousewheel
             >
+              <Filo slot="wrapper-start" className="position-absolute h-100 w-100" />
               <SwiperSlide>
                 <Hero />
               </SwiperSlide>
@@ -60,8 +67,8 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <section className="container hero-section text-center">
-                  <div className="row align-items-center">
-                    <div className="col">
+                  <div className="row align-items-center w-100">
+                    <div className="col-12">
                       <h2 className="handwritten">Ecco cosa ti propongo</h2>
                       <p className="lead">
                         Premi play e inizieremo una riflessione guidata che potrà esserti utile per iniziare a
