@@ -81,6 +81,7 @@ $btn-padding-x: 1rem;
 
 .handwritten {
   font-family: $font-family-handwritten;
+  font-weight: 500;
 }
 
 .fixed-header {
@@ -99,7 +100,6 @@ $btn-padding-x: 1rem;
   height: 100%;
 
   @extend .d-flex, .align-items-center;
-
 }
 
 
@@ -113,6 +113,5 @@ $btn-padding-x: 1rem;
 }
 
 .home-slider {
-
   max-height: 100vh;
 }

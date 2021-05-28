@@ -8,6 +8,7 @@ import Footer from './Footer';
 
 SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel]);
 
+console.log('Hey, what are you looking for?');
 export default function Layout({
   children, title, fixedHeader, hideFooter,
 }) {
