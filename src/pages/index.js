@@ -8,9 +8,9 @@ import Download from '../components/Download';
 function Hero() {
   return (
     <div className="container d-flex align-items-center hero-section">
-      <div className="row h-100 align-items-center">
+      <div className="row align-items-center">
         <div className="col-5">
-          <h1 className="display-3">Ascolta le emozioni!</h1>
+          <h1 className="display-3 handwritten">Ascolta le emozioni!</h1>
           <p className="lead py-4">
             Riflettere su se stessi e con gli altri non è mai un’impresa facile, per questo Feelo è
             qui per aiutarti!
@@ -43,73 +43,63 @@ export default function Home() {
               </SwiperSlide>
               <SwiperSlide>
                 <section className="container d-flex align-items-center hero-section">
-                  <div className="row h-100 align-items-center">
+                  <div className="row text-center">
                     <div className="col-12">
-                      <h2>Benvenuto su Feelo</h2>
+                      <h2 className="handwritten">Ciao, io sono feelo</h2>
                     </div>
                     <div className="col-12 col-lg-10 offset-lg-1">
-                      <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-                        <iframe
-                          src="https://player.vimeo.com/video/552398689?title=0&byline=0"
-                          style={{
-                            position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-                          }}
-                          frameBorder="0"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          allowFullScreen
-                        />
-                      </div>
-                      <script src="https://player.vimeo.com/api/player.js" />
+                      <p className="lead">
+                        Attraverso attività e riflessioni appositamente pensate per sostenere te e i tuoi cari
+                        emotivamente durante
+                        il percorso terapeutico, ti mostrerò come il lavoro
+                        di squadra possa essere una strategia vincente!
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </SwiperSlide>
+              <SwiperSlide>
+                <section className="container hero-section text-center">
+                  <div className="row align-items-center">
+                    <div className="col">
+                      <h2 className="handwritten">Ecco cosa ti propongo</h2>
+                      <p className="lead">
+                        Premi play e inizieremo una riflessione guidata che potrà esserti utile per iniziare a
+                        conoscerci.
+                      </p>
+                      <p className="text-right"><a className="btn btn-link">Scopri di più</a></p>
                     </div>
                   </div>
                 </section>
               </SwiperSlide>
               <SwiperSlide>
                 <section className="container hero-section">
-                  <div className="row h-100 align-items-center">
-                    <div className="col">
-                      <Card>
-                        <h2>Ecco cosa ti propongo</h2>
-                        <p className="lead">
-                          Attraverso attività e riflessioni appositamente pensate per sostenere te e i tuoi cari emotivamente
-                          durante
-                          il percorso terapeutico, ti mostrerò come il lavoro
-                          di squadra possa essere una strategia vincente!
+                  <div className="row">
+                    <div className="col-12 col-lg-7">
+                      <div className="testimonianza">
+                        <p>Sofia</p>
+                        <p className="h4">
+                          Feelo mi ha aiutata molto, c’è sempre qualche attività che risponde ai miei
+                          bisogni.
                         </p>
-                        <p className="text-right"><a className="btn btn-link">Scopri di più</a></p>
-                      </Card>
-
+                      </div>
                     </div>
-                  </div>
-                </section>
-
-              </SwiperSlide>
-              <SwiperSlide>
-
-                <section className="container hero-section">
-                  <div className="row">
-                    <div className="col-12">
-                      <Card>
-                        <div className="row">
-                          <div className="col-6" />
-                          <div className="col-6">
-                            <h2>Prova subito un'attività</h2>
-                            <p className="lead">
-                              Questa riflessione guidata potrà esserti utile per capire cosa faremo insieme
-                              all’interno dell’app. Premi play e iniziamo l’attività!
-                            </p>
-                          </div>
-                        </div>
-                      </Card>
+                    <div className="col-12 col-lg-7 offset-lg-5">
+                      <div className="testimonianza">
+                        <p>Giulia</p>
+                        <p className="h4">
+                          Bellissima app, la consiglio a tutti quelli che soffrono di disturbi alimentari. “Feelo mi ha
+                          aiutata molto, c’è sempre qualche attività che risponde ai miei bisogni.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </section>
-              </SwiperSlide>
-              <SwiperSlide>
-                <section className="container">
-                  <div className="row">
-                    <div className="col">
-                      <h2>Cosa dicono i nostri utenti?</h2>
+                    <div className="col-12 col-lg-7">
+                      <div className="testimonianza">
+                        <p>Maria</p>
+                        <p className="h4">
+                          Fantastica, finalmente riesco a parlare con mia figlia senza doverci litigare sempre!
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </section>

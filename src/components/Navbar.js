@@ -1,16 +1,14 @@
 import { Link } from 'gatsby';
 
-import { ReactComponent as Logo } from '../images/logo.svg';
+import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar({ title, fixed }) {
   return (
     <div className={`container ${fixed && 'fixed-header'}`}>
 
       <div className="row justify-content-between align-items-center py-3">
-        <div id="logo-container" className="col-auto ">
-          <div>
-            <Logo heigth="100%" />
-          </div>
+        <div id="logo-container" className="col ">
+          <Logo className="h-100" />
         </div>
         <nav className="col-auto">
           <ul className="nav">
