@@ -1,3 +1,7 @@
+
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";
+
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -27,6 +31,7 @@ $border-radius-lg: 2.5rem;
 
 //$btn-padding-y:               .5rem !default;
 $btn-padding-x: 1rem;
+
 
 
 // scss-docs-start import-stack
@@ -76,16 +81,20 @@ $btn-padding-x: 1rem;
 // scss-docs-end import-stack
 
 
-@import "~swiper/swiper";
-@import "~swiper/components/pagination/pagination";
 
-
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
 .nav-link.active {
   color: $black;
 }
 
 .hero-section {
-  min-height: 75vh;
+  height: 100%;
 
   & > .row {
     height: 100%;
@@ -94,7 +103,16 @@ $btn-padding-x: 1rem;
 }
 
 
+#logo-container {
+  height: 48px;
+}
+
 .card-grid {
   @include make-row(40);
   @extend .px-5;
+}
+
+.home-slider {
+
+  max-height: 100vh;
 }
