@@ -1,0 +1,2 @@
+(self.webpackChunkfeelo=self.webpackChunkfeelo||[]).push([[101],{7004:function(e,n,t){"use strict";t.r(n),t.d(n,{default:function(){return a}});var c=t(8920),s=t(5893);function a(){return(0,s.jsx)(c.Z,{title:"Contatti",children:(0,s.jsx)("div",{className:"container",children:(0,s.jsx)("div",{className:"row",children:(0,s.jsx)("div",{className:"col-12",children:(0,s.jsx)("h1",{className:"handwritten text-center",children:"Contattaci"})})})})})}}}]);
+//# sourceMappingURL=component---src-pages-contatti-js-b1c6cb79ed3fcaaea542.js.map
