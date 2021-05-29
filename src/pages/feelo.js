@@ -1,11 +1,8 @@
 import { graphql, Link } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
-import Card from '../components/Card';
 
-SwiperCore.use([Pagination]);
 export default function Feelo({ data: { scopriGiulia1 } }) {
   const featureFeeler = [
     'Ti suggerirò un aggiornamento costante sulla situazione emotiva del tuo caro, consigliandoti in ogni situazione come stargli accanto.',
@@ -22,10 +19,6 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
     'Se avrai bisogno di supporto in un momento particolare della giornata potrai sempre rivolgerti a me, scrivendomi un messaggio nella chat.',
     'In ogni momento potrai consultare l’andamento del tuo percorso sull’app e l’evoluzione delle relazioni con i tuoi Feeler.',
   ];
-
-  const autoplay = {
-
-  };
   return (
     <Layout>
 
@@ -38,10 +31,9 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
               disorder, ha bisogno di sentirsi compreso e supportato. Questo può avvenire grazie a una relazione
               efficace con chi gli sta a fianco affinchè si senta accompagnato in questo percorso.
             </p>
-
             <p>
               <a href="#download" className="btn btn-primary ">Scarica Feelo</a>
-              <Link className="btn btn-link">Cos’è un disturbo alimentare?</Link>
+              <a href="#perché" className="btn btn-link">Cos’è un disturbo alimentare?</a>
             </p>
           </div>
           <div className="col-12 text-center">

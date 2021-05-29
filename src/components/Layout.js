@@ -1,4 +1,5 @@
 import '../scss/style.scss';
+
 import { Helmet } from 'react-helmet';
 import SwiperCore, {
   Navigation, Pagination, Scrollbar, Mousewheel,

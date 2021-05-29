@@ -98,8 +98,11 @@ $btn-padding-x: 1rem;
 
 .hero-section {
   height: 100%;
-
-  @extend .d-flex, .align-items-center;
+  display: flex;
+  align-items: center;
+  & > .row {
+    width: 100%;
+  }
 }
 
 
