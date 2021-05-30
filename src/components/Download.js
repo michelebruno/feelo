@@ -1,6 +1,6 @@
 export default function () {
   return (
-    <section className="container">
+    <section className="container hero-section">
       <div className="row">
         <div className="col-12">
           <h2>Download</h2>

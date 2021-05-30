@@ -23,9 +23,9 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
     <Layout>
 
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center">
           <div className="col-12 text-center"><h1 className="handwritten">Come posso aiutarti?</h1></div>
-          <div className="col-8 offset-md-2">
+          <div className="col-12 col-lg-8">
             <p className="lead text-center">
               Sappiamo che chi soffre di Disturbi alimentari, come anoressia, bulimia e binge eating
               disorder, ha bisogno di sentirsi compreso e supportato. Questo può avvenire grazie a una relazione
@@ -39,8 +39,8 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
           <div className="col-12 text-center">
             <h2>Per chi è pensato Feelo?</h2>
           </div>
-          <div className="row align-items-center">
-            <div className="col-6">
+          <div className="row row-cols-1 row-cols-lg-2  align-items-center">
+            <div className="col">
               <h3>Per chi soffre di disturbi alimentari</h3>
               <p>
                 Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è difficile, fatto
@@ -48,7 +48,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
                 supportandoti ogni giorno.
               </p>
             </div>
-            <div className="col-6">
+            <div className="col">
               <Swiper pagination autoplay slidesPerView={1} loop>
                 {featureGiulia.map((t) => (
                   <SwiperSlide key={t}>
@@ -63,8 +63,8 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
               </Swiper>
             </div>
           </div>
-          <div className="row align-items-center flex-lg-row-reverse">
-            <div className="col-6">
+          <div className="row row-cols-1 row-cols-lg-2 align-items-center  flex-lg-row-reverse">
+            <div className="col">
               <h3>Per i feeler</h3>
               <p>
                 Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è difficile, fatto
@@ -72,7 +72,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
                 supportandoti ogni giorno.
               </p>
             </div>
-            <div className="col-6">
+            <div className="col ">
               <Swiper pagination autoplay slidesPerView={1} loop>
                 {featureFeeler.map((t) => (
                   <SwiperSlide key={t}>
@@ -87,19 +87,21 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
               </Swiper>
             </div>
           </div>
-          <div className="row">
-            <div className="col-12">
-              <h2 className="text-center">Perchè nasce Feelo?</h2>
-            </div>
-            <div className="col-10">
-              <p>
-                I Disturbi del Comportamento Alimentare sono patologie complesse, determinate da condizioni di disagio
-                psichico ed emotivo e richiedono un trattamento specifico.
-              </p>
-              <p>
-                Il 2020 a causa del Covid-19 ha visto un aumento del 30% delle rihieste di supporto. Feelo nasce
-                dall’idea che sia necessario un sostegno che accompagni laddove i medici non possono essere presenti.
-              </p>
+          <div className="row justify-content-center">
+            <div className="row justify-content-center">
+              <div className="col-12">
+                <h2 className="text-center">Perchè nasce Feelo?</h2>
+              </div>
+              <div className="col-12 col-lg-10">
+                <p>
+                  I Disturbi del Comportamento Alimentare sono patologie complesse, determinate da condizioni di disagio
+                  psichico ed emotivo e richiedono un trattamento specifico.
+                </p>
+                <p>
+                  Il 2020 a causa del Covid-19 ha visto un aumento del 30% delle rihieste di supporto. Feelo nasce
+                  dall’idea che sia necessario un sostegno che accompagni laddove i medici non possono essere presenti.
+                </p>
+              </div>
             </div>
           </div>
         </div>

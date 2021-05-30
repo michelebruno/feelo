@@ -26,6 +26,13 @@ $line-height-base: 1.35;
 $headings-font-weight: 700;
 $headings-line-height: 1;
 
+$enable-negative-margins: true;
+
+$modal-sm: 75%;
+$modal-md: 75%;
+$modal-lg: 75%;
+$modal-xl: 75%;
+
 $border-radius: 1.5rem;
 $border-radius-lg: 2.5rem;
 
@@ -100,7 +107,8 @@ $btn-padding-x: 1rem;
   height: 100%;
   display: flex;
   align-items: center;
-  & > .row {
+
+  &.d-flex > .row {
     width: 100%;
   }
 }
@@ -119,7 +127,7 @@ $btn-padding-x: 1rem;
   max-height: 100vh;
 }
 
- #filo_svg__animami {
+#filo_svg__animami {
   stroke-dasharray: 100%;
   stroke-dashoffset: 100%;
   animation: dash 10s;

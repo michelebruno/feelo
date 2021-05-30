@@ -18,7 +18,7 @@ export default function Navbar({ title, fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/feelo">
+              <Link activeClassName="active" className="nav-link" to="/scopri">
                 Scopri
               </Link>
             </li>
