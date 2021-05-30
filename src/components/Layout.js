@@ -2,12 +2,12 @@ import '../scss/style.scss';
 
 import { Helmet } from 'react-helmet';
 import SwiperCore, {
-  Navigation, Pagination, Scrollbar, Mousewheel,
+  Navigation, Pagination, Scrollbar, Mousewheel, Autoplay,
 } from 'swiper/core';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel]);
+SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel, Autoplay]);
 
 console.log('Hey, what are you looking for?');
 export default function Layout({

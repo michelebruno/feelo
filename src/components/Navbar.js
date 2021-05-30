@@ -5,8 +5,7 @@ import { ReactComponent as Logo } from '../images/logo-resp.svg';
 export default function Navbar({ title, fixed }) {
   return (
     <div className={`container ${fixed && 'fixed-header'}`}>
-
-      <div className="row justify-content-between align-items-center py-3">
+      <div className="row justify-content-between align-items-center py-2">
         <div id="logo-container" className="col ">
           <Logo className="h-100" />
         </div>

@@ -31,8 +31,8 @@ export default function Contatti() {
                     Per chi sei
                     preoccupato?
                   </label>
-                  <div className="form-check row row-cols-3">
-                    <div>
+                  <div className="form-check row">
+                    <div className="col-auto">
                       <input
                         className="form-check-input"
                         type="radio"
@@ -43,7 +43,7 @@ export default function Contatti() {
                         Per me
                       </label>
                     </div>
-                    <div>
+                    <div className="col-auto">
                       <input
                         className="form-check-input"
                         type="radio"
@@ -55,7 +55,7 @@ export default function Contatti() {
                         Per un mio famigliare
                       </label>
                     </div>
-                    <div>
+                    <div className="col-auto">
                       <input
                         className="form-check-input"
                         type="radio"
@@ -67,6 +67,33 @@ export default function Contatti() {
                         Per un amico/a
                       </label>
                     </div>
+                  </div>
+
+                  <div className="form-check ">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="flexSwitchCheckChecked"
+                      checked
+                    />
+                    <label className="form-check-label" htmlFor="flexSwitchCheckChecked">
+                      Desideri
+                      ricevere per mail informazioni utili su cosa fare in questa
+                      situazione?
+                    </label>
+                  </div>
+                  <div className="form-check ">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id="flexSwitchCheckChecked"
+                      checked
+                    />
+                    <label className="form-check-label" htmlFor="flexSwitchCheckChecked">
+                      Desideri
+                      ricevere per mail informazioni utili su dove recarti per chiedere
+                      aiuto?
+                    </label>
                   </div>
                 </div>
               </form>

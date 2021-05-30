@@ -27,11 +27,11 @@ function Hero() {
 }
 
 export default function Home() {
-  useEffect(() => {
-    gsap.to('#filo_svg__animami', {
-      drawSvg: '10%',
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.to('#filo_svg__animami', {
+  //     drawSvg: '10%',
+  //   });
+  // }, []);
 
   const [modal, setModal] = useState(false);
 
@@ -42,7 +42,6 @@ export default function Home() {
   return (
     <Layout fixedHeader hideFooter>
       <div className="container-fluid px-0">
-
         <div
           className={`modal fade ${modal && 'show d-block '}`}
           id="exampleModal"
@@ -77,7 +76,7 @@ export default function Home() {
               direction="vertical"
               mousewheel
             >
-              <Filo slot="wrapper-start" className="position-absolute h-100 w-100" />
+              <Filo slot="wrapper-start" />
               <SwiperSlide>
                 <Hero />
               </SwiperSlide>

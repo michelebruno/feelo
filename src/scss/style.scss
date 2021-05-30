@@ -7,8 +7,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-
 $grid-gutter-width: 30px;
 $spacer: 3rem;
 
@@ -86,6 +84,7 @@ $btn-padding-x: 1rem;
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
+
 .handwritten {
   font-family: $font-family-handwritten;
   font-weight: 500;
@@ -127,9 +126,17 @@ $btn-padding-x: 1rem;
   max-height: 100vh;
 }
 
+#filo_svg__Livello_1 {
+  top: 0;
+  left: -30px;
+  right: -30px;
+  bottom: 0;
+  //height: 500vh;
+  position: absolute;
+}
+
 #filo_svg__animami {
   stroke-dasharray: 100%;
-  stroke-dashoffset: 100%;
   animation: dash 10s;
 }
 
@@ -138,6 +145,6 @@ $btn-padding-x: 1rem;
     stroke-dashoffset: 100%;
   }
   to {
-    stroke-dashoffset: 0%;
+    stroke-dashoffset: 0;
   }
 }
