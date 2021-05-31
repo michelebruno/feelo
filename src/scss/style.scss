@@ -147,11 +147,12 @@ $btn-padding-x-lg: 1.8rem;
 }
 
 header.page-header {
-  padding: map-get($spacers, 5) 0;
+  padding: map-get($spacers, 4) 0;
   text-align: center;
 }
 
-#home-mockup-1, #home-mockup-2, #home-mockup-3 {
+.home-mockup {
+  transition: all 2s ease-out;
 
   position: absolute;
   width: 18%;
@@ -161,12 +162,24 @@ header.page-header {
   top: 15%;
   left: -5%;
   transform: rotate(20deg);
+
+  .swiper-slide-active & {
+    top: 15%;
+  }
 }
 
 #home-mockup-2 {
   bottom: -10%;
   transform: rotate(-10deg) scale(.9);
   left: 5%;
+
+
+  .swiper-slide-next & {
+    bottom: -18%;
+  }
+  .swiper-slide-prev & {
+    bottom: -2%;
+  }
 
 }
 
@@ -175,4 +188,17 @@ header.page-header {
   top: 8%;
   width: 20%;
   transform: rotate(-10deg);
+
+  .swiper-slide-next & {
+    top: 20%;
+  }
+  .swiper-slide-prev & {
+    top: 0%;
+  }
+}
+
+.why-card {
+  img {
+    border-radius: 50%;
+  }
 }

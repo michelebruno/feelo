@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Modal, ModalBody } from 'reactstrap';
 import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
@@ -13,7 +14,7 @@ function Hero() {
       <div className="row align-items-center">
         <div className="col-12 col-lg-5">
           <h1 className="display-3 handwritten">Ascolta le emozioni!</h1>
-          <p className="lead py-4">
+          <p className="lead py-3">
             Riflettere su se stessi e con gli altri non è mai un’impresa facile, per questo Feelo è
             qui per aiutarti!
           </p>
@@ -49,11 +50,8 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="w-100 text-end position-absolute">
-                <button className="btn btn-link mt-n4 " onClick={toggleModal}>Close</button>
-              </div>
+          <Modal isOpen={modal} toggle={toggleModal} centered>
+            <ModalBody>
               <div style={{ padding: '56.25% 0 0 0', position: 'relative', width: '100%' }}>
                 <iframe
                   src="https://player.vimeo.com/video/554150656?title=0&byline=0"
@@ -65,14 +63,15 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                   allowFullScreen
                 />
               </div>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js" />
-          </div>
+              <script src="https://player.vimeo.com/api/player.js" />
+            </ModalBody>
+          </Modal>
+
         </div>
         <div className="row g-0">
-          <div className="col-12 gx-2">
+          <div className="col-12">
             <Swiper
-              className="home-slider position-relative"
+              className="home-slider position-relative gx-2"
               pagination
               direction="vertical"
               mousewheel
@@ -103,7 +102,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                 <section className="container d-flex align-items-center  hero-section">
                   <div className="row text-center justify-content-center">
                     <div className="col-12">
-                      <h2 className="handwritten">Ciao, io sono Feelo</h2>
+                      <h2 className="handwritten h1">Ciao, io sono Feelo</h2>
                     </div>
                     <div className="col-12 col-lg-8">
                       <p className="lead">
@@ -115,13 +114,13 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                       </p>
                     </div>
 
-                    <div id="home-mockup-1">
+                    <div className="home-mockup" id="home-mockup-1">
                       <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
-                    <div id="home-mockup-2">
+                    <div className="home-mockup" id="home-mockup-2">
                       <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
-                    <div id="home-mockup-3">
+                    <div className="home-mockup" id="home-mockup-3">
                       <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
                   </div>
@@ -131,7 +130,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                 <section className="container hero-section text-center">
                   <div className="row align-items-center w-100">
                     <div className="col-12">
-                      <h2 className="handwritten">Ecco cosa ti propongo</h2>
+                      <h2 className="handwritten h1">Ecco cosa ti propongo</h2>
                       <p className="lead">
                         Premi play e inizieremo una riflessione guidata che potrà esserti utile per
                         iniziare a
@@ -183,7 +182,31 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                 </section>
               </SwiperSlide>
               <SwiperSlide>
-                <Download />
+
+                <section className="container hero-section">
+                  <div className="row">
+                    <div className="col-12">
+                      <h2>Download</h2>
+                    </div>
+                    <div className="col-6">
+                      <p className="lead">Hey, siamo su play store!</p>
+                      <p>
+                        <a href="#" className="btn btn-link">Play store</a>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <footer className="container text-light">
+                  <div className="row">
+                    <div className="col-12 col-lg-auto">
+                      F, IG,
+                    </div>
+                    <div className="col-12 col-lg-auto">
+                      <a href="javascript:void()">Termini e condizioni</a>
+                    </div>
+                  </div>
+                </footer>
               </SwiperSlide>
             </Swiper>
           </div>
@@ -198,7 +221,7 @@ export const query = graphql`{
   home: allFile(
     sort: {fields: [relativePath]}
     filter: {relativePath: {regex: "/home(.*)/"}
-  }) {
+    }) {
     nodes {
       childImageSharp {
         gatsbyImageData(

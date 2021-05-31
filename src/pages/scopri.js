@@ -45,7 +45,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
             <h2>Per chi è pensato Feelo?</h2>
           </div>
           <div
-            className="row align-items-center justify-content-center bg-white rounded-3 py-3 my-3"
+            className="row align-items-center justify-content-center bg-white rounded-3 py-3 my-3 shadow"
           >
             <div className="col-12 col-lg-4">
               <h3>Per chi soffre di disturbi alimentari</h3>
@@ -74,7 +74,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
             </div>
           </div>
           <div
-            className="row align-items-center justify-content-center flex-lg-row-reverse bg-white rounded-3 py-3 my-3"
+            className="row align-items-center justify-content-center flex-lg-row-reverse bg-white rounded-3 py-3 my-3 shadow"
           >
             <div className="col-12 col-lg-4">
               <h3>Per i feeler</h3>
@@ -123,6 +123,45 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
                 </p>
               </div>
             </div>
+            <div className="col-12">
+              <div className="row justify-content-center">
+                <div className="col-12 col-lg-3 why-card text-center">
+                  <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
+                  <h3>
+                    Le cause più diffuse
+                  </h3>
+                  <p>
+                    I timori per la propria salute, le dispense piene di cibo, la carenza di
+                    relazioni
+                    sociali, l’impossibilità di reperire cure adeguate e di svolgere attività fisica
+                    hanno favorito la diffusione dei disturbi alimentari.
+                  </p>
+                </div>
+                <div className="col-12 col-lg-3 why-card text-center">
+                  <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
+                  <h3>
+                    Il peso dell’isolamento
+                  </h3>
+                  <p>
+                    L’isolamento durante il lockdown nazionale ha portato a situazioni di convivenza
+                    forzata, influendo negativamente sugli equilibri familiari con ripercussioni
+                    sulla malattia.
+                  </p>
+                </div>
+                <div className="col-12 col-lg-3 why-card text-center">
+                  <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
+                  <h3>
+                    Il ruolo dei familiari
+                  </h3>
+                  <p>
+                    La famiglia svolge un ruolo fondamentale nell’ambito dei Disturbi Alimentari
+                    avendo la funzione di ago della bilancia nell’andamneto di queste dinamiche.
+
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -134,7 +173,7 @@ export const query = graphql`{
   scopriGiulia1: file(relativePath: {eq: "scopri-giulia-1.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH 
+        layout: FULL_WIDTH
       )
     }
   }
