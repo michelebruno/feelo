@@ -4,9 +4,11 @@ export default function Contatti() {
   return (
     <Layout title="Contatti">
       <div className="container">
-        <div className="row">
-          <div className="col-12"><h1 className="handwritten text-center">Contattaci</h1></div>
-        </div>
+        <header className="row page-header justify-content-center">
+          <div className="col-12">
+            <h1 className="handwritten">Contatti</h1>
+          </div>
+        </header>
       </div>
       <div className="container">
         <div className="row justify-content-center">

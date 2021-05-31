@@ -1,7 +1,8 @@
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
@@ -26,7 +27,7 @@ function Hero() {
   );
 }
 
-export default function Home() {
+export default function Home({ data: { home: { nodes: homeImages } } }) {
   // useEffect(() => {
   //   gsap.to('#filo_svg__animami', {
   //     drawSvg: '10%',
@@ -78,21 +79,50 @@ export default function Home() {
             >
               <Filo slot="wrapper-start" />
               <SwiperSlide>
-                <Hero />
+                <div className="container d-flex align-items-center hero-section">
+                  <div className="row align-items-center">
+                    <div className="col-12 col-lg-5">
+                      <h1 className="display-3 handwritten">Ascolta le emozioni!</h1>
+                      <p className="lead py-4">
+                        Riflettere su se stessi e con gli altri non è mai un’impresa facile, per
+                        questo Feelo è
+                        qui per aiutarti!
+                      </p>
+                      <div>
+                        <a href="#download" className="btn btn-primary btn-lg">Scarica Feelo</a>
+                        <Link to="/scopri" className="btn btn-link btn-lg ">Scopri cos'è</Link>
+                      </div>
+                    </div>
+                    <div className="col-12 col-lg">
+                      <GatsbyImage alt="Immagini" image={getImage(homeImages[0])} />
+                    </div>
+                  </div>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <section className="container d-flex align-items-center hero-section">
-                  <div className="row text-center">
+                <section className="container d-flex align-items-center  hero-section">
+                  <div className="row text-center justify-content-center">
                     <div className="col-12">
                       <h2 className="handwritten">Ciao, io sono Feelo</h2>
                     </div>
-                    <div className="col-12 col-lg-10 offset-lg-1">
+                    <div className="col-12 col-lg-8">
                       <p className="lead">
-                        Attraverso attività e riflessioni appositamente pensate per sostenere te e i tuoi cari
+                        Attraverso attività e riflessioni appositamente pensate per sostenere te e i
+                        tuoi cari
                         emotivamente durante
                         il percorso terapeutico, ti mostrerò come il lavoro
                         di squadra possa essere una strategia vincente!
                       </p>
+                    </div>
+
+                    <div id="home-mockup-1">
+                      <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
+                    </div>
+                    <div id="home-mockup-2">
+                      <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
+                    </div>
+                    <div id="home-mockup-3">
+                      <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
                   </div>
                 </section>
@@ -103,11 +133,15 @@ export default function Home() {
                     <div className="col-12">
                       <h2 className="handwritten">Ecco cosa ti propongo</h2>
                       <p className="lead">
-                        Premi play e inizieremo una riflessione guidata che potrà esserti utile per iniziare a
+                        Premi play e inizieremo una riflessione guidata che potrà esserti utile per
+                        iniziare a
                         conoscerci.
                       </p>
                       <p className="text-right">
-                        <button onClick={toggleModal} className="btn btn-outline-primary">Inizia l'attività</button>
+                        <button onClick={toggleModal} className="btn btn-outline-primary">
+                          Inizia
+                          l'attività
+                        </button>
                       </p>
                     </div>
                   </div>
@@ -120,7 +154,8 @@ export default function Home() {
                       <div className="testimonianza">
                         <p>Sofia</p>
                         <p className="h4">
-                          Feelo mi ha aiutata molto, c’è sempre qualche attività che risponde ai miei
+                          Feelo mi ha aiutata molto, c’è sempre qualche attività che risponde ai
+                          miei
                           bisogni.
                         </p>
                       </div>
@@ -129,7 +164,8 @@ export default function Home() {
                       <div className="testimonianza">
                         <p>Giulia</p>
                         <p className="h4">
-                          Bellissima app, la consiglio a tutti quelli che soffrono di disturbi alimentari. “Feelo mi ha
+                          Bellissima app, la consiglio a tutti quelli che soffrono di disturbi
+                          alimentari. “Feelo mi ha
                           aiutata molto, c’è sempre qualche attività che risponde ai miei bisogni.
                         </p>
                       </div>
@@ -138,7 +174,8 @@ export default function Home() {
                       <div className="testimonianza">
                         <p>Maria</p>
                         <p className="h4">
-                          Fantastica, finalmente riesco a parlare con mia figlia senza doverci litigare sempre!
+                          Fantastica, finalmente riesco a parlare con mia figlia senza doverci
+                          litigare sempre!
                         </p>
                       </div>
                     </div>
@@ -146,7 +183,6 @@ export default function Home() {
                 </section>
               </SwiperSlide>
               <SwiperSlide>
-
                 <Download />
               </SwiperSlide>
             </Swiper>
@@ -157,3 +193,18 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const query = graphql`{
+  home: allFile(
+    sort: {fields: [relativePath]}
+    filter: {relativePath: {regex: "/home(.*)/"}
+  }) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+        )
+      }
+    }
+  }
+}`;
