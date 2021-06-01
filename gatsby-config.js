@@ -1,3 +1,5 @@
+const googleCredentials = require('./credentials.json');
+
 module.exports = {
   siteMetadata: {
     title: 'Feelo',
@@ -62,6 +64,15 @@ module.exports = {
         typekit: {
           id: 'kai1avr',
         },
+      },
+    },
+
+    {
+      resolve: 'gatsby-source-google-spreadsheet',
+      options: {
+        spreadsheetId: '1gOuWFAHHvMHLZ7FCgS4oBpd5qFRUm70cCv0FZTaIH4s',
+        typePrefix: 'Sheets',
+        credentials: googleCredentials,
       },
     },
   ],

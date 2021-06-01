@@ -31,6 +31,7 @@
     "gatsby-plugin-svgr": "^3.0.0-beta.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.5.0",
+    "gatsby-source-google-spreadsheet": "^2.0.0",
     "gatsby-transformer-csv": "^3.6.0",
     "gatsby-transformer-sharp": "^3.5.0",
     "gsap": "^3.6.1",
