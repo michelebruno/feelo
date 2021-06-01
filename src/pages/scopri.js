@@ -128,8 +128,8 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
             </div>
           </div>
           <div className="col-12">
-            <div className="row justify-content-center">
-              <div className="col-12 col-lg-3 why-card text-center">
+            <div className="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
+              <div className="why-card text-center">
                 <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
                 <h3>
                   Le cause più diffuse
@@ -141,7 +141,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
                   hanno favorito la diffusione dei disturbi alimentari.
                 </p>
               </div>
-              <div className="col-12 col-lg-3 why-card text-center">
+              <div className="why-card text-center">
                 <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
                 <h3>
                   Il peso dell’isolamento
@@ -152,7 +152,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
                   sulla malattia.
                 </p>
               </div>
-              <div className="col-12 col-lg-3 why-card text-center">
+              <div className="why-card text-center">
                 <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
                 <h3>
                   Il ruolo dei familiari

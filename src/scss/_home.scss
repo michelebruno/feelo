@@ -1,0 +1,74 @@
+
+.home-slider {
+  max-height: 100vh;
+}
+
+#filo_svg__Livello_1 {
+  top: 0;
+  left: -30px;
+  right: -30px;
+  bottom: 0;
+  //height: 500vh;
+  position: absolute;
+}
+
+#filo_svg__animami {
+  stroke-dasharray: 100%;
+  animation: dash 10s;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+header.page-header {
+  padding: map-get($spacers, 4) 0;
+  text-align: center;
+}
+
+.home-mockup {
+  transition: all 2s ease-out;
+
+  position: absolute;
+  width: 18%;
+}
+
+#home-mockup-1 {
+  top: 15%;
+  left: -5%;
+
+  & > .gatsby-image-wrapper {
+    transform: rotate(20deg);
+  }
+
+  //.swiper-slide-active & {
+  //  top: 15%;
+  //}
+}
+
+#home-mockup-2 {
+  bottom: -10%;
+
+  & > .gatsby-image-wrapper {
+    transform: rotate(-10deg);
+  }
+
+  left: 5%;
+}
+
+#home-mockup-3 {
+  right: 0%;
+  top: 8%;
+  width: 20%;
+
+  & > .gatsby-image-wrapper {
+    transform: rotate(-10deg);
+  }
+
+}
+

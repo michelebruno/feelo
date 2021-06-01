@@ -180,7 +180,6 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                 </section>
               </SwiperSlide>
               <SwiperSlide>
-
                 <section className="container hero-section ">
                   <div className="row">
                     <div className="col-12">
@@ -196,12 +195,17 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                   </div>
 
                   <footer className="container text-light">
-                    <div className="row">
+                    <div className="row text-uppercase text-light">
                       <div className="col-12 col-lg-auto">
                         F, IG,
                       </div>
                       <div className="col-12 col-lg-auto">
-                        <a href="javascript:void()">Termini e condizioni</a>
+                        <a
+                          href
+                          className="link-text "
+                        >
+                          Termini e condizioni
+                        </a>
                       </div>
                     </div>
                   </footer>

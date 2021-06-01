@@ -1,0 +1,21 @@
+
+.accordion {
+  @extend .shadow-sm, .rounded-3;
+  //overflow: hidden;
+  background-color: $light;
+
+  .accordion-header {
+    background-color: $gray-200;
+    font-weight: $font-weight-bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend .shadow-sm, .px-2, .py-2, .rounded-3 ;
+  }
+
+  .accordion-body {
+    @extend .px-2, .py-2 ;
+
+  }
+}
