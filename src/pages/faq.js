@@ -29,6 +29,7 @@ export default function Faq({ data: { faqs } }) {
   }
 
   const attivita = getCatFaqs('attività');
+
   return (
     <Layout>
       <div className="container">

@@ -19,8 +19,8 @@ export default function Contatti({ data: { associazioni: { nodes: associazioni }
           <div className="col-10">
             {typeof window !== 'undefined' && (
             <MapContainer
-              center={[51.505, -0.09]}
-              zoom={13}
+              center={[44.17279, 12.11119]}
+              zoom={6}
               scrollWheelZoom={false}
               style={{ minHeight: '400px' }}
             >
@@ -28,13 +28,11 @@ export default function Contatti({ data: { associazioni: { nodes: associazioni }
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              {associazioni.map(({ lat, long }) => (lat && long)
+              {associazioni.map(({ lat, long, luogo }) => (lat && long)
                 && (
                   <Marker position={[lat, long]}>
                     <Popup>
-                      A pretty CSS3 popup.
-                      <br />
-                      Easily customizable.
+                      {luogo}
                     </Popup>
                   </Marker>
                 ))}

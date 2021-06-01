@@ -35,6 +35,7 @@ header.page-header {
   transition: all 2s ease-out;
 
   position: absolute;
+  z-index: 9999;
   width: 40%;
   @include media-breakpoint-up("lg") {
     width: 18%;
@@ -96,4 +97,35 @@ header.page-header {
   & > .row {
     width: 100%;
   }
+}
+
+#home-proposta-image {
+  position: absolute;
+  bottom: -10%;
+  width: 150%;
+  left: -25%;
+
+  @include media-breakpoint-up("lg") {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+#home-landing-image {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: -10%;
+  @include media-breakpoint-up("lg") {
+    width: 60%;
+    right: 0;
+    left: unset;
+    bottom: 10%;
+  }
+}
+
+#home-download-image {
+  position: absolute;
+  width: 60%;
+  right: 5%;
 }

@@ -8,7 +8,16 @@ import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
 import Download, { GooglePlayButton, PlayStoreButton } from '../components/Download';
 
-export default function Home({ data: { home: { nodes: homeImages } } }) {
+export default function Home({
+  data: {
+    sofia,
+    maria,
+    download,
+    proposta,
+    landing,
+    mockups: { nodes: mockups },
+  },
+}) {
   // useEffect(() => {
   //   gsap.to('#filo_svg__animami', {
   //     drawSvg: '10%',
@@ -55,23 +64,26 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
               speed={1000}
             >
               <Filo slot="wrapper-start" />
-              <SwiperSlide>
+              <SwiperSlide className="bg-white">
                 <div className="container d-flex align-items-center hero-section">
                   <div className="row align-items-center">
+                    <div id="home-landing-image">
+                      <GatsbyImage alt="Immagini" image={getImage(landing)} />
+                    </div>
                     <div className="col-12 col-lg-5">
                       <h1 className="display-3 handwritten">Ascolta le emozioni!</h1>
-                      <p className="lead py-4">
+                      <p className="lead py-2">
                         Riflettere su se stessi e con gli altri non è mai un’impresa facile, per
                         questo Feelo è
                         qui per aiutarti!
                       </p>
                       <div>
                         <a href="#download" className="btn btn-primary me-1 mb-1">Scarica Feelo</a>
-                        <Link to="/scopri" className="btn btn-outline-primary me-1 mb-1">Scopri cos'è</Link>
+                        <Link to="/scopri" className="btn btn-outline-primary me-1 mb-1">
+                          Scopri
+                          cos'è
+                        </Link>
                       </div>
-                    </div>
-                    <div className="col-12 col-lg">
-                      <GatsbyImage alt="Immagini" image={getImage(homeImages[0])} />
                     </div>
                   </div>
                 </div>
@@ -80,7 +92,10 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                 <section className="container d-flex align-items-center  hero-section">
                   <div className="row text-center justify-content-center">
                     <div className="col-12">
-                      <h2 className="handwritten h1">Ciao, io sono Feelo</h2>
+                      <h2 className="handwritten h1" data-swiper-parallax-y="-15%">
+                        Ciao, io sono
+                        Feelo
+                      </h2>
                     </div>
                     <div className="col-12 col-lg-8">
                       <p className="lead">
@@ -93,29 +108,32 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                     </div>
 
                     <div className="home-mockup" id="home-mockup-1" data-swiper-parallax="10%">
-                      <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
+                      <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
                     </div>
                     <div className="home-mockup" id="home-mockup-2" data-swiper-parallax="-20%">
-                      <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
+                      <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
                     </div>
                     <div className="home-mockup" id="home-mockup-3" data-swiper-parallax="-30%">
-                      <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
+                      <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
                     </div>
                   </div>
                 </section>
               </SwiperSlide>
-              <SwiperSlide>
-                <section className="container hero-section text-center">
+              <SwiperSlide className="bg-primary text-light">
+                <section
+                  className="container hero-section text-center"
+                  data-swiper-parallax-y="-15%"
+                >
                   <div className="row align-items-center w-100">
                     <div className="col-12">
                       <h2 className="handwritten h1">Ecco cosa ti propongo</h2>
-                      <p className="lead">
+                      <p className="lead" data-swiper-parallax-opacity="0">
                         Premi play e inizieremo una riflessione guidata che potrà esserti utile per
                         iniziare a
                         conoscerci.
                       </p>
                       <p className="text-right">
-                        <button onClick={toggleModal} className="btn btn-outline-primary">
+                        <button onClick={toggleModal} className="btn btn-outline-light">
                           Inizia l'attività
                           <PlayIcon />
                         </button>
@@ -123,6 +141,12 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                     </div>
                   </div>
                 </section>
+                <div id="home-proposta-image" data-swiper-parallax-opacity={0}>
+                  <GatsbyImage
+                    alt="big man"
+                    image={getImage(proposta)}
+                  />
+                </div>
               </SwiperSlide>
               <SwiperSlide>
                 <section className="container hero-section">
@@ -159,7 +183,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                   </div>
                 </section>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className="bg-white">
                 <section className="container hero-section ">
                   <div className="row">
                     <div className="col-12">
@@ -172,6 +196,9 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                         <PlayStoreButton />
                       </p>
                     </div>
+                  </div>
+                  <div id="home-download-image">
+                    <GatsbyImage alt={'Scarica l\'app'} image={getImage(download)} />
                   </div>
 
                   <footer className="container text-light">
@@ -201,9 +228,9 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
 }
 
 export const query = graphql`{
-  home: allFile(
+  mockups: allFile(
     sort: {fields: [relativePath]}
-    filter: {relativePath: {regex: "/home(.*)/"}
+    filter: {relativePath: {regex: "/home-screenshot(.*)/"}
     }) {
     nodes {
       childImageSharp {
@@ -213,4 +240,40 @@ export const query = graphql`{
       }
     }
   }
+  sofia : file(relativePath: {eq: "home-feeler-sofia.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  maria : file(relativePath: {eq: "home-feeler-maria.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  landing : file(relativePath: {eq: "home-landing.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  proposta : file(relativePath: {eq: "home-proposta.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  download : file(relativePath: {eq: "home-download.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+
 }`;

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 
-export default function Feelo({ data: { scopriGiulia1 } }) {
+export default function Feelo({ data: { scopriGiulia1, feeler: { nodes: feelerImages } } }) {
   const featureFeeler = [
     'Ti suggerirò un aggiornamento costante sulla situazione emotiva del tuo caro, consigliandoti in ogni situazione come stargli accanto.',
     'Coinvolgerò te e i tuoi Feeler in attività condivise, per riflettere insieme sulla vostra relazione.',
@@ -90,10 +90,10 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
               </div>
               <div className="col-12 col-lg-6">
                 <Swiper pagination autoplay slidesPerView={1} loop>
-                  {featureFeeler.map((t) => (
+                  {featureFeeler.map((t, i) => (
                     <SwiperSlide key={t}>
                       <div className="position-relative">
-                        <GatsbyImage alt="Ti guiderò" image={getImage(scopriGiulia1)} />
+                        <GatsbyImage alt="Ti guiderò" image={getImage(feelerImages[0])} />
                         <p
                           className="lead position-absolute handwritten text-center"
                           style={{ bottom: 35 }}
@@ -178,6 +178,15 @@ export const query = graphql`{
       gatsbyImageData(
         layout: FULL_WIDTH
       )
+    }
+  }
+  feeler : allFile(filter: {relativePath: {regex: "/scopri-feeler-(.*)/i"}}) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+        )
+      }
     }
   }
 }`;
