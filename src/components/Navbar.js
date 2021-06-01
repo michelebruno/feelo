@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 
 import { useState } from 'react';
+import { navigate } from 'gatsby-link';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar({ title, fixed }) {
@@ -20,7 +21,7 @@ export default function Navbar({ title, fixed }) {
         className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-md"
       >
         <div id="logo-container" className="col ">
-          <Logo className="h-100" />
+          <Logo className="h-100" onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
         </div>
         <button
           className="navbar-toggler col"

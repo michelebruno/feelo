@@ -47,7 +47,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
           <div className="col-12">
 
             <div
-              className="row align-items-center justify-content-center bg-white rounded-3 py-3 my-3 mx-1 shadow"
+              className="features-card"
             >
               <div className="col-12 col-lg-4">
                 <h3>Per chi soffre di disturbi alimentari</h3>
@@ -76,7 +76,7 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
               </div>
             </div>
             <div
-              className="row align-items-center justify-content-center flex-lg-row-reverse bg-white rounded-3 py-3 my-3 mx-1 shadow"
+              className="features-card flex-lg-row-reverse "
             >
               <div className="col-12 col-lg-4">
                 <h3>Per i feeler</h3>

@@ -172,6 +172,7 @@ header.page-header {
   & > .gatsby-image-wrapper {
     transform: rotate(20deg);
   }
+
   //.swiper-slide-active & {
   //  top: 15%;
   //}
@@ -179,19 +180,19 @@ header.page-header {
 
 #home-mockup-2 {
   bottom: -10%;
+
   & > .gatsby-image-wrapper {
     transform: rotate(-10deg);
   }
+
   left: 5%;
-
-
-
 }
 
 #home-mockup-3 {
   right: 0%;
   top: 8%;
   width: 20%;
+
   & > .gatsby-image-wrapper {
     transform: rotate(-10deg);
   }
@@ -220,17 +221,51 @@ nav.navbar-collapse.show {
   flex-direction: column;
 
   ul.nav {
-  flex-direction: column;
+    flex-direction: column;
   }
 
   .logo {
     padding-bottom: map-get($spacers, 3);
-    width:75%;
+    width: 75%;
   }
+
   .close-button {
     position: fixed;
     top: 10px;
     right: 10px;
     display: block !important;
   }
+}
+
+.accordion {
+  @extend .shadow-sm, .rounded-3;
+  //overflow: hidden;
+  background-color: $light;
+
+  .accordion-header {
+    background-color: $gray-200;
+    font-weight: $font-weight-bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend .shadow-sm, .px-2, .py-2, .rounded-3 ;
+  }
+
+  .accordion-body {
+    @extend .px-2, .py-2 ;
+
+  }
+}
+
+.features-card {
+//row align-items-center justify-content-center
+  // bg-white rounded-3 py-3 my-3 mx-1 shadow
+
+  justify-content: center;
+  align-items: center;
+  @extend .shadow, .rounded-3, .gx-5, .py-3, .row;
+  background-color: $white;
+  //padding: map-get($spacers, 3) map-get($spacers, 2);
+  margin: map-get($spacers, 2) map-get($spacers, 1) ;
 }

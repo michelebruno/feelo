@@ -44,30 +44,26 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
   return (
     <Layout fixedHeader hideFooter>
       <div className="container-fluid px-0">
-        <div
-          className={`modal fade ${modal && 'show d-block '}`}
-          id="exampleModal"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <Modal isOpen={modal} toggle={toggleModal} centered>
-            <ModalBody>
-              <div style={{ padding: '56.25% 0 0 0', position: 'relative', width: '100%' }}>
-                <iframe
-                  src="https://player.vimeo.com/video/554150656?title=0&byline=0"
-                  style={{
-                    position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
-                  }}
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <script src="https://player.vimeo.com/api/player.js" />
-            </ModalBody>
-          </Modal>
+        <Modal isOpen={modal} toggle={toggleModal} centered>
+          <ModalBody className="p-0">
+            <div style={{ padding: '56.25% 0 0 0', position: 'relative', width: '100%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/554150656?title=0&byline=0"
+                style={{
+                  position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
+                }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <script src="https://player.vimeo.com/api/player.js" />
+            <div className="position-absolute w-100 text-center p-1">
+              <button className="btn-text btn" onClick={toggleModal}>Close</button>
+            </div>
+          </ModalBody>
+        </Modal>
 
-        </div>
         <div className="row g-0">
           <div className="col-12">
             <Swiper
