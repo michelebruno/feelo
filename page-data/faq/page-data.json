@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-faq-js","path":"/faq/","result":{"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-faq-js","path":"/faq/","result":{"data":{"faqs":{"group":[{"nodes":[{"answer":"certo, caro","category":"account","question":"Posso essere  una FAQ?"}],"fieldValue":"account"}]}},"pageContext":{}},"staticQueryHashes":[]}
