@@ -108,18 +108,6 @@ $btn-padding-x-lg: 1.8rem;
   color: $black;
 }
 
-.hero-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-
-  & > .row {
-    width: 100%;
-  }
-}
-
 
 #logo-container {
   height: 36px;
@@ -134,13 +122,14 @@ $btn-padding-x-lg: 1.8rem;
  */
 nav.navbar-collapse.show {
   position: fixed;
+  z-index: 9555;
   top: 0;
   left: 0;
   min-height: 100vh;
   width: 100vw;
   overflow-y: scroll;
 
-  background: $white;
+  background: rgba($white, .95);
   display: flex;
   align-items: center;
   justify-content: center !important;
@@ -156,11 +145,19 @@ nav.navbar-collapse.show {
     width: 75%;
   }
 
-  .close-button {
+  .close-button-container {
+    @extend .py-2;
     position: fixed;
-    top: 10px;
+    text-align: right;
+    top:0;
     right: 10px;
     display: block !important;
+
+
+    height: 36px;
+    @include media-breakpoint-up('lg') {
+      height: 48px;
+    }
   }
 }
 

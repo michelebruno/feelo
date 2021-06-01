@@ -35,11 +35,14 @@ header.page-header {
   transition: all 2s ease-out;
 
   position: absolute;
-  width: 18%;
+  width: 40%;
+  @include media-breakpoint-up("lg") {
+    width: 18%;
+  }
 }
 
 #home-mockup-1 {
-  top: 15%;
+  top: 13%;
   left: -5%;
 
   & > .gatsby-image-wrapper {
@@ -49,6 +52,10 @@ header.page-header {
   //.swiper-slide-active & {
   //  top: 15%;
   //}
+
+  @include media-breakpoint-up("lg") {
+    width: 18%;
+  }
 }
 
 #home-mockup-2 {
@@ -59,16 +66,34 @@ header.page-header {
   }
 
   left: 5%;
+
+  @include media-breakpoint-up("lg") {
+    width: 18%;
+  }
 }
 
 #home-mockup-3 {
   right: 0%;
   top: 8%;
-  width: 20%;
 
   & > .gatsby-image-wrapper {
-    transform: rotate(-10deg);
+    transform: rotate(-10deg) scale(.9);
   }
 
+  @include media-breakpoint-up("lg") {
+    width: 18%;
+  }
 }
 
+
+.hero-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  & > .row {
+    width: 100%;
+  }
+}

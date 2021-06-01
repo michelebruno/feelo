@@ -19,8 +19,8 @@ function Hero() {
             qui per aiutarti!
           </p>
           <div>
-            <a href="#download" className="btn btn-primary btn-lg">Scarica Feelo</a>
-            <Link to="/scopri" className="btn btn-link btn-lg ">Scopri cos'è</Link>
+            <a href="#download" className="btn btn-primary">Scarica Feelo</a>
+            <Link to="/scopri" className="btn btn-outline-primary">Scopri cos'è</Link>
           </div>
         </div>
       </div>
@@ -86,8 +86,8 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                         qui per aiutarti!
                       </p>
                       <div>
-                        <a href="#download" className="btn btn-primary btn-lg">Scarica Feelo</a>
-                        <Link to="/scopri" className="btn btn-link btn-lg ">Scopri cos'è</Link>
+                        <a href="#download" className="btn btn-primary">Scarica Feelo</a>
+                        <Link to="/scopri" className="btn btn-outline-primary">Scopri cos'è</Link>
                       </div>
                     </div>
                     <div className="col-12 col-lg">

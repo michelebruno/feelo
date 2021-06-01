@@ -41,7 +41,10 @@ export default function Navbar({ title, fixed }) {
           : ''}`}
         >
           <Logo className="logo d-md-none" />
-          <button className="close-button d-md-none" onClick={closeNavbar}>Close</button>
+          <div className="col-12 position-absolute d-md-none close-button-container">
+            <button className="btn btn-text" onClick={closeNavbar}>Close</button>
+
+          </div>
           <ul className="nav">
             <li className="nav-item">
               <Link activeClassName="active" className="nav-link" to="/">

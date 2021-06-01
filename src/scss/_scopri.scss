@@ -1,16 +1,16 @@
 
 .features-card {
-  @extend .shadow, .rounded-3, .gx-5, .py-3, .row;
+  @extend .shadow, .rounded-3, .gx-3, .py-3, .row;
   justify-content: center;
   align-items: center;
   background-color: $white;
-  margin: map-get($spacers, 2) map-get($spacers, 1) ;
+  margin: map-get($spacers, 2) map-get($spacers, 1) map-get($spacers, 4) map-get($spacers, 1);
 }
 
-
 .why-card {
-  @extend .col;
+  @extend .col, .pt-3;
   img {
     border-radius: 50%;
   }
 }
+
