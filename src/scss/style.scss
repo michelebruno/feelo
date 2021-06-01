@@ -10,6 +10,9 @@
 $grid-gutter-width: 30px;
 $spacer: 3rem;
 
+$enable-deprecation-messages: false;
+$enable-negative-margins: true;
+
 $primary: #593FF4;
 $secondary: #9E9E9E;
 
@@ -24,7 +27,6 @@ $line-height-base: 1.35;
 $headings-font-weight: 700;
 $headings-line-height: 1;
 
-$enable-negative-margins: true;
 
 $modal-sm: 75%;
 $modal-md: 75%;
@@ -109,14 +111,17 @@ $btn-padding-x-lg: 1.8rem;
   display: flex;
   align-items: center;
 
-  &.d-flex > .row {
+  & > .row {
     width: 100%;
   }
 }
 
 
 #logo-container {
-  height: 48px;
+  height: 36px;
+  @include media-breakpoint-up('lg') {
+    height: 48px;
+  }
 }
 
 .home-slider {
@@ -200,5 +205,36 @@ header.page-header {
 .why-card {
   img {
     border-radius: 50%;
+  }
+}
+
+nav.navbar-collapse.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  text-align: center;
+  flex-direction: column;
+
+  ul.nav {
+  flex-direction: column;
+  }
+
+  .logo {
+    padding-bottom: map-get($spacers, 3);
+    width:75%;
+  }
+  .close-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: block !important;
   }
 }

@@ -1,9 +1,9 @@
 import { graphql, Link } from 'gatsby';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
-import gsap from 'gsap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Modal, ModalBody } from 'reactstrap';
+import { PlayIcon } from '@fluentui/react-icons-mdl2';
 import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
@@ -140,6 +140,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                         <button onClick={toggleModal} className="btn btn-outline-primary">
                           Inizia
                           l'attività
+                          <PlayIcon />
                         </button>
                       </p>
                     </div>
