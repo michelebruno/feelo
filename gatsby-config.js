@@ -46,6 +46,15 @@ module.exports = {
       __key: 'images',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: './src/data/',
+      },
+      __key: 'data',
+    },
+    'gatsby-transformer-csv',
+    {
       resolve: 'gatsby-plugin-svgr',
       options: {
         prettier: true, // use prettier to format JS code output (default)
@@ -73,6 +82,13 @@ module.exports = {
         spreadsheetId: '1gOuWFAHHvMHLZ7FCgS4oBpd5qFRUm70cCv0FZTaIH4s',
         typePrefix: 'Sheets',
         credentials: googleCredentials,
+      },
+    },
+
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
   ],

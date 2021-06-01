@@ -8,26 +8,6 @@ import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
 import Download, { GooglePlayButton, PlayStoreButton } from '../components/Download';
 
-function Hero() {
-  return (
-    <div className="container d-flex align-items-center hero-section">
-      <div className="row align-items-center">
-        <div className="col-12 col-lg-5">
-          <h1 className="display-3 handwritten">Ascolta le emozioni!</h1>
-          <p className="lead py-3">
-            Riflettere su se stessi e con gli altri non è mai un’impresa facile, per questo Feelo è
-            qui per aiutarti!
-          </p>
-          <div>
-            <a href="#download" className="btn btn-primary">Scarica Feelo</a>
-            <Link to="/scopri" className="btn btn-outline-primary">Scopri cos'è</Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Home({ data: { home: { nodes: homeImages } } }) {
   // useEffect(() => {
   //   gsap.to('#filo_svg__animami', {
@@ -59,7 +39,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
             </div>
             <script src="https://player.vimeo.com/api/player.js" />
             <div className="position-absolute w-100 text-center p-1">
-              <button className="btn-text btn" onClick={toggleModal}>Close</button>
+              <button className="btn btn-text" onClick={toggleModal}>Close</button>
             </div>
           </ModalBody>
         </Modal>
@@ -86,8 +66,8 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                         qui per aiutarti!
                       </p>
                       <div>
-                        <a href="#download" className="btn btn-primary">Scarica Feelo</a>
-                        <Link to="/scopri" className="btn btn-outline-primary">Scopri cos'è</Link>
+                        <a href="#download" className="btn btn-primary me-1 mb-1">Scarica Feelo</a>
+                        <Link to="/scopri" className="btn btn-outline-primary me-1 mb-1">Scopri cos'è</Link>
                       </div>
                     </div>
                     <div className="col-12 col-lg">
