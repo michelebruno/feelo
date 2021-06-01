@@ -6,7 +6,7 @@ import { Modal, ModalBody } from 'reactstrap';
 import { PlayIcon } from '@fluentui/react-icons-mdl2';
 import { ReactComponent as Filo } from '../images/filo.svg';
 import Layout from '../components/Layout';
-import Download from '../components/Download';
+import Download, { GooglePlayButton, PlayStoreButton } from '../components/Download';
 
 function Hero() {
   return (
@@ -75,6 +75,8 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
               pagination
               direction="vertical"
               mousewheel
+              parallax
+              speed={1000}
             >
               <Filo slot="wrapper-start" />
               <SwiperSlide>
@@ -114,13 +116,13 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                       </p>
                     </div>
 
-                    <div className="home-mockup" id="home-mockup-1">
+                    <div className="home-mockup" id="home-mockup-1" data-swiper-parallax="10%">
                       <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
-                    <div className="home-mockup" id="home-mockup-2">
+                    <div className="home-mockup" id="home-mockup-2" data-swiper-parallax="-20%">
                       <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
-                    <div className="home-mockup" id="home-mockup-3">
+                    <div className="home-mockup" id="home-mockup-3" data-swiper-parallax="-30%">
                       <GatsbyImage alt="Mockup" image={getImage(homeImages[1])} />
                     </div>
                   </div>
@@ -138,8 +140,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                       </p>
                       <p className="text-right">
                         <button onClick={toggleModal} className="btn btn-outline-primary">
-                          Inizia
-                          l'attività
+                          Inizia l'attività
                           <PlayIcon />
                         </button>
                       </p>
@@ -184,7 +185,7 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
               </SwiperSlide>
               <SwiperSlide>
 
-                <section className="container hero-section">
+                <section className="container hero-section ">
                   <div className="row">
                     <div className="col-12">
                       <h2>Download</h2>
@@ -192,22 +193,23 @@ export default function Home({ data: { home: { nodes: homeImages } } }) {
                     <div className="col-6">
                       <p className="lead">Hey, siamo su play store!</p>
                       <p>
-                        <a href="#" className="btn btn-link">Play store</a>
+                        <GooglePlayButton />
+                        <PlayStoreButton />
                       </p>
                     </div>
                   </div>
-                </section>
 
-                <footer className="container text-light">
-                  <div className="row">
-                    <div className="col-12 col-lg-auto">
-                      F, IG,
+                  <footer className="container text-light">
+                    <div className="row">
+                      <div className="col-12 col-lg-auto">
+                        F, IG,
+                      </div>
+                      <div className="col-12 col-lg-auto">
+                        <a href="javascript:void()">Termini e condizioni</a>
+                      </div>
                     </div>
-                    <div className="col-12 col-lg-auto">
-                      <a href="javascript:void()">Termini e condizioni</a>
-                    </div>
-                  </div>
-                </footer>
+                  </footer>
+                </section>
               </SwiperSlide>
             </Swiper>
           </div>

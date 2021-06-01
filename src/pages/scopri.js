@@ -44,124 +44,127 @@ export default function Feelo({ data: { scopriGiulia1 } }) {
           <div className="col-12 text-center">
             <h2>Per chi è pensato Feelo?</h2>
           </div>
-          <div
-            className="row align-items-center justify-content-center bg-white rounded-3 py-3 my-3 shadow"
-          >
-            <div className="col-12 col-lg-4">
-              <h3>Per chi soffre di disturbi alimentari</h3>
-              <p>
-                Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è
-                difficile, fatto di alti e bass. Feelo conosce questi stati d’animo e ti aiuta ad
-                affrontarli con serenità supportandoti ogni giorno.
-              </p>
+          <div className="col-12">
+
+            <div
+              className="row align-items-center justify-content-center bg-white rounded-3 py-3 my-3 mx-1 shadow"
+            >
+              <div className="col-12 col-lg-4">
+                <h3>Per chi soffre di disturbi alimentari</h3>
+                <p>
+                  Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è
+                  difficile, fatto di alti e bass. Feelo conosce questi stati d’animo e ti aiuta ad
+                  affrontarli con serenità supportandoti ogni giorno.
+                </p>
+              </div>
+              <div className="col-12 col-lg-6">
+                <Swiper pagination autoplay slidesPerView={1} loop>
+                  {featureGiulia.map((t) => (
+                    <SwiperSlide key={t}>
+                      <div className="position-relative">
+                        <GatsbyImage alt="Ti guiderò" image={getImage(scopriGiulia1)} />
+                        <p
+                          className="lead position-absolute handwritten text-center"
+                          style={{ bottom: 35 }}
+                        >
+                          {t}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
-            <div className="col-12 col-lg-6">
-              <Swiper pagination autoplay slidesPerView={1} loop>
-                {featureGiulia.map((t) => (
-                  <SwiperSlide key={t}>
-                    <div className="position-relative">
-                      <GatsbyImage alt="Ti guiderò" image={getImage(scopriGiulia1)} />
-                      <p
-                        className="lead position-absolute handwritten text-center"
-                        style={{ bottom: 35 }}
-                      >
-                        {t}
-                      </p>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+            <div
+              className="row align-items-center justify-content-center flex-lg-row-reverse bg-white rounded-3 py-3 my-3 mx-1 shadow"
+            >
+              <div className="col-12 col-lg-4">
+                <h3>Per i feeler</h3>
+                <p>
+                  Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è
+                  difficile, fatto
+                  di alti e bass. Feelo conosce questi stati d’animo e ti aiuta ad affrontarli con
+                  serenità
+                  supportandoti ogni giorno.
+                </p>
+              </div>
+              <div className="col-12 col-lg-6">
+                <Swiper pagination autoplay slidesPerView={1} loop>
+                  {featureFeeler.map((t) => (
+                    <SwiperSlide key={t}>
+                      <div className="position-relative">
+                        <GatsbyImage alt="Ti guiderò" image={getImage(scopriGiulia1)} />
+                        <p
+                          className="lead position-absolute handwritten text-center"
+                          style={{ bottom: 35 }}
+                        >
+                          {t}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
-          <div
-            className="row align-items-center justify-content-center flex-lg-row-reverse bg-white rounded-3 py-3 my-3 shadow"
-          >
-            <div className="col-12 col-lg-4">
-              <h3>Per i feeler</h3>
-              <p>
-                Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è
-                difficile, fatto
-                di alti e bass. Feelo conosce questi stati d’animo e ti aiuta ad affrontarli con
-                serenità
-                supportandoti ogni giorno.
-              </p>
-            </div>
-            <div className="col-12 col-lg-6">
-              <Swiper pagination autoplay slidesPerView={1} loop>
-                {featureFeeler.map((t) => (
-                  <SwiperSlide key={t}>
-                    <div className="position-relative">
-                      <GatsbyImage alt="Ti guiderò" image={getImage(scopriGiulia1)} />
-                      <p
-                        className="lead position-absolute handwritten text-center"
-                        style={{ bottom: 35 }}
-                      >
-                        {t}
-                      </p>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
+        </div>
+        <div className="row justify-content-center">
           <div className="row justify-content-center">
-            <div className="row justify-content-center">
-              <div className="col-12">
-                <h2 className="text-center">Perchè nasce Feelo?</h2>
-              </div>
-              <div className="col-12 col-lg-10">
-                <p>
-                  I Disturbi del Comportamento Alimentare sono patologie complesse, determinate da
-                  condizioni di disagio
-                  psichico ed emotivo e richiedono un trattamento specifico.
-                </p>
-                <p>
-                  Il 2020 a causa del Covid-19 ha visto un aumento del 30% delle rihieste di
-                  supporto. Feelo nasce
-                  dall’idea che sia necessario un sostegno che accompagni laddove i medici non
-                  possono essere presenti.
-                </p>
-              </div>
-            </div>
             <div className="col-12">
-              <div className="row justify-content-center">
-                <div className="col-12 col-lg-3 why-card text-center">
-                  <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
-                  <h3>
-                    Le cause più diffuse
-                  </h3>
-                  <p>
-                    I timori per la propria salute, le dispense piene di cibo, la carenza di
-                    relazioni
-                    sociali, l’impossibilità di reperire cure adeguate e di svolgere attività fisica
-                    hanno favorito la diffusione dei disturbi alimentari.
-                  </p>
-                </div>
-                <div className="col-12 col-lg-3 why-card text-center">
-                  <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
-                  <h3>
-                    Il peso dell’isolamento
-                  </h3>
-                  <p>
-                    L’isolamento durante il lockdown nazionale ha portato a situazioni di convivenza
-                    forzata, influendo negativamente sugli equilibri familiari con ripercussioni
-                    sulla malattia.
-                  </p>
-                </div>
-                <div className="col-12 col-lg-3 why-card text-center">
-                  <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
-                  <h3>
-                    Il ruolo dei familiari
-                  </h3>
-                  <p>
-                    La famiglia svolge un ruolo fondamentale nell’ambito dei Disturbi Alimentari
-                    avendo la funzione di ago della bilancia nell’andamneto di queste dinamiche.
-
-                  </p>
-                </div>
-              </div>
-
+              <h2 className="text-center">Perchè nasce Feelo?</h2>
             </div>
+            <div className="col-12 col-lg-10">
+              <p>
+                I Disturbi del Comportamento Alimentare sono patologie complesse, determinate da
+                condizioni di disagio
+                psichico ed emotivo e richiedono un trattamento specifico.
+              </p>
+              <p>
+                Il 2020 a causa del Covid-19 ha visto un aumento del 30% delle rihieste di
+                supporto. Feelo nasce
+                dall’idea che sia necessario un sostegno che accompagni laddove i medici non
+                possono essere presenti.
+              </p>
+            </div>
+          </div>
+          <div className="col-12">
+            <div className="row justify-content-center">
+              <div className="col-12 col-lg-3 why-card text-center">
+                <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
+                <h3>
+                  Le cause più diffuse
+                </h3>
+                <p>
+                  I timori per la propria salute, le dispense piene di cibo, la carenza di
+                  relazioni
+                  sociali, l’impossibilità di reperire cure adeguate e di svolgere attività fisica
+                  hanno favorito la diffusione dei disturbi alimentari.
+                </p>
+              </div>
+              <div className="col-12 col-lg-3 why-card text-center">
+                <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
+                <h3>
+                  Il peso dell’isolamento
+                </h3>
+                <p>
+                  L’isolamento durante il lockdown nazionale ha portato a situazioni di convivenza
+                  forzata, influendo negativamente sugli equilibri familiari con ripercussioni
+                  sulla malattia.
+                </p>
+              </div>
+              <div className="col-12 col-lg-3 why-card text-center">
+                <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
+                <h3>
+                  Il ruolo dei familiari
+                </h3>
+                <p>
+                  La famiglia svolge un ruolo fondamentale nell’ambito dei Disturbi Alimentari
+                  avendo la funzione di ago della bilancia nell’andamneto di queste dinamiche.
+
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

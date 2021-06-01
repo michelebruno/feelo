@@ -109,7 +109,9 @@ $btn-padding-x-lg: 1.8rem;
 .hero-section {
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
 
   & > .row {
     width: 100%;
@@ -166,25 +168,23 @@ header.page-header {
 #home-mockup-1 {
   top: 15%;
   left: -5%;
-  transform: rotate(20deg);
 
-  .swiper-slide-active & {
-    top: 15%;
+  & > .gatsby-image-wrapper {
+    transform: rotate(20deg);
   }
+  //.swiper-slide-active & {
+  //  top: 15%;
+  //}
 }
 
 #home-mockup-2 {
   bottom: -10%;
-  transform: rotate(-10deg) scale(.9);
+  & > .gatsby-image-wrapper {
+    transform: rotate(-10deg);
+  }
   left: 5%;
 
 
-  .swiper-slide-next & {
-    bottom: -18%;
-  }
-  .swiper-slide-prev & {
-    bottom: -2%;
-  }
 
 }
 
@@ -192,14 +192,10 @@ header.page-header {
   right: 0%;
   top: 8%;
   width: 20%;
-  transform: rotate(-10deg);
+  & > .gatsby-image-wrapper {
+    transform: rotate(-10deg);
+  }
 
-  .swiper-slide-next & {
-    top: 20%;
-  }
-  .swiper-slide-prev & {
-    top: 0%;
-  }
 }
 
 .why-card {

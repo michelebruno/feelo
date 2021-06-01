@@ -17,7 +17,7 @@ export default function Navbar({ title, fixed }) {
   return (
     <div className={`container ${fixed && 'fixed-header'}`}>
       <div
-        className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-lg"
+        className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-md"
       >
         <div id="logo-container" className="col ">
           <Logo className="h-100" />
@@ -39,8 +39,8 @@ export default function Navbar({ title, fixed }) {
           ? 'show'
           : ''}`}
         >
-          <Logo className="logo d-lg-none" />
-          <button className="close-button d-lg-none" onClick={closeNavbar}>Close</button>
+          <Logo className="logo d-md-none" />
+          <button className="close-button d-md-none" onClick={closeNavbar}>Close</button>
           <ul className="nav">
             <li className="nav-item">
               <Link activeClassName="active" className="nav-link" to="/">

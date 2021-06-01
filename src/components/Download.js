@@ -1,3 +1,24 @@
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import { ReactComponent as PlayStoreSvg } from '../images/play-store-badge.svg';
+
+function GooglePlayButton() {
+  const { file } = useStaticQuery(graphql`{
+    file(relativePath: {eq: "google-play-badge.png"}) {
+      childImageSharp{
+        gatsbyImageData(
+          layout: CONSTRAINED
+        )
+      }
+    }
+  }`);
+  return <div className="d-inline-block" style={{ width: '10em' }}><GatsbyImage alt="Google Play Badge" image={getImage(file)} /></div>;
+}
+function PlayStoreButton() {
+  return <div className="d-inline-block" style={{ width: '10em' }}><PlayStoreSvg /></div>;
+}
+export { PlayStoreButton, GooglePlayButton };
+
 export default function () {
   return (
     <section className="container hero-section">
