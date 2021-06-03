@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function Accordion({ question, children }) {
   const [open, setOpen] = useState(false);
   return (
-    <article className="accordion">
+    <article className="accordion my-3">
       <div className="accordion-header" onClick={() => setOpen(!open)}>
         <div className="col">
           {question}

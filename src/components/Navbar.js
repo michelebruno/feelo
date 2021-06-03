@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 
 import { useState } from 'react';
 import { navigate } from 'gatsby-link';
+import { CancelIcon, GlobalNavButtonIcon } from '@fluentui/react-icons-mdl2';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar({ title, fixed }) {
@@ -23,27 +24,35 @@ export default function Navbar({ title, fixed }) {
         <div id="logo-container" className="col ">
           <Logo className="h-100" onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
         </div>
-        <button
-          className="navbar-toggler col"
-          type="button"
-          onClick={openNavbar}
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-          Open nav
-        </button>
+        <div className="col-auto">
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={openNavbar}
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <GlobalNavButtonIcon />
+          </button>
+        </div>
         <nav className={`col-auto collapse navbar-collapse justify-content-end ${navbarStatus
           ? 'show'
           : ''}`}
         >
           <Logo className="logo d-md-none" />
           <div className="col-12 position-absolute d-md-none close-button-container">
-            <button className="btn btn-text" onClick={closeNavbar}>Close</button>
 
+            <button
+              className="navbar-toggler"
+              type="button"
+              onClick={closeNavbar}
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <CancelIcon />
+            </button>
           </div>
           <ul className="nav">
             <li className="nav-item">

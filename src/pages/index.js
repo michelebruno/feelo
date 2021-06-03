@@ -5,13 +5,34 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Modal, ModalBody } from 'reactstrap';
 import { PlayIcon } from '@fluentui/react-icons-mdl2';
 import { ReactComponent as Filo } from '../images/filo.svg';
+import { ReactComponent as Quote } from '../images/quote.svg';
 import Layout from '../components/Layout';
 import Download, { GooglePlayButton, PlayStoreButton } from '../components/Download';
+
+function Testimonianza({
+  nome, image, children, className, ...props
+}) {
+  return (
+    <div className={`row align-items-center gx-1 py-1 ${className}`} {...props}>
+      <div className="col-3">
+        <Quote style={{ position: 'absolute', zIndex: 8, left: -10 }} />
+        <div className="thumbnail" style={{ borderRadius: '50%', overflow: 'hidden' }}>
+          <GatsbyImage alt={`Foto di ${nome}`} image={getImage(image)} />
+        </div>
+      </div>
+      <div className="col">
+        <p className="small mb-0">{nome}</p>
+        <p className="lead fw-bold">{children}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Home({
   data: {
     sofia,
     maria,
+    giulia,
     download,
     proposta,
     landing,
@@ -24,6 +45,7 @@ export default function Home({
   //   });
   // }, []);
 
+  const [activeSlide, setActiveSlide] = useState(0);
   const [modal, setModal] = useState(false);
 
   function toggleModal() {
@@ -33,26 +55,6 @@ export default function Home({
   return (
     <Layout fixedHeader hideFooter>
       <div className="container-fluid px-0">
-        <Modal isOpen={modal} toggle={toggleModal} centered>
-          <ModalBody className="p-0">
-            <div style={{ padding: '56.25% 0 0 0', position: 'relative', width: '100%' }}>
-              <iframe
-                src="https://player.vimeo.com/video/554150656?title=0&byline=0"
-                style={{
-                  position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
-                }}
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <script src="https://player.vimeo.com/api/player.js" />
-            <div className="position-absolute w-100 text-center p-1">
-              <button className="btn btn-text" onClick={toggleModal}>Close</button>
-            </div>
-          </ModalBody>
-        </Modal>
-
         <div className="row g-0">
           <div className="col-12">
             <Swiper
@@ -61,21 +63,22 @@ export default function Home({
               direction="vertical"
               mousewheel
               parallax
+              onSlideChange={({ activeIndex }) => setActiveSlide(activeIndex)}
               speed={1000}
+              data-active-slide={activeSlide}
             >
               <Filo slot="wrapper-start" />
-              <SwiperSlide className="bg-white">
+              <SwiperSlide>
                 <div className="container d-flex align-items-center hero-section">
                   <div className="row align-items-center">
-                    <div id="home-landing-image">
+                    <div id="home-landing-image" data-swiper-parallax-opacity={0}>
                       <GatsbyImage alt="Immagini" image={getImage(landing)} />
                     </div>
                     <div className="col-12 col-lg-5">
-                      <h1 className="display-3 handwritten">Ascolta le emozioni!</h1>
+                      <h1 className="display-3 handwritten">Insieme per ritrovarsi</h1>
                       <p className="lead py-2">
-                        Riflettere su se stessi e con gli altri non è mai un’impresa facile, per
-                        questo Feelo è
-                        qui per aiutarti!
+                        Isolarsi nel disturbo alimentare è facile, per questo Feelo ti aiuta ad
+                        affrontare il problema prendendosi cura delle tue relazioni.
                       </p>
                       <div>
                         <a href="#download" className="btn btn-primary me-1 mb-1">Scarica Feelo</a>
@@ -89,7 +92,7 @@ export default function Home({
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <section className="container d-flex align-items-center  hero-section">
+                <section className="container d-flex align-items-center hero-section">
                   <div className="row text-center justify-content-center">
                     <div className="col-12">
                       <h2 className="handwritten h1" data-swiper-parallax-y="-15%">
@@ -106,16 +109,6 @@ export default function Home({
                         di squadra possa essere una strategia vincente!
                       </p>
                     </div>
-
-                    <div className="home-mockup" id="home-mockup-1" data-swiper-parallax="10%">
-                      <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
-                    </div>
-                    <div className="home-mockup" id="home-mockup-2" data-swiper-parallax="-20%">
-                      <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
-                    </div>
-                    <div className="home-mockup" id="home-mockup-3" data-swiper-parallax="-30%">
-                      <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
-                    </div>
                   </div>
                 </section>
               </SwiperSlide>
@@ -128,57 +121,59 @@ export default function Home({
                     <div className="col-12">
                       <h2 className="handwritten h1">Ecco cosa ti propongo</h2>
                       <p className="lead" data-swiper-parallax-opacity="0">
-                        Premi play e inizieremo una riflessione guidata che potrà esserti utile per
-                        iniziare a
-                        conoscerci.
-                      </p>
-                      <p className="text-right">
-                        <button onClick={toggleModal} className="btn btn-outline-light">
-                          Inizia l'attività
-                          <PlayIcon />
-                        </button>
+                        Il mio percorso segue i principi della terapia cognitivo comportamentale o
+                        CBT, attualmente considerata a livello internazionale una dei modelli più
+                        efficaci per la comprensione dei disturbi psicopatologici.
                       </p>
                     </div>
                   </div>
                 </section>
-                <div id="home-proposta-image" data-swiper-parallax-opacity={0}>
-                  <GatsbyImage
-                    alt="big man"
-                    image={getImage(proposta)}
-                  />
+                <div className="home-mockup" id="home-mockup-1" data-swiper-parallax="10%">
+                  <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
+                </div>
+                <div className="home-mockup" id="home-mockup-2" data-swiper-parallax="-20%">
+                  <GatsbyImage alt="Mockup" image={getImage(mockups[1])} />
+                </div>
+                <div className="home-mockup" id="home-mockup-3" data-swiper-parallax="-30%">
+                  <GatsbyImage alt="Mockup" image={getImage(mockups[0])} />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <section className="container hero-section">
                   <div className="row">
                     <div className="col-12 col-lg-7">
-                      <div className="testimonianza">
-                        <p>Sofia</p>
-                        <p className="h4">
-                          Feelo mi ha aiutata molto, c’è sempre qualche attività che risponde ai
-                          miei
-                          bisogni.
-                        </p>
-                      </div>
+                      <Testimonianza
+                        nome="Sofia"
+                        data-swiper-parallax-x="10%"
+                        data-swiper-parallax-opacity="0"
+                        image={sofia}
+                      >
+                        Feelo mi ha aiutata molto, c’è sempre qualche attività che risponde ai
+                        miei bisogni.
+                      </Testimonianza>
                     </div>
                     <div className="col-12 col-lg-7 offset-lg-5">
-                      <div className="testimonianza">
-                        <p>Giulia</p>
-                        <p className="h4">
-                          Bellissima app, la consiglio a tutti quelli che soffrono di disturbi
-                          alimentari. “Feelo mi ha
-                          aiutata molto, c’è sempre qualche attività che risponde ai miei bisogni.
-                        </p>
-                      </div>
+                      <Testimonianza
+                        nome="Giulia"
+                        image={giulia}
+                        data-swiper-parallax-x="-10%"
+                        data-swiper-parallax-opacity="0"
+                      >
+                        Bellissima app, la consiglio a tutti quelli che soffrono di disturbi
+                        alimentari. “Feelo mi ha
+                        aiutata molto, c’è sempre qualche attività che risponde ai miei bisogni.
+                      </Testimonianza>
                     </div>
-                    <div className="col-12 col-lg-7">
-                      <div className="testimonianza">
-                        <p>Maria</p>
-                        <p className="h4">
-                          Fantastica, finalmente riesco a parlare con mia figlia senza doverci
-                          litigare sempre!
-                        </p>
-                      </div>
+                    <div className="col-12 col-lg-7 offset-lg-2">
+                      <Testimonianza
+                        image={maria}
+                        nome="Maria"
+                        data-swiper-parallax-x="10%"
+                        data-swiper-parallax-opacity="0"
+                      >
+                        Fantastica, finalmente riesco a parlare con mia figlia senza doverci
+                        litigare sempre!
+                      </Testimonianza>
                     </div>
                   </div>
                 </section>
@@ -187,10 +182,10 @@ export default function Home({
                 <section className="container hero-section ">
                   <div className="row">
                     <div className="col-12">
-                      <h2>Download</h2>
+                      <h2>Scarica l’app</h2>
                     </div>
                     <div className="col-6">
-                      <p className="lead">Hey, siamo su play store!</p>
+                      <p className="lead">Scarica Feelo e iniziamo il nostro percorso insieme. </p>
                       <p>
                         <GooglePlayButton />
                         <PlayStoreButton />
@@ -208,7 +203,6 @@ export default function Home({
                       </div>
                       <div className="col-12 col-lg-auto">
                         <a
-                          href
                           className="link-text "
                         >
                           Termini e condizioni
@@ -221,7 +215,25 @@ export default function Home({
             </Swiper>
           </div>
         </div>
-
+        <Modal isOpen={modal} toggle={toggleModal} centered>
+          <ModalBody className="p-0">
+            <div style={{ padding: '56.25% 0 0 0', position: 'relative', width: '100%' }}>
+              <iframe
+                src="https://player.vimeo.com/video/531964255?title=0&byline=0"
+                style={{
+                  position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
+                }}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <script src="https://player.vimeo.com/api/player.js" />
+            <div className="position-absolute w-100 text-center p-1">
+              <button className="btn btn-text" onClick={toggleModal}>Close</button>
+            </div>
+          </ModalBody>
+        </Modal>
       </div>
     </Layout>
   );
@@ -240,35 +252,42 @@ export const query = graphql`{
       }
     }
   }
-  sofia : file(relativePath: {eq: "home-feeler-sofia.png"}) {
+  sofia: file(relativePath: {eq: "home-testimonianze-sofia.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  maria : file(relativePath: {eq: "home-feeler-maria.png"}) {
+  maria: file(relativePath: {eq: "home-testimonianze-maria.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  landing : file(relativePath: {eq: "home-landing.png"}) {
+  giulia: file(relativePath: {eq: "home-testimonianze-giulia.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  proposta : file(relativePath: {eq: "home-proposta.png"}) {
+  landing: file(relativePath: {eq: "home-landing.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  download : file(relativePath: {eq: "home-download.png"}) {
+  proposta: file(relativePath: {eq: "home-proposta.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  download: file(relativePath: {eq: "home-download.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH

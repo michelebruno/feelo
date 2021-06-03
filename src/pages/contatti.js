@@ -21,12 +21,11 @@ export default function Contatti({ data: { associazioni: { nodes: associazioni }
             <MapContainer
               center={[44.17279, 12.11119]}
               zoom={6}
-              scrollWheelZoom={false}
               style={{ minHeight: '400px' }}
             >
               <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="http://b.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
               />
               {associazioni.map(({ lat, long, luogo }) => (lat && long)
                 && (

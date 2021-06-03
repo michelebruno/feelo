@@ -1,6 +1,12 @@
 
 .home-slider {
   max-height: 100vh;
+
+
+  .swiper-slide {
+    height: 100vh;
+  }
+
 }
 
 #filo_svg__Livello_1 {
@@ -8,23 +14,37 @@
   left: -30px;
   right: -30px;
   bottom: 0;
+  z-index: 99;
   //height: 500vh;
   position: absolute;
 }
 
-#filo_svg__animami {
-  stroke-dasharray: 100%;
-  animation: dash 10s;
-}
+#filo_svg__animami,#filo_svg__Livello_1 {
+  stroke-dasharray: 10163;
+  stroke-dashoffset: 8163;
+  transition: all 3s;
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 100%;
+  :not(.swiper-container-initialized) > .swiper-wrapper > svg > & {
+    stroke-dashoffset: 10163 !important;
   }
-  to {
+
+  [data-active-slide="1"] & {
+    stroke-dashoffset: 5163;
+  }
+
+  [data-active-slide="2"] & {
+    stroke-dashoffset: 2163;
+  }
+
+  [data-active-slide="3"] & {
+    stroke-dashoffset: 1003;
+  }
+
+  [data-active-slide="4"] & {
     stroke-dashoffset: 0;
   }
 }
+
 
 header.page-header {
   padding: map-get($spacers, 4) 0;
@@ -35,10 +55,10 @@ header.page-header {
   transition: all 2s ease-out;
 
   position: absolute;
-  z-index: 9999;
+  z-index: 89;
   width: 40%;
   @include media-breakpoint-up("lg") {
-    width: 18%;
+    width: 16%;
   }
 }
 
@@ -69,7 +89,7 @@ header.page-header {
   left: 5%;
 
   @include media-breakpoint-up("lg") {
-    width: 18%;
+    width: 15%;
   }
 }
 
@@ -86,8 +106,9 @@ header.page-header {
   }
 }
 
-
 .hero-section {
+  z-index: 100;
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -106,8 +127,8 @@ header.page-header {
   left: -25%;
 
   @include media-breakpoint-up("lg") {
-    width: 70%;
-    left: 15%;
+    width: 60%;
+    left: 20%;
   }
 }
 
@@ -128,4 +149,26 @@ header.page-header {
   position: absolute;
   width: 60%;
   right: 5%;
+}
+
+.testimonianza {
+  .thumbnail {
+    position: relative;
+
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (1) * 100%;
+    }
+
+    > .gatsby-image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
 }
