@@ -14,8 +14,14 @@
     @extend .shadow-sm, .px-2, .py-2, .rounded-3 ;
   }
 
+  .accordion-icon {
+    transition: all 200ms;
+  }
+
+  &.open .accordion-icon {
+    transform: rotate(-180deg);
+  }
   .accordion-body {
     @extend .px-2, .py-2 ;
-
   }
 }
