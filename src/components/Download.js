@@ -2,7 +2,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ReactComponent as PlayStoreSvg } from '../images/play-store-badge.svg';
 
-function GooglePlayButton() {
+function GooglePlayButton({ className }) {
   const { file } = useStaticQuery(graphql`{
     file(relativePath: {eq: "google-play-badge.png"}) {
       childImageSharp{
@@ -12,10 +12,10 @@ function GooglePlayButton() {
       }
     }
   }`);
-  return <div className="d-inline-block" style={{ width: '10em' }}><GatsbyImage alt="Google Play Badge" image={getImage(file)} /></div>;
+  return <div className={'d-inline-block ' && className} style={{ width: '10em' }}><GatsbyImage alt="Google Play Badge" image={getImage(file)} /></div>;
 }
-function PlayStoreButton() {
-  return <div className="d-inline-block" style={{ width: '10em' }}><PlayStoreSvg /></div>;
+function PlayStoreButton({ className }) {
+  return <div className={'d-inline-block ' && className} style={{ width: '10em' }}><PlayStoreSvg /></div>;
 }
 export { PlayStoreButton, GooglePlayButton };
 

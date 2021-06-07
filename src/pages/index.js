@@ -75,10 +75,10 @@ export default function Home({
                       <GatsbyImage alt="Immagini" image={getImage(landing)} />
                     </div>
                     <div className="col-12 col-lg-5">
-                      <h1 className="display-3 handwritten">Insieme per ritrovarsi</h1>
+                      <h1 className="display-3 handwritten">Ritrovarsi è una conquista!</h1>
                       <p className="lead py-2">
-                        Isolarsi nel disturbo alimentare è facile, per questo Feelo ti aiuta ad
-                        affrontare il problema prendendosi cura delle tue relazioni.
+                        Feelo è l’app pensata per affrontare i disturbi alimentari insieme a chi ti
+                        vuol bene.
                       </p>
                       <div>
                         <a href="#download" className="btn btn-primary me-1 mb-1">Scarica Feelo</a>
@@ -102,23 +102,36 @@ export default function Home({
                     </div>
                     <div className="col-12 col-lg-8">
                       <p className="lead">
-                        Attraverso attività e riflessioni appositamente pensate per sostenere te e i
-                        tuoi cari
-                        emotivamente durante
-                        il percorso terapeutico, ti mostrerò come il lavoro
-                        di squadra possa essere una strategia vincente!
+                        Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente
+                        per imparare a sostenersi a vicenda durante il trattamento di un disturbo
+                        dell’alimentazione.
                       </p>
+                    </div>
+                    <div className="col-12 col-lg-8">
+
+                      <div style={{ padding: '56.25% 0 0 0', position: 'relative', width: '100%' }}>
+                        <iframe
+                          src="https://player.vimeo.com/video/531964255?title=0&byline=0"
+                          style={{
+                            position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
+                          }}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                      <script src="https://player.vimeo.com/api/player.js" />
                     </div>
                   </div>
                 </section>
               </SwiperSlide>
-              <SwiperSlide className="bg-primary text-light">
+              <SwiperSlide className="">
                 <section
                   className="container hero-section text-center"
                   data-swiper-parallax-y="-15%"
                 >
-                  <div className="row align-items-center w-100">
-                    <div className="col-12">
+                  <div className="row align-items-center justify-content-center w-100">
+                    <div className="col-12 col-lg-6">
                       <h2 className="handwritten h1">Ecco cosa ti propongo</h2>
                       <p className="lead" data-swiper-parallax-opacity="0">
                         Il mio percorso segue i principi della terapia cognitivo comportamentale o
@@ -141,44 +154,26 @@ export default function Home({
               <SwiperSlide>
                 <section className="container hero-section">
                   <div className="row">
-                    <div className="col-12 col-lg-7">
-                      <Testimonianza
-                        nome="Sofia"
-                        data-swiper-parallax-x="10%"
-                        data-swiper-parallax-opacity="0"
-                        image={sofia}
-                      >
-                        Feelo mi ha aiutata molto, c’è sempre qualche attività che risponde ai
-                        miei bisogni.
-                      </Testimonianza>
+                    <div className="col-12 col-lg-6 offset-lg-1">
+                      <h2>Pensata per chi soffre di disturbi alimentari...</h2>
+                      <p>Il periodo che stai affrontando è difficile, fatto di alti e bassi. Ti aiuterò ad affrontare questa situazione supportandoti in ogni momento. </p>
                     </div>
-                    <div className="col-12 col-lg-7 offset-lg-5">
-                      <Testimonianza
-                        nome="Giulia"
-                        image={giulia}
-                        data-swiper-parallax-x="-10%"
-                        data-swiper-parallax-opacity="0"
-                      >
-                        Bellissima app, la consiglio a tutti quelli che soffrono di disturbi
-                        alimentari. “Feelo mi ha
-                        aiutata molto, c’è sempre qualche attività che risponde ai miei bisogni.
-                      </Testimonianza>
+                    <div className="col-5 text-center" style={{ minHeight: '25vh' }}>
+                      <a href="#" className="btn btn-outline-primary">Perché farti aiutare?</a>
                     </div>
-                    <div className="col-12 col-lg-7 offset-lg-2">
-                      <Testimonianza
-                        image={maria}
-                        nome="Maria"
-                        data-swiper-parallax-x="10%"
-                        data-swiper-parallax-opacity="0"
-                      >
-                        Fantastica, finalmente riesco a parlare con mia figlia senza doverci
-                        litigare sempre!
-                      </Testimonianza>
+                  </div>
+                  <div className="row flex-lg-row-reverse">
+                    <div className="col-12 col-lg-6 offset-lg-1">
+                      <h2>...e per i Feeler</h2>
+                      <p>Che sia un familiare o un amico, il feeler è colui che la persona affetta da disturbi alimentari sente vicina. Ti aiuterò a comprenderla e sostenerla durante le sue giornate!</p>
+                    </div>
+                    <div className="col-5 text-center" style={{ minHeight: '25vh' }}>
+                      <a href="#" className="btn btn-outline-primary">Perché diventare Feeler?</a>
                     </div>
                   </div>
                 </section>
               </SwiperSlide>
-              <SwiperSlide className="bg-white">
+              <SwiperSlide className="">
                 <section className="container hero-section ">
                   <div className="row">
                     <div className="col-12">
