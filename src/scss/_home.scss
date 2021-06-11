@@ -106,6 +106,12 @@ header.page-header {
   }
 }
 
+.hero {
+  position: relative;
+  h2 {
+    color: $primary;
+  }
+}
 .hero-section {
   z-index: 100;
   position: relative;

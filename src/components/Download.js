@@ -1,6 +1,5 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import { ReactComponent as DownloadClip } from '../images/wave-10-1x.svg';
 
 function GooglePlayButton({ className }) {
   return (
@@ -27,8 +26,7 @@ export default function () {
     }
   }`);
   return (
-    <section id="download" className="container-fluid">
-      <DownloadClip width={0} height={0} />
+    <section id="download" className="container-fluid clip01">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-6 col-lg-4 offset-lg-1">

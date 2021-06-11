@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Modal, ModalBody } from 'reactstrap';
 import { PlayIcon } from '@fluentui/react-icons-mdl2';
+import classNames from 'classnames';
 import { ReactComponent as Filo } from '../images/filo.svg';
 import { ReactComponent as Quote } from '../images/quote.svg';
 import Layout from '../components/Layout';
@@ -28,6 +29,25 @@ function Testimonianza({
   );
 }
 
+function Hero({ className, children, reverse }) {
+  return (
+    <div className={classNames('container-fluid hero ', className)}>
+      <div className="row g-2">
+        <div className="col-12">
+          <div className="container">
+            <div className={classNames('row ', {
+              'flex-lg-row-reverse': reverse,
+            })}
+            >
+              {children}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home({
   data: {
     sofia,
@@ -39,13 +59,6 @@ export default function Home({
     mockups: { nodes: mockups },
   },
 }) {
-  // useEffect(() => {
-  //   gsap.to('#filo_svg__animami', {
-  //     drawSvg: '10%',
-  //   });
-  // }, []);
-
-  const [activeSlide, setActiveSlide] = useState(0);
   const [modal, setModal] = useState(false);
 
   function toggleModal() {
@@ -54,12 +67,56 @@ export default function Home({
 
   return (
     <Layout fixedHeader hideFooter>
-      <div className="container-fluid px-0">
-        <div className="row g-0">
-          <div className="col-12" />
+      <div className="container-fluid px-0 gx-0 py-5 gradient3">
+        <div className="row">
+          <div className="col-12">
+            <div className="container">
+              <div className="row g-0">
+                <div className="col-12 text-center">
+                  <h1 className="text-primary">Ciao, io sono Feelo</h1>
+                  <p className="lead">
+                    L’app pensata per affrontare i disturbi alimentari insieme a chi ti
+                    vuole bene.
+                  </p>
+                  <p>
+                    <button className="btn btn-lg btn-primary">Scarica Feelo</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <Hero className="gradient2 clip10">
+              <div className="col-12 col-lg-6">
+                <h2>Ecco cosa propongo</h2>
+                <p className="lead">
+                  Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
+                  imparare a sostenersi a vicenda durante il trattamento di un disturbo
+                  dell’alimentazione.
+                </p>
+              </div>
+            </Hero>
+
+            <Hero reverse className=" gradient1 clip01">
+              <div className="col-12 col-lg-6">
+                <h2>Per chi soffre di disturbi alimentari...</h2>
+                <p className="lead">
+                  Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo ti
+                  guiderò nella scoperta di te stesso per affrontare le tue paure.
+                </p>
+              </div>
+            </Hero>
+            <Hero className="gradient2 clip10">
+              <div className="col-12 col-lg-6">
+                <h2>...e per coloro che gli vogliono bene</h2>
+                <p className="lead">
+                  Il mio supporto si fonda sulla terapia cognitivo comportamentale che promuove le
+                  relazioni e il dialogo.
+                </p>
+              </div>
+            </Hero>
+          </div>
         </div>
-        <Download />
       </div>
+      <Download />
     </Layout>
   );
 }
