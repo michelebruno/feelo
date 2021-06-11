@@ -174,16 +174,16 @@ footer {
 }
 
 
-#download {
-  margin-top: 10em;
-  padding-top: 10em;
-  background: linear-gradient(180deg, #E0EAFF 1.1%, #CAC2FF 89.57%);
-}
+$clipped-overlay : 40vh;
 
 .clip01, .clip10 {
-  margin-top: -30vh;
-  padding-top: 30vh;
-  padding-bottom: 50vh;
+  margin-top: -$clipped-overlay;
+  padding-top: $clipped-overlay;
+  padding-bottom: $clipped-overlay * 1.5;
+}
+
+.has-clipped-next {
+  padding-bottom: $clipped-overlay * 1.5;
 }
 
 .clip01 {

@@ -14,7 +14,13 @@ function Testimonianza({
   nome, image, children, className, ...props
 }) {
   return (
-    <div className={`row align-items-center gx-1 py-1 ${className}`} {...props}>
+    <div
+      className={classNames(
+        'row align-items-center gx-1 py-1',
+        className,
+      )}
+      {...props}
+    >
       <div className="col-3">
         <Quote style={{ position: 'absolute', zIndex: 8, left: -10 }} />
         <div className="thumbnail" style={{ borderRadius: '50%', overflow: 'hidden' }}>
@@ -29,10 +35,16 @@ function Testimonianza({
   );
 }
 
-function Hero({ className, children, reverse }) {
+export function ClippedSection({
+  className, children, reverse, dontClip,
+}) {
   return (
-    <div className={classNames('container-fluid hero ', className)}>
-      <div className="row g-2">
+    <section className={classNames('container-fluid g-2 hero', {
+      clip01: !dontClip,
+      'has-clipped-next': dontClip,
+    }, className)}
+    >
+      <div className="row ">
         <div className="col-12">
           <div className="container">
             <div className={classNames('row ', {
@@ -44,7 +56,7 @@ function Hero({ className, children, reverse }) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -67,56 +79,51 @@ export default function Home({
 
   return (
     <Layout fixedHeader hideFooter>
-      <div className="container-fluid px-0 gx-0 py-5 gradient3">
-        <div className="row">
-          <div className="col-12">
-            <div className="container">
-              <div className="row g-0">
-                <div className="col-12 text-center">
-                  <h1 className="text-primary">Ciao, io sono Feelo</h1>
-                  <p className="lead">
-                    L’app pensata per affrontare i disturbi alimentari insieme a chi ti
-                    vuole bene.
-                  </p>
-                  <p>
-                    <button className="btn btn-lg btn-primary">Scarica Feelo</button>
-                  </p>
-                </div>
-              </div>
+      <div className="row gradient3 gx-0">
+        <div className="col-12">
+          <ClippedSection dontClip>
+            <div className="col-12 text-center">
+              <h1 className="text-primary">Ciao, io sono Feelo</h1>
+              <p className="lead">
+                L’app pensata per affrontare i disturbi alimentari insieme a chi ti
+                vuole bene.
+              </p>
+              <p>
+                <button className="btn btn-lg btn-primary">Scarica Feelo</button>
+              </p>
             </div>
-            <Hero className="gradient2 clip10">
-              <div className="col-12 col-lg-6">
-                <h2>Ecco cosa propongo</h2>
-                <p className="lead">
-                  Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
-                  imparare a sostenersi a vicenda durante il trattamento di un disturbo
-                  dell’alimentazione.
-                </p>
-              </div>
-            </Hero>
-
-            <Hero reverse className=" gradient1 clip01">
-              <div className="col-12 col-lg-6">
-                <h2>Per chi soffre di disturbi alimentari...</h2>
-                <p className="lead">
-                  Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo ti
-                  guiderò nella scoperta di te stesso per affrontare le tue paure.
-                </p>
-              </div>
-            </Hero>
-            <Hero className="gradient2 clip10">
-              <div className="col-12 col-lg-6">
-                <h2>...e per coloro che gli vogliono bene</h2>
-                <p className="lead">
-                  Il mio supporto si fonda sulla terapia cognitivo comportamentale che promuove le
-                  relazioni e il dialogo.
-                </p>
-              </div>
-            </Hero>
-          </div>
+          </ClippedSection>
+          <ClippedSection className="gradient2 clip10">
+            <div className="col-12 col-lg-6">
+              <h2>Ecco cosa propongo</h2>
+              <p className="lead">
+                Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
+                imparare a sostenersi a vicenda durante il trattamento di un disturbo
+                dell’alimentazione.
+              </p>
+            </div>
+          </ClippedSection>
+          <ClippedSection reverse className=" gradient1 clip01">
+            <div className="col-12 col-lg-6">
+              <h2>Per chi soffre di disturbi alimentari...</h2>
+              <p className="lead">
+                Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo ti
+                guiderò nella scoperta di te stesso per affrontare le tue paure.
+              </p>
+            </div>
+          </ClippedSection>
+          <ClippedSection className="gradient2 clip10">
+            <div className="col-12 col-lg-6">
+              <h2>...e per coloro che gli vogliono bene</h2>
+              <p className="lead">
+                Il mio supporto si fonda sulla terapia cognitivo comportamentale che promuove le
+                relazioni e il dialogo.
+              </p>
+            </div>
+          </ClippedSection>
+          <Download />
         </div>
       </div>
-      <Download />
     </Layout>
   );
 }
