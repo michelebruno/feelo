@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Accordion from '../components/Accordion';
+import Download from '../components/Download';
 
 function Group({ faqs, title }) {
   return (faqs
@@ -45,6 +46,7 @@ export default function Faq({ data: { faqs } }) {
           </div>
         </div>
       </div>
+      <Download />
     </Layout>
   );
 }

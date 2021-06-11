@@ -1,7 +1,6 @@
-import { graphql, Link } from 'gatsby';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import Download from '../components/Download';
 
 export default function Feelo({ data: { scopriGiulia1, feeler: { nodes: feelerImages } } }) {
   const featureFeeler = [
@@ -24,150 +23,45 @@ export default function Feelo({ data: { scopriGiulia1, feeler: { nodes: feelerIm
 
       <div className="container">
         <header className="row justify-content-center page-header">
-          <div className="col-12 text-center">
-            <h1 className="handwritten">Come posso aiutarti?</h1>
-          </div>
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-lg-6">
+            <h1>
+              Al centro la persona,
+              non il disturbo
+            </h1>
             <p className="lead text-center">
-              Sappiamo che chi soffre di Disturbi alimentari, come anoressia, bulimia e binge eating
-              disorder, ha bisogno di sentirsi compreso e supportato. Questo può avvenire grazie a
-              una relazione
-              efficace con chi gli sta a fianco affinchè si senta accompagnato in questo percorso.
-            </p>
-            <p>
-              <a href="#download" className="btn btn-primary ">Scarica Feelo</a>
-              <a href="#perché" className="btn btn-link">Cos’è un disturbo alimentare?</a>
+              Con contenuti dedicati, supporto le persone che soffrono di disturbi alimentari e i
+              propri cari, spostando il focus dalla malattia ai pensieri positivi, con l’obiettivo
+              di
+              {' '}
+              <b>costruire un dialogo verso un percorso di guarigione</b>
+              .
             </p>
           </div>
         </header>
-        <div className="row justify-content-center">
-          <div className="col-12 text-center">
-            <h2>Per chi è pensato Feelo?</h2>
-          </div>
-          <div className="col-12">
-
-            <div
-              className="features-card"
-            >
-              <div className="col-12 col-lg-4">
-                <h3>Per chi soffre di disturbi alimentari</h3>
-                <p>
-                  Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è
-                  difficile, fatto di alti e bass. Feelo conosce questi stati d’animo e ti aiuta ad
-                  affrontarli con serenità supportandoti ogni giorno.
-                </p>
-              </div>
-              <div className="col-12 col-lg-6">
-                <Swiper pagination autoplay slidesPerView={1} loop>
-                  {featureGiulia.map((t) => (
-                    <SwiperSlide key={t}>
-                      <div className="position-relative">
-                        <GatsbyImage alt="Ti guiderò" image={getImage(scopriGiulia1)} />
-                        <p
-                          className="lead position-absolute handwritten text-center"
-                          style={{ bottom: 35 }}
-                        >
-                          {t}
-                        </p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div>
-            <div
-              className="features-card flex-lg-row-reverse "
-            >
-              <div className="col-12 col-lg-4">
-                <h3>Per i feeler</h3>
-                <p>
-                  Se soffri di un disturbo alimentare Feelo sa che il periodo che stai affrontando è
-                  difficile, fatto
-                  di alti e bass. Feelo conosce questi stati d’animo e ti aiuta ad affrontarli con
-                  serenità
-                  supportandoti ogni giorno.
-                </p>
-              </div>
-              <div className="col-12 col-lg-6">
-                <Swiper pagination autoplay slidesPerView={1} loop>
-                  {featureFeeler.map((t, i) => (
-                    <SwiperSlide key={t}>
-                      <div className="position-relative">
-                        <GatsbyImage alt="Ti guiderò" image={getImage(feelerImages[0])} />
-                        <p
-                          className="lead position-absolute handwritten text-center"
-                          style={{ bottom: 35 }}
-                        >
-                          {t}
-                        </p>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div>
+        <div className="row justify-content-center flex-lg-row-reverse">
+          <div className="col-12 col-lg-6">
+            <h2>A chi si trova al centro della tempesta...</h2>
+            <p>
+              Riscopri le tue potenzialità attraverso riflessioni e attività introspettive e
+              coltiva le tue relazioni grazie alle
+              {' '}
+              <b>attività condivise</b>
+              . Feelo sarà l’amico che sarà sempre accanto a te e terrà traccia dei tuoi progressi.
+            </p>
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="row justify-content-center">
-            <div className="col-12">
-              <h2 className="text-center">Perchè nasce Feelo?</h2>
-            </div>
-            <div className="col-12 col-lg-10">
-              <p>
-                I Disturbi del Comportamento Alimentare sono patologie complesse, determinate da
-                condizioni di disagio
-                psichico ed emotivo e richiedono un trattamento specifico.
-              </p>
-              <p>
-                Il 2020 a causa del Covid-19 ha visto un aumento del 30% delle rihieste di
-                supporto. Feelo nasce
-                dall’idea che sia necessario un sostegno che accompagni laddove i medici non
-                possono essere presenti.
-              </p>
-            </div>
-          </div>
-          <div className="col-12">
-            <div className="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
-              <div className="why-card text-center">
-                <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
-                <h3>
-                  Le cause più diffuse
-                </h3>
-                <p>
-                  I timori per la propria salute, le dispense piene di cibo, la carenza di
-                  relazioni
-                  sociali, l’impossibilità di reperire cure adeguate e di svolgere attività fisica
-                  hanno favorito la diffusione dei disturbi alimentari.
-                </p>
-              </div>
-              <div className="why-card text-center">
-                <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
-                <h3>
-                  Il peso dell’isolamento
-                </h3>
-                <p>
-                  L’isolamento durante il lockdown nazionale ha portato a situazioni di convivenza
-                  forzata, influendo negativamente sugli equilibri familiari con ripercussioni
-                  sulla malattia.
-                </p>
-              </div>
-              <div className="why-card text-center">
-                <GatsbyImage alt="Perchè 1" image={getImage(scopriGiulia1)} />
-                <h3>
-                  Il ruolo dei familiari
-                </h3>
-                <p>
-                  La famiglia svolge un ruolo fondamentale nell’ambito dei Disturbi Alimentari
-                  avendo la funzione di ago della bilancia nell’andamneto di queste dinamiche.
-
-                </p>
-              </div>
-            </div>
-
+          <div className="col-12 col-lg-6">
+            <h2>...ai feeler che arrivano in soccorso</h2>
+            <p>
+              Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare, tenendo
+              traccia degli avanzamenti del tuo caro, che potrai supportare grazie al dialogo
+              costruttivo in cui ti guiderà.
+            </p>
           </div>
         </div>
       </div>
+      <Download />
     </Layout>
   );
 }

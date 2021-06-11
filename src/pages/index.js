@@ -121,7 +121,7 @@ export default function Home({
               </p>
             </div>
           </ClippedSection>
-          <Download />
+          <Download doesntCover={false} />
         </div>
       </div>
     </Layout>

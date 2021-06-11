@@ -66,13 +66,18 @@ export default function Navbar({ title, fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/faq">
-                FAQ
+              <Link activeClassName="active" className="nav-link" to="/testimonianze">
+                Testimonianze
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/contatti">
-                Contatti
+              <Link activeClassName="active" className="nav-link" to="/progetto">
+                Progetto
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link activeClassName="active" className="nav-link" to="/faq">
+                FAQ
               </Link>
             </li>
             <li className="nav-item">

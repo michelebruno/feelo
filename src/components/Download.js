@@ -1,5 +1,6 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import classNames from 'classnames';
 
 function GooglePlayButton({ className }) {
   return (
@@ -15,7 +16,7 @@ function PlayStoreButton({ className }) {
 
 export { PlayStoreButton, GooglePlayButton };
 
-export default function () {
+export default function Download({ className, doesntCover }) {
   const { mockup } = useStaticQuery(graphql`query Download {
     mockup: file(relativePath: {eq: "home-screenshot-1.png"}) {
       childImageSharp{
@@ -26,7 +27,11 @@ export default function () {
     }
   }`);
   return (
-    <section id="download" className="row justify-content-between gx-0 clip01 gradient2">
+    <section
+      id="download"
+      className={classNames('row justify-content-between gx-0 clip01 gradient2 pb-3',
+        { 'mt-0': doesntCover })}
+    >
 
       <div className="col-6 col-lg-4 offset-lg-1">
         <h2>Scarica l’App</h2>
@@ -40,9 +45,18 @@ export default function () {
         </p>
       </div>
       <div className="col-12 col-lg-6 text-center position-relative">
-        <GatsbyImage alt="Mockup della schermata iniziale" style={{ maxWidth: '40%' }} image={getImage(mockup)} className="mx-auto" />
+        <GatsbyImage
+          alt="Mockup della schermata iniziale"
+          style={{ maxWidth: '40%' }}
+          image={getImage(mockup)}
+          className="mx-auto"
+        />
       </div>
 
     </section>
   );
 }
+
+Download.defaultProps = {
+  doesntCover: true,
+};
