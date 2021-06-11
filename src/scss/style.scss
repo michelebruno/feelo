@@ -168,3 +168,11 @@ footer {
   text-transform: uppercase;
   color: $light !important;
 }
+
+
+#download {
+  margin-top: 10em;
+  padding-top: 10em;
+  background: linear-gradient(180deg, #E0EAFF 1.1%, #CAC2FF 89.57%);
+  clip-path: url(#wave-10-1x_svg__downloadClip);
+}
