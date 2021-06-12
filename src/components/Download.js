@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 export default function Download({ className, doesntCover }) {
   const { mockup } = useStaticQuery(graphql`query Download {
-    mockup: file(relativePath: {eq: "home-screenshot-1.png"}) {
+    mockup: file(relativePath: {eq: "mockup intro app.png"}) {
       childImageSharp{
         gatsbyImageData(
           layout: FULL_WIDTH
@@ -15,8 +15,10 @@ export default function Download({ className, doesntCover }) {
   return (
     <section
       id="download"
-      className={classNames('row justify-content-between gx-0 clip01 gradient2 pb-3',
-        { 'mt-0': doesntCover })}
+      className={classNames('row justify-content-between gx-0 clip01 gradient2 pb-2 ',
+        {
+          'mt-3': doesntCover,
+        })}
     >
       <div className="col-12">
         <div className="container">
@@ -33,10 +35,9 @@ export default function Download({ className, doesntCover }) {
                 <a href="#" className="btn btn-outline-primary">iOS</a>
               </p>
             </div>
-            <div className="col-12 col-lg-6 text-center position-relative">
+            <div className="col-12 col-lg-4 offset-2 mt-n3 text-center position-relative">
               <GatsbyImage
                 alt="Mockup della schermata iniziale"
-                style={{ maxWidth: '40%' }}
                 image={getImage(mockup)}
                 className="mx-auto"
               />

@@ -46,6 +46,14 @@ module.exports = {
       },
       __key: 'images',
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'mockups',
+        path: './src/mockups/',
+      },
+      __key: 'mockups',
+    },
     'gatsby-transformer-csv',
     {
       resolve: 'gatsby-plugin-svgr',
