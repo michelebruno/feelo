@@ -16,8 +16,8 @@ module.exports = {
         name: 'Feelo',
         short_name: 'Feelo',
         start_url: '/',
-        background_color: '#593FF4',
-        theme_color: '#593FF4',
+        background_color: '#6852F5',
+        theme_color: '#6852F5',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',
@@ -33,6 +33,7 @@ module.exports = {
       options: {
         defaults: {
           placeholder: 'blurred',
+          quality: 100,
         },
       },
     },
@@ -44,14 +45,6 @@ module.exports = {
         path: './src/images/',
       },
       __key: 'images',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'data',
-        path: './src/data/',
-      },
-      __key: 'data',
     },
     'gatsby-transformer-csv',
     {
@@ -82,13 +75,6 @@ module.exports = {
         spreadsheetId: '1gOuWFAHHvMHLZ7FCgS4oBpd5qFRUm70cCv0FZTaIH4s',
         typePrefix: 'Sheets',
         credentials: googleCredentials,
-      },
-    },
-
-    {
-      resolve: 'gatsby-plugin-react-leaflet',
-      options: {
-        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
   ],
