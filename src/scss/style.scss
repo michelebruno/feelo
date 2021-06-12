@@ -10,21 +10,39 @@
 $grid-gutter-width: 30px;
 $spacer: 3rem;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1240px
+);
+
 $link-decoration: none;
 
 $enable-deprecation-messages: false;
 $enable-negative-margins: true;
 
-$primary: #593FF4;
+$primary: #6852F5;
 $secondary: #9E9E9E;
 
 $body-bg: #F3F6FD;
-
 $nav-link-color: $secondary;
 
 $font-size-base: 1.1rem;
 $font-family-sans-serif: proxima-soft, sans-serif;
 $font-family-handwritten: Mansalva, handwritten, proxima-soft;
+$font-weight-bolder:700;
+
 $line-height-base: 1.35;
 $headings-font-weight: 700;
 $headings-line-height: 1;
@@ -179,11 +197,11 @@ $clipped-overlay : 40vh;
 .clip01, .clip10 {
   margin-top: -$clipped-overlay;
   padding-top: $clipped-overlay;
-  padding-bottom: $clipped-overlay * 1.5;
+  padding-bottom: $clipped-overlay * 1.1;
 }
 
 .has-clipped-next {
-  padding-bottom: $clipped-overlay * 1.5;
+  padding-bottom: $clipped-overlay * 1.1;
 }
 
 .clip01 {
@@ -192,6 +210,18 @@ $clipped-overlay : 40vh;
 
 .clip10 {
   clip-path: url(#wave-10-1x_svg__wave10);
+}
+
+#home-doppioavatar {
+  position: absolute;
+  right: 0;
+  top: -75%;
+  height: 100%;
+}
+#home-avatarRosa {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .gradient1 {

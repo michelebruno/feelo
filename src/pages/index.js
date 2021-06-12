@@ -1,11 +1,11 @@
 import { graphql, Link } from 'gatsby';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Modal, ModalBody } from 'reactstrap';
 import { PlayIcon } from '@fluentui/react-icons-mdl2';
 import classNames from 'classnames';
-import { ReactComponent as Filo } from '../images/filo.svg';
+import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
+import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
 import { ReactComponent as Quote } from '../images/quote.svg';
 import Layout from '../components/Layout';
 import Download, { GooglePlayButton, PlayStoreButton } from '../components/Download';
@@ -36,7 +36,7 @@ function Testimonianza({
 }
 
 export function ClippedSection({
-  className, children, reverse, dontClip,
+  className, children, reverse, dontClip, justifyCenter,
 }) {
   return (
     <section className={classNames('container-fluid g-2 hero', {
@@ -46,9 +46,11 @@ export function ClippedSection({
     >
       <div className="row ">
         <div className="col-12">
-          <div className="container">
+          <div className="container position-relative">
             <div className={classNames('row ', {
               'flex-lg-row-reverse': reverse,
+              'justify-content-center': justifyCenter,
+
             })}
             >
               {children}
@@ -62,12 +64,10 @@ export function ClippedSection({
 
 export default function Home({
   data: {
-    sofia,
-    maria,
-    giulia,
-    download,
-    proposta,
-    landing,
+    sedutoVerde,
+    sedutoRosa,
+    avatarRosa,
+    doppioAvatar,
     mockups: { nodes: mockups },
   },
 }) {
@@ -81,44 +81,83 @@ export default function Home({
     <Layout fixedHeader hideFooter>
       <div className="row gradient3 gx-0">
         <div className="col-12">
-          <ClippedSection dontClip>
-            <div className="col-12 text-center">
-              <h1 className="text-primary">Ciao, io sono Feelo</h1>
+          <ClippedSection dontClip justifyCenter>
+            <div className="col-12 col-lg-6  text-center pt-5 pb-5">
+              <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
               <p className="lead">
-                L’app pensata per affrontare i disturbi alimentari insieme a chi ti
+                L’app pensata per affrontare i
+                {' '}
+                <strong className="fw-bold">Disturbi Alimentari</strong>
+                <wbr />
+                <br />
+                {' '}
+                insieme a chi ti
                 vuole bene.
               </p>
               <p>
-                <button className="btn btn-lg btn-primary">Scarica Feelo</button>
+                <button className="btn btn-primary">Scarica Feelo</button>
               </p>
+            </div>
+            <div className="col-10 d-flex" id="hero-image-wrapper">
+              <FiloHero />
+              <div id="home-seduto-rosa">
+                <GatsbyImage alt="Seduto verde" image={getImage(sedutoRosa)} />
+              </div>
+              <div id="home-seduto-verde">
+                <GatsbyImage alt="Seduto verde" image={getImage(sedutoVerde)} />
+              </div>
+              <FiloHeroOver />
+
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10">
             <div className="col-12 col-lg-6">
-              <h2>Ecco cosa propongo</h2>
-              <p className="lead">
+              <h2 className="mb-3">Ecco cosa propongo</h2>
+              <p className="lead mb-3">
                 Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
-                imparare a sostenersi a vicenda durante il trattamento di un disturbo
-                dell’alimentazione.
+                {' '}
+                <strong>imparare a sostenersi a vicenda</strong>
+                {' '}
+                durante il trattamento di un Disturbo
+                dell’Alimentazione.
               </p>
             </div>
           </ClippedSection>
           <ClippedSection reverse className=" gradient1 clip01">
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-5 offset-lg-2">
               <h2>Per chi soffre di disturbi alimentari...</h2>
               <p className="lead">
-                Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo ti
-                guiderò nella scoperta di te stesso per affrontare le tue paure.
+                Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
+                {' '}
+                <strong>
+                  ti
+                  guiderò nella scoperta di te stesso per affrontare le tue paure
+                </strong>
+                .
               </p>
+              <Link className="btn btn-outline-primary" to="/scopri">
+                Cos’è un disturbo alimentare?
+              </Link>
+            </div>
+            <div className="col-12 col-lg-5" id="home-avatarRosa">
+              <GatsbyImage alt="Avatar rosa" image={getImage(avatarRosa)} />
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10">
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-4 offset-lg-1">
               <h2>...e per coloro che gli vogliono bene</h2>
               <p className="lead">
                 Il mio supporto si fonda sulla terapia cognitivo comportamentale che promuove le
                 relazioni e il dialogo.
               </p>
+            </div>
+            <div className="col-12 col-lg-7" id="home-doppioavatar">
+              <GatsbyImage
+                alt="Due avatar che si incontrano"
+                objectPosition="right top"
+                objectFit="scale-down"
+                image={getImage(doppioAvatar)}
+              />
             </div>
           </ClippedSection>
           <Download doesntCover={false} />
@@ -141,21 +180,28 @@ export const query = graphql`{
       }
     }
   }
-  sofia: file(relativePath: {eq: "home-testimonianze-sofia.png"}) {
+  doppioAvatar: file(relativePath: {eq: "doppioavatar.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  maria: file(relativePath: {eq: "home-testimonianze-maria.png"}) {
+  sedutoRosa: file(relativePath: {eq: "omino_seduto_rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  giulia: file(relativePath: {eq: "home-testimonianze-giulia.png"}) {
+  sedutoVerde: file(relativePath: {eq: "omino_seduto_verde.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  avatarRosa: file(relativePath: {eq: "avatar-rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH

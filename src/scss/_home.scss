@@ -19,7 +19,7 @@
   position: absolute;
 }
 
-#filo_svg__animami,#filo_svg__Livello_1 {
+#filo_svg__animami, #filo_svg__Livello_1 {
   stroke-dasharray: 10163;
   stroke-dashoffset: 8163;
   transition: all 3s;
@@ -106,12 +106,18 @@ header.page-header {
   }
 }
 
+#home-title {
+  font-size: 70px;
+}
+
 .hero {
   position: relative;
+
   h2 {
     color: $primary;
   }
 }
+
 .hero-section {
   z-index: 100;
   position: relative;
@@ -177,4 +183,37 @@ header.page-header {
     }
   }
 
+}
+
+#hero-image-wrapper {
+  position: absolute;
+  bottom: -27%;
+  z-index: 9;
+}
+
+#home-seduto-rosa {
+  width: 32.3%;
+}
+#home-seduto-verde {
+  width: 23%;
+  align-self: end;
+  margin-left: auto;
+  position: relative;
+}
+
+#filo-hero_svg__filo {
+  top: 20%;
+  position: absolute;
+}
+#filo-hero-over_svg__filo {
+  top: 20%;
+  position: absolute;
+}
+#filo-hero_svg__trim2, filo-hero_svg__trim1 {
+  position: absolute;
+  z-index: 90;
+}
+
+#filo-hero_svg__completo {
+  z-index: 7;
 }
