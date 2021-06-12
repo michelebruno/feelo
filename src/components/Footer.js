@@ -1,9 +1,4 @@
 import { Link } from 'gatsby';
-import { ReactComponent as AtIcon } from '../images/at-sign.svg';
-import { ReactComponent as FacebookIcon } from '../images/facebook.svg';
-import { ReactComponent as TwitterIcon } from '../images/twitter.svg';
-import { ReactComponent as IgIcon } from '../images/instagram.svg';
-import { GooglePlayButton, PlayStoreButton } from './Download';
 
 export default function Footer() {
   return (

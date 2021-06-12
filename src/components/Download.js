@@ -2,20 +2,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import classNames from 'classnames';
 
-function GooglePlayButton({ className }) {
-  return (
-    <div className={'d-inline-block ' && className} style={{ width: '10em' }} />
-  );
-}
-
-function PlayStoreButton({ className }) {
-  return (
-    <div className={'d-inline-block ' && className} style={{ width: '10em' }} />
-  );
-}
-
-export { PlayStoreButton, GooglePlayButton };
-
 export default function Download({ className, doesntCover }) {
   const { mockup } = useStaticQuery(graphql`query Download {
     mockup: file(relativePath: {eq: "home-screenshot-1.png"}) {

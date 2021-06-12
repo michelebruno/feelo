@@ -7,7 +7,7 @@ function Group({ faqs, title }) {
   return (faqs
     ? (
       <section>
-        <h2>{title}</h2>
+        <h2 className="text-center">{title}</h2>
         <ul className="list-unstyled">
           {faqs.map(({ question, answer }) => (
             <Accordion

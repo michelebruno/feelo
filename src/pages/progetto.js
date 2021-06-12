@@ -1,6 +1,20 @@
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 
-export default function () {
+function TeamMember({ nome, ruolo, image }) {
+  return (
+    <div className="text-center">
+      <div className="rounded-50">
+        <GatsbyImage alt={`Ritratto di ${nome}`} image={getImage(image)} />
+      </div>
+      <strong className="d-block">{nome}</strong>
+      <span className="d-block">{ruolo}</span>
+
+    </div>
+  );
+}
+
+export default function Progetto() {
   return (
     <Layout>
       <header className="container">
@@ -16,6 +30,14 @@ export default function () {
           </div>
         </div>
       </header>
+      <div className="container pt-5">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-8 text-center ">
+            <h2 className="">Il team</h2>
+
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

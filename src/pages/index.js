@@ -8,7 +8,7 @@ import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
 import { ReactComponent as Quote } from '../images/quote.svg';
 import Layout from '../components/Layout';
-import Download, { GooglePlayButton, PlayStoreButton } from '../components/Download';
+import Download from '../components/Download';
 
 function Testimonianza({
   nome, image, children, className, ...props
