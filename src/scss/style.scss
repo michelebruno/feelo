@@ -187,7 +187,6 @@ nav.navbar-collapse.show {
 @import "faq";
 @import "scopri";
 footer {
-  text-transform: uppercase;
   color: $light !important;
 }
 
@@ -210,18 +209,6 @@ $clipped-overlay : 40vh;
 
 .clip10 {
   clip-path: url(#wave-10-1x_svg__wave10);
-}
-
-#home-doppioavatar {
-  position: absolute;
-  right: 0;
-  top: -75%;
-  height: 100%;
-}
-#home-avatarRosa {
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .gradient1 {

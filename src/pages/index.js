@@ -47,7 +47,7 @@ export function ClippedSection({
       <div className="row ">
         <div className="col-12">
           <div className="container position-relative">
-            <div className={classNames('row ', {
+            <div className={classNames('row gx-0', {
               'flex-lg-row-reverse': reverse,
               'justify-content-center': justifyCenter,
 
@@ -78,7 +78,7 @@ export default function Home({
   }
 
   return (
-    <Layout fixedHeader hideFooter>
+    <Layout fixedHeader>
       <div className="row gradient3 gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
@@ -111,7 +111,7 @@ export default function Home({
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10">
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-4 pb-5 offset-lg-1">
               <h2 className="mb-3">Ecco cosa propongo</h2>
               <p className="lead mb-3">
                 Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
@@ -124,7 +124,8 @@ export default function Home({
             </div>
           </ClippedSection>
           <ClippedSection reverse className=" gradient1 clip01">
-            <div className="col-12 col-lg-5 offset-lg-2">
+            <div className="col-12 col-lg-1" />
+            <div className="col-12 col-lg-4 offset-lg-1">
               <h2>Per chi soffre di disturbi alimentari...</h2>
               <p className="lead">
                 Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
@@ -144,10 +145,14 @@ export default function Home({
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10">
-            <div className="col-12 col-lg-4 offset-lg-1">
+            <div className="col-12 col-lg-4 offset-lg-1 pb-4">
               <h2>...e per coloro che gli vogliono bene</h2>
               <p className="lead">
-                Il mio supporto si fonda sulla terapia cognitivo comportamentale che promuove le
+                Il mio supporto si fonda sulla
+                {' '}
+                <strong>terapia cognitivo comportamentale</strong>
+                {' '}
+                che promuove le
                 relazioni e il dialogo.
               </p>
             </div>
