@@ -1,66 +1,12 @@
 import { graphql, Link } from 'gatsby';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Modal, ModalBody } from 'reactstrap';
-import { PlayIcon } from '@fluentui/react-icons-mdl2';
 import classNames from 'classnames';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
-import { ReactComponent as Quote } from '../images/quote.svg';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
-
-function Testimonianza({
-  nome, image, children, className, ...props
-}) {
-  return (
-    <div
-      className={classNames(
-        'row align-items-center gx-1 py-1',
-        className,
-      )}
-      {...props}
-    >
-      <div className="col-3">
-        <Quote style={{ position: 'absolute', zIndex: 8, left: -10 }} />
-        <div className="thumbnail" style={{ borderRadius: '50%', overflow: 'hidden' }}>
-          <GatsbyImage alt={`Foto di ${nome}`} image={getImage(image)} />
-        </div>
-      </div>
-      <div className="col">
-        <p className="small mb-0">{nome}</p>
-        <p className="lead fw-bold">{children}</p>
-      </div>
-    </div>
-  );
-}
-
-export function ClippedSection({
-  className, children, reverse, dontClip, justifyCenter,
-}) {
-  return (
-    <section className={classNames('container-fluid g-2 hero', {
-      clip01: !dontClip,
-      'has-clipped-next': dontClip,
-    }, className)}
-    >
-      <div className="row ">
-        <div className="col-12">
-          <div className="container position-relative">
-            <div className={classNames('row gx-0', {
-              'flex-lg-row-reverse': reverse,
-              'justify-content-center': justifyCenter,
-
-            })}
-            >
-              {children}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+import ClippedSection from '../components/ClippedSection';
 
 export default function Home({
   data: {

@@ -2,12 +2,15 @@ import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import classNames from 'classnames';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
 
 function Features({ features, sfondo }) {
   const [activeSlide, setActiveSlide] = useState(0);
+
+  const swiper = useRef();
+
   return (
     <div className="feature-wrapper row">
       <div className="col-3 d-flex flex-column justify-content-center">
@@ -15,6 +18,7 @@ function Features({ features, sfondo }) {
           {
             features.map(({ label, icon }, index) => (
               <li
+                onClick={() => swiper.current.slideTo(index + 1)}
                 className={classNames('d-flex justify-content-between', {
                   'text-white': activeSlide === index,
                 })}
@@ -27,8 +31,21 @@ function Features({ features, sfondo }) {
           }
         </ul>
       </div>
-      <div className="col-7 offset-lg-1 align-self-stretch">
-        <Swiper loop autoplay onSlideChange={({ activeIndex }) => setActiveSlide(activeIndex < 5 ? activeIndex - 1 : activeIndex - 6) || console.log(activeIndex)}>
+      <div className="col-7 offset-lg-1 align-self-stretch position-relative">
+
+        <div className="features-backgroud" slot="container-start">
+          <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
+        </div>
+        <Swiper
+          loop
+          autoplay
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          onSwiper={(s) => swiper.current = s}
+          onSlideChange={({ activeIndex }) => setActiveSlide(
+            activeIndex < 6 ? activeIndex - 1 : activeIndex - 6,
+          )}
+        >
           {features.map(({ image, label }) => (
             <SwiperSlide key={label}>
               <GatsbyImage
@@ -96,7 +113,7 @@ export default function Feelo({
             </p>
           </div>
           <div className="col-12 col-lg-6">
-            <Features features={featureGiulia} />
+            <Features features={featureGiulia} sfondo={sfondoRosa} />
           </div>
         </div>
         <div className="row">
@@ -150,5 +167,5 @@ export const query = graphql`{
       }
     }
   }
-  
+
 }`;

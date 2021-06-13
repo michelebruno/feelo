@@ -1,5 +1,6 @@
 @import "~swiper/swiper";
 @import "~swiper/components/pagination/pagination";
+@import "~swiper/components/effect-fade/effect-fade";
 
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
@@ -229,4 +230,12 @@ $clipped-overlay : 40vh;
 
 .gradient3 {
   background: linear-gradient(180deg, #E0EAFF 0%, #6852F5 131.97%);
+}
+
+.features-backgroud {
+  position: absolute;
+  opacity: .6;
+  top: 10%;
+  left: 0;
+  width: 120%;
 }

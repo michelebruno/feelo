@@ -2,14 +2,14 @@ import '@fontsource/mansalva';
 import '../scss/style.scss';
 import { Helmet } from 'react-helmet';
 import SwiperCore, {
-  Navigation, Pagination, Scrollbar, Mousewheel, Autoplay, Parallax,
+  Navigation, Pagination, Scrollbar, Mousewheel, Autoplay, Parallax, EffectFade,
 } from 'swiper/core';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { ReactComponent as DownloadClip } from '../images/wave-10-1x.svg';
 import { ReactComponent as Wave01 } from '../images/wave-01-1x.svg';
 
-SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel, Autoplay, Parallax]);
+SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel, Autoplay, EffectFade, Parallax]);
 
 console.log('Hey, what are you looking for?');
 export default function Layout({

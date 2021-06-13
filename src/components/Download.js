@@ -24,7 +24,7 @@ export default function Download({ className, doesntCover }) {
         <div className="container">
           <div className="row">
 
-            <div className="col-6 col-lg-4 offset-lg-1 pb-5">
+            <div className="col-12 col-lg-4 offset-lg-1 pb-5">
               <h2>Scarica l’App</h2>
               <p className="lead">
                 Inizia il tuo percorso con Feelo che ti aiuterà ad affrontare il
@@ -35,7 +35,7 @@ export default function Download({ className, doesntCover }) {
                 <a href="#" className="btn btn-outline-primary">iOS</a>
               </p>
             </div>
-            <div className="col-12 col-lg-4 offset-2 mt-n3 text-center position-relative">
+            <div className="col-12 col-lg-4 offset-lg-2 mt-n3 text-center position-relative">
               <GatsbyImage
                 alt="Mockup della schermata iniziale"
                 image={getImage(mockup)}
