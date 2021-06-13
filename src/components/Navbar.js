@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { useState } from 'react';
 import { navigate } from 'gatsby-link';
 import { CancelIcon, GlobalNavButtonIcon } from '@fluentui/react-icons-mdl2';
+import classNames from 'classnames';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar({ title, fixed }) {
@@ -17,7 +18,7 @@ export default function Navbar({ title, fixed }) {
   }
 
   return (
-    <div className={`container ${fixed && 'fixed-header'}`}>
+    <div className={classNames('container', { 'fixed-header': fixed })}>
       <div
         className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-md"
       >
@@ -61,22 +62,22 @@ export default function Navbar({ title, fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/scopri">
+              <Link activeClassName="active" className="nav-link" to="/scopri/">
                 Scopri
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/testimonianze">
+              <Link activeClassName="active" className="nav-link" to="/testimonianze/">
                 Testimonianze
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/progetto">
+              <Link activeClassName="active" className="nav-link" to="/progetto/">
                 Progetto
               </Link>
             </li>
             <li className="nav-item">
-              <Link activeClassName="active" className="nav-link" to="/faq">
+              <Link activeClassName="active" className="nav-link" to="/faq/">
                 FAQ
               </Link>
             </li>

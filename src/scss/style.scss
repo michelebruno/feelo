@@ -56,11 +56,15 @@ $modal-xl: 75%;
 $border-radius: 1.5rem;
 $border-radius-lg: 2.5rem;
 
+$btn-font-weight: $font-weight-bolder;
 $btn-padding-x: 1.5rem;
 $btn-padding-y: .5rem;
 
 $btn-padding-y-lg: 1.16rem;
 $btn-padding-x-lg: 1.8rem;
+
+
+$navbar-light-active-color: $primary;
 
 // scss-docs-start import-stack
 // Configuration
@@ -111,6 +115,10 @@ $btn-padding-x-lg: 1.8rem;
 
 body {
   background: linear-gradient(180deg, #E0EAFF 2.12%, #CAC2FF 55.5%);
+}
+
+.btn-outline-primary {
+  background-color: $white;
 }
 
 .handwritten {
