@@ -16,9 +16,7 @@
     "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public && gatsby clean"
   },
   "dependencies": {
-    "@fluentui/font-icons-mdl2": "^8.1.1",
-    "@fluentui/react": "^8.16.0",
-    "@fluentui/react-icons-mdl2": "^1.1.1",
+    "@fluentui/react-icons": "^1.1.130",
     "@fontsource/mansalva": "^4.4.2",
     "@svgr/webpack": "^5.5.0",
     "bootstrap": "^5.0.1",

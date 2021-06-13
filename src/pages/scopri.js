@@ -3,6 +3,12 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import classNames from 'classnames';
 import { useRef, useState } from 'react';
+import {
+  Chat24Filled, Chat24Regular,
+  Home24Filled,
+  TaskListLtr24Filled,
+  TaskListLtr24Regular,
+} from '@fluentui/react-icons';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
 
@@ -19,12 +25,12 @@ function Features({ features, sfondo }) {
             features.map(({ label, icon }, index) => (
               <li
                 onClick={() => swiper.current.slideTo(index + 1)}
-                className={classNames('d-flex justify-content-between', {
+                className={classNames('d-flex small py-1 justify-content-end', {
                   'text-white': activeSlide === index,
                 })}
                 key={label}
               >
-                <span>{label}</span>
+                <span className="px-1">{label}</span>
                 <span>{icon}</span>
               </li>
             ))
@@ -74,11 +80,15 @@ export default function Feelo({
   ];
 
   const featureGiulia = [
-    { image: giulia.nodes[4], label: 'Home', icon: 'Home' },
-    { image: giulia.nodes[0], label: 'Attività', icon: 'Home' },
+    { image: giulia.nodes[4], label: 'Home', icon: <Home24Filled /> },
+    { image: giulia.nodes[0], label: 'Attività', icon: <TaskListLtr24Regular /> },
     { image: giulia.nodes[2], label: 'Diario', icon: 'Home' },
-    { image: giulia.nodes[1], label: 'Chat', icon: 'Home' },
-    { image: giulia.nodes[3], label: 'Feelo', icon: 'Home' },
+    { image: giulia.nodes[1], label: 'Chat', icon: <Chat24Regular /> },
+    {
+      image: giulia.nodes[3],
+      label: 'Feelo',
+      icon: <Home24Filled />,
+    },
   ];
   return (
     <Layout>

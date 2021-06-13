@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDownIcon, ChevronUpIcon } from '@fluentui/react-icons-mdl2';
+import { ChevronUp24Filled } from '@fluentui/react-icons';
 
 export default function Accordion({ question, children }) {
   const [open, setOpen] = useState(false);
@@ -10,7 +10,7 @@ export default function Accordion({ question, children }) {
           {question}
         </div>
         <div className="col-auto accordion-icon">
-          <ChevronUpIcon />
+          <ChevronUp24Filled />
         </div>
       </div>
       <div className={`accordion-body ${

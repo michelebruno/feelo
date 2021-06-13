@@ -2,8 +2,8 @@ import { Link } from 'gatsby';
 
 import { useState } from 'react';
 import { navigate } from 'gatsby-link';
-import { CancelIcon, GlobalNavButtonIcon } from '@fluentui/react-icons-mdl2';
 import classNames from 'classnames';
+import { CalendarCancel20Filled, LineHorizontal320Filled } from '@fluentui/react-icons';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar({ title, fixed }) {
@@ -34,7 +34,7 @@ export default function Navbar({ title, fixed }) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <GlobalNavButtonIcon />
+            <LineHorizontal320Filled />
           </button>
         </div>
         <nav className={`col-auto collapse navbar-collapse justify-content-end ${navbarStatus
@@ -52,7 +52,7 @@ export default function Navbar({ title, fixed }) {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <CancelIcon />
+              <CalendarCancel20Filled />
             </button>
           </div>
           <ul className="nav">
