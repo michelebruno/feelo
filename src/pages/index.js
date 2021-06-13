@@ -12,8 +12,11 @@ export default function Home({
   data: {
     sedutoVerde,
     sedutoRosa,
+    sfondoVerde,
+    sfondoRosa,
     avatarRosa,
-    doppioAvatar,
+    doppioAvatar, propongoAttivita,
+    propongoFeelo,
     mockups: { nodes: mockups },
   },
 }) {
@@ -24,7 +27,7 @@ export default function Home({
   }
 
   return (
-    <Layout fixedHeader>
+    <Layout>
       <div className="row gradient3 gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
@@ -41,7 +44,14 @@ export default function Home({
                 vuole bene.
               </p>
               <p>
-                <button className="btn btn-primary">Scarica Feelo</button>
+                <button
+                  onClick={() => document.getElementById('download').scrollIntoView()}
+                  className="btn btn-primary position-relative"
+                  style={{ zIndex: 999 }}
+                >
+                  Scarica
+                  Feelo
+                </button>
               </p>
             </div>
             <div className="col-10 d-flex" id="hero-image-wrapper">
@@ -67,6 +77,20 @@ export default function Home({
                 durante il trattamento di un Disturbo
                 dell’Alimentazione.
               </p>
+            </div>
+            <div className="col-12 col-lg position-relative" id="home-propongo-wrapper">
+              <div id="home-propongo-verde">
+                <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
+              </div>
+              <div id="home-propongo-rosa">
+                <GatsbyImage alt="Sfondo" image={getImage(sfondoRosa)} />
+              </div>
+              <div id="home-propongo-feelo">
+                <GatsbyImage alt="Sfondo" image={getImage(propongoFeelo)} />
+              </div>
+              <div id="home-propongo-attivita">
+                <GatsbyImage alt="Sfondo" image={getImage(propongoAttivita)} />
+              </div>
             </div>
           </ClippedSection>
           <ClippedSection reverse className=" gradient1 clip01">
@@ -174,6 +198,35 @@ export const query = graphql`{
     }
   }
   download: file(relativePath: {eq: "home-download.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+
+  sfondoRosa: file(relativePath: {eq: "sfondo-rosa.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  sfondoVerde: file(relativePath: {eq: "sfondo-verde.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  propongoAttivita: file(relativePath: {eq: "giulia-attivita.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  propongoFeelo: file(relativePath: {eq: "giulia-feelo.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH

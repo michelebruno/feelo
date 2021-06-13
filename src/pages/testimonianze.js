@@ -5,11 +5,11 @@ import Download from '../components/Download';
 
 function Testimonianza({ nome, children }) {
   return (
-    <div className="row g-3 bg-white rounded-2 shadow">
+    <div className="row px-3 py-3 bg-white rounded-3 shadow h-100">
       <div className="col-12">
         <div className="row">
-          <div className="col-3">Aer</div>
-          <div className="col">{nome}</div>
+          <div className="col-auto">Aer</div>
+          <div className="col h2">{nome}</div>
         </div>
       </div>
       <div className="col">
@@ -95,9 +95,9 @@ export default function Testimonianze({ data: { forchetta } }) {
         </div>
       </div>
       <div className="container-fluid">
-        <div className="row flex-nowrap gx-4 py-4  ps-1 overflow-scroll">
+        <div className="row flex-nowrap gx-4 py-4 px-3 ps-1 overflow-scroll">
           {testimonianze.map(({ nome, body }) => (
-            <div key={nome} className="col-4 h-100">
+            <div key={nome} className="col-6 h-100">
               <Testimonianza nome={nome}>{body}</Testimonianza>
             </div>
           ))}

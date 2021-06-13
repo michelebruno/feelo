@@ -45,8 +45,6 @@
   }
 }
 
-
-
 .home-mockup {
   transition: all 2s ease-out;
 
@@ -187,12 +185,51 @@
   z-index: 9;
 }
 
+#home-propongo-wrapper {
+  position: relative;
+  top: -10%;
+}
+
+#home-propongo-rosa {
+  position: absolute;
+  width: 68%;
+  opacity: .5;
+  right: 0;
+  bottom: 0;
+
+}
+
+#home-propongo-verde {
+  position: absolute;
+  opacity: .5;
+
+  top: -45%;
+  width: 68%;
+}
+
+#home-propongo-feelo {
+  position: absolute;
+  transform: scale(.9);
+  left: 10%;
+  bottom: 0%;
+  width: 60%;
+}
+
+#home-propongo-attivita {
+  position: absolute;
+  transform: scale(.9);
+  top: -45%;
+  right: 10%;
+  width: 60%;
+}
+
 #home-doppioavatar {
   position: absolute;
   right: -5%;
   top: -90%;
   height: 100%;
 }
+
 #home-avatarRosa {
   position: absolute;
   left: 0;
@@ -202,6 +239,7 @@
 #home-seduto-rosa {
   width: 32.3%;
 }
+
 #home-seduto-verde {
   width: 23%;
   align-self: end;
@@ -213,10 +251,12 @@
   top: 20%;
   position: absolute;
 }
+
 #filo-hero-over_svg__filo {
   top: 20%;
   position: absolute;
 }
+
 #filo-hero_svg__trim2, filo-hero_svg__trim1 {
   position: absolute;
   z-index: 90;
