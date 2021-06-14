@@ -1,4 +1,6 @@
 import { Link } from 'gatsby';
+import { ReactComponent as InstagramIcon } from
+  '../images/instagram.svg';
 
 export default function Footer() {
   return (
@@ -38,7 +40,7 @@ export default function Footer() {
                 <div className="w-100 border-bottom border-white" />
               </div>
 
-              <div className="col-12 py-1" style={{ fontSize: '0.8em', lineHeight: 1 }}>
+              <div className="col-11 py-1" style={{ fontSize: '0.8em', lineHeight: 1 }}>
                 <p className="">
                   Feelo Europe S.A. | Via Giuseppe Candiani, 72 20138 Milano |
                   VAT LU30726739 | società del gruppo Feelo S.p.A
@@ -46,6 +48,11 @@ export default function Footer() {
                 <p className="">
                   Ⓒ 2021 Feelo. All Rights Reserved.
                 </p>
+              </div>
+              <div className="col-1 ">
+                <span className="p-1 m-1 bg-white rounded-3 w-auto shadow d-inline-block">
+                  <InstagramIcon />
+                </span>
               </div>
             </div>
           </div>

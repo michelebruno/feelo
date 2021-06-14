@@ -23,11 +23,12 @@ function Features({ features, sfondo, reverse }) {
 
   return (
     <div className={classNames('feature-wrapper row', { 'flex-row-reverse': !reverse })}>
-      <div className="col-7 offset-lg-1 align-self-stretch position-relative">
+      <div className="col-9 align-self-stretch position-relative">
         <div className="features-backgroud" slot="container-start">
           <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
         </div>
         <Swiper
+          className="mx-auto"
           loop
           autoplay
           effect="fade"
@@ -129,10 +130,15 @@ export default function Feelo({
     <Layout>
 
       <div className="container">
-        <header className="row page-header align-items-center">
-          <div className="col-12 col-lg-6">
+        <header className="row page-header">
+          <div className="col-12 col-lg-6 heading-column">
             <h1>
-              Al centro la persona, non il disturbo
+              Al centro la persona,
+              {' '}
+              <wbr />
+              <br />
+              {' '}
+              non il disturbo
             </h1>
             <p className="lead ">
               Con contenuti dedicati, supporto le persone che soffrono di Disturbi Alimentari e i
@@ -143,7 +149,7 @@ export default function Feelo({
               .
             </p>
           </div>
-          <div className="col-6 px-5 position-relative">
+          <div className="col-6 ps-5 position-relative mt-n4" style={{ zIndex: -1 }}>
             <FiloPeople className="filo-people" />
             <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
             {' '}
@@ -155,7 +161,7 @@ export default function Feelo({
           <div className="col-12 col-lg-1" />
           <div className="col-12 col-lg-4 offset-lg-1">
             <h2>A chi si trova al centro della tempesta...</h2>
-            <p>
+            <p className="lead">
               Riscopri le tue potenzialità attraverso riflessioni e attività introspettive e
               coltiva le tue relazioni grazie alle
               {' '}
@@ -170,13 +176,13 @@ export default function Feelo({
         <div className="row align-items-center">
           <div className="col-12 col-lg-4 offset-lg-1 align-items-center">
             <h2>...ai feeler che arrivano in soccorso</h2>
-            <p>
+            <p className="lead">
               Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare, tenendo
               traccia degli avanzamenti del tuo caro, che potrai supportare grazie al dialogo
               costruttivo in cui ti guiderà.
             </p>
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6 offset-lg-1">
             <Features features={featureFeeler} sfondo={sfondoVerde} reverse />
           </div>
         </div>

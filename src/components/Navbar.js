@@ -82,7 +82,7 @@ export default function Navbar({ title, fixed }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="#download" className="btn btn-primary">
+              <Link to="#download" className="btn btn-outline-primary">
                 Download
               </Link>
             </li>

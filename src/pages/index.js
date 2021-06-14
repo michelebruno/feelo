@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import classNames from 'classnames';
-import { ArrowRight16Filled, ArrowRight20Filled } from '@fluentui/react-icons';
+import { ArrowRight16Filled } from '@fluentui/react-icons';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
 import { ReactComponent as FiloGiulia } from '../images/filo-giulia-home.svg';
@@ -34,8 +34,8 @@ export default function Home({
     <Layout>
       <div className="row gradient3 gx-0">
         <div className="col-12">
-          <ClippedSection dontClip justifyCenter>
-            <div className="col-12 col-lg-6  text-center pt-5 pb-5">
+          <ClippedSection dontClip justifyCenter className="gradient-3">
+            <div className="col-12 col-lg-7  text-center pt-3 pb-5">
               <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
               <p className="lead">
                 L’app pensata per affrontare i
@@ -146,6 +146,22 @@ export default function Home({
                   image={getImage(doppioAvatar)}
                 />
               </div>
+            </div>
+          </ClippedSection>
+          <ClippedSection className="gradient1 pt-5">
+            <div className="col-12 py-5">
+              <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                <iframe
+                  src="https://player.vimeo.com/video/520254400?title=0&byline=0"
+                  style={{
+                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+                  }}
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <script src="https://player.vimeo.com/api/player.js" />
             </div>
           </ClippedSection>
           <Download doesntCover={false} />

@@ -46,6 +46,7 @@ $gray-800: #343a40 !default;
 $gray-900: #101010;
 $black: #000 !default;
 
+
 $primary: #6852F5;
 $secondary: #9E9E9E;
 
@@ -59,8 +60,11 @@ $font-weight-bolder: 700;
 
 $line-height-base: 1.35;
 $headings-font-weight: 700;
-$headings-line-height: 1;
+$headings-line-height: 1.3;
 $headings-color: $primary;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$h1-font-size: $font-size-base * 2.8;
 
 $modal-sm: 75%;
 $modal-md: 75%;
@@ -87,7 +91,6 @@ $nav-tabs-link-active-color: $primary;
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
-
 // Layout & components
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
@@ -161,6 +164,12 @@ body {
   }
 }
 
+.btn-outline-primary {
+  &:not(:hover) {
+    background-color: $white;
+  }
+}
+
 
 /**
  * NAVBAR
@@ -213,8 +222,11 @@ footer {
   color: $light !important;
 }
 
+.heading-column {
+ @extend .pt-lg-4;
+}
 
-$clipped-overlay: 40vh;
+$clipped-overlay: 50vh;
 
 .clip01, .clip10 {
   margin-top: -$clipped-overlay;

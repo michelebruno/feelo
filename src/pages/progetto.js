@@ -20,7 +20,7 @@ export default function Progetto() {
     <Layout>
       <header className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-lg-6 text-center">
+          <div className="col-12 col-lg-6 text-center heading-column">
             <h1>Perché nasce Feelo?</h1>
             <p className="lead">
               L’app Feelo è stata realizzata al fine di supportare coloro che

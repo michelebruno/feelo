@@ -24,12 +24,12 @@ export default function Download({ className, doesntCover, hug }) {
   return (
     <section
       id="download"
-      className={classNames('row justify-content-between gx-0 clip10 gradient2 pt-5 pb-2 ',
+      className={classNames('row justify-content-between gx-0 clip10 gradient2  pt-5 pb-1 overflow-hidden',
         {
           'mt-3': doesntCover,
         })}
     >
-      <div className="col-12">
+      <div className="pt-4">
         <div className="container">
           <div className="row position-relative">
 

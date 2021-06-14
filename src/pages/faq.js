@@ -49,8 +49,8 @@ export default function Faq({ data: { faqs } }) {
     <Layout>
       <div className="container">
         <header className="row page-header justify-content-center mb-3">
-          <div className="col-12">
-            <h1 className="text-center handwirtten">Domande frequenti</h1>
+          <div className="col-12 heading-column">
+            <h1 className="text-center">Domande e risposte frequenti</h1>
           </div>
         </header>
         <div className="row justify-content-center pb-5 mb-5">
@@ -74,9 +74,10 @@ export default function Faq({ data: { faqs } }) {
         <div className="row justify-content-center">
 
           <div className="col-12 col-md-8">
-            <Group id="info" title="Feelo" faqs={getCatFaqs('feelo')} />
+            <Group id="info" title="Info generali" faqs={getCatFaqs('feelo')} />
+            <Group id="attivita" title="Attività" faqs={getCatFaqs('attività')} />
+            <Group id="feeler" title="Feeler" faqs={getCatFaqs('feeler')} />
             <Group id="account" title="Account" faqs={getCatFaqs('account')} />
-            <Group id="attivita" title="Attività" faqs={getCatFaqs('feeler')} />
           </div>
         </div>
       </div>

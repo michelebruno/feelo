@@ -56,8 +56,8 @@ export default function Testimonianze({ data: { forchetta } }) {
   return (
     <Layout>
       <header className="container">
-        <div className="row justify-content-between align-items-center">
-          <div className="col-12 col-lg-6">
+        <div className="row justify-content-between ">
+          <div className="col-12 col-lg-6 heading-column">
             <h1>Che cos’è un disturbo alimentare?</h1>
             <p className="lead">
               I Disturbi del Comportamento Alimentare sono patologie complesse,
@@ -72,7 +72,7 @@ export default function Testimonianze({ data: { forchetta } }) {
       </header>
       <div className="container">
         <div className="row">
-          <div className="col offset-lg-1">
+          <div className="col offset-lg-1 heading-column">
             <h2>Le testimonianze</h2>
           </div>
         </div>
