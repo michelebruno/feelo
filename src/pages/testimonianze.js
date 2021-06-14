@@ -1,25 +1,8 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
-
-function Testimonianza({ nome, children }) {
-  return (
-    <div className="row px-3 py-3 bg-white rounded-3 shadow h-100">
-      <div className="col-12">
-        <div className="row">
-          <div className="col-auto">Aer</div>
-          <div className="col h2">{nome}</div>
-        </div>
-      </div>
-      <div className="col">
-        <p className="lead">
-          {children}
-        </p>
-      </div>
-    </div>
-  );
-}
+import Testimonianza from '../components/Testimonianza';
 
 export default function Testimonianze({ data: { forchetta } }) {
   const testimonianze = [
@@ -94,8 +77,8 @@ export default function Testimonianze({ data: { forchetta } }) {
           </div>
         </div>
       </div>
-      <div className="container-fluid">
-        <div className="row flex-nowrap gx-4 py-4 px-3 ps-1 overflow-scroll">
+      <div className="container-fluid gx-4">
+        <div className="row flex-nowrap gx-4 py-4 px-3 ps-1 " style={{ overflowX: 'scroll' }}>
           {testimonianze.map(({ nome, body }) => (
             <div key={nome} className="col-6 h-100">
               <Testimonianza nome={nome}>{body}</Testimonianza>
