@@ -67,7 +67,7 @@ function Features({ features, sfondo }) {
 
 export default function Feelo({
   data: {
-    sfondoVerde, sfondoRosa, feeler: { nodes: feelerImages }, giulia,
+    sfondoVerde, sfondoRosa, persone, feeler: { nodes: feelerImages }, giulia,
   },
 }) {
   const featureFeeler = [
@@ -93,7 +93,7 @@ export default function Feelo({
     <Layout>
 
       <div className="container">
-        <header className="row page-header">
+        <header className="row page-header align-items-center">
           <div className="col-12 col-lg-6">
             <h1>
               Al centro la persona,
@@ -107,6 +107,9 @@ export default function Feelo({
               <strong>costruire un dialogo verso un percorso di guarigione</strong>
               .
             </p>
+          </div>
+          <div className="col-6">
+            <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
           </div>
         </header>
         <div className="row flex-lg-row-reverse align-items-center">
@@ -150,6 +153,13 @@ export const query = graphql`{
     }
   }
   sfondoVerde: file(relativePath: {eq: "sfondo-verde.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+      )
+    }
+  }
+  persone: file(relativePath: {eq: "persone.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH

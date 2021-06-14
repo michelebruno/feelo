@@ -4,6 +4,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import classNames from 'classnames';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
+import { ReactComponent as FiloGiulia } from '../images/filo-giulia-home.svg';
+import { ReactComponent as FiloFeeler } from '../images/filo-home-feeler.svg';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
 import ClippedSection from '../components/ClippedSection';
@@ -101,8 +103,7 @@ export default function Home({
                 Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
                 {' '}
                 <strong>
-                  ti
-                  guiderò nella scoperta di te stesso per affrontare le tue paure
+                  ti guiderò nella scoperta di te stesso per affrontare le tue paure
                 </strong>
                 .
               </p>
@@ -111,7 +112,11 @@ export default function Home({
               </Link>
             </div>
             <div className="col-12 col-lg-5" id="home-avatarRosa">
-              <GatsbyImage alt="Avatar rosa" image={getImage(avatarRosa)} />
+              <div className="position-relative w-100 h-100">
+                <FiloGiulia id="filo-giulia" />
+                <GatsbyImage alt="Avatar rosa" image={getImage(avatarRosa)} />
+
+              </div>
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10">
@@ -127,12 +132,15 @@ export default function Home({
               </p>
             </div>
             <div className="col-12 col-lg-7" id="home-doppioavatar">
-              <GatsbyImage
-                alt="Due avatar che si incontrano"
-                objectPosition="right top"
-                objectFit="scale-down"
-                image={getImage(doppioAvatar)}
-              />
+              <div className="position-relative w-100 h-100">
+                <FiloFeeler id="filo-feeler" />
+                <GatsbyImage
+                  alt="Due avatar che si incontrano"
+                  objectPosition="right top"
+                  objectFit="scale-down"
+                  image={getImage(doppioAvatar)}
+                />
+              </div>
             </div>
           </ClippedSection>
           <Download doesntCover={false} />

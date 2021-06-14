@@ -207,6 +207,23 @@
   width: 68%;
 }
 
+#filo-giulia {
+  position: absolute;
+  stroke: $white !important;
+  bottom: 20%;
+  left: -5%;
+  width: 120%;
+}
+
+#filo-feeler {
+  $width: 46%;
+  position: absolute;
+  top: 70%;
+  left: calc(50% - #{$width} / 2 );
+  width: $width;
+  z-index: 5;
+}
+
 #home-propongo-feelo {
   position: absolute;
   transform: scale(.9);
