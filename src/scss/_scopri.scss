@@ -9,8 +9,30 @@
 
 .why-card {
   @extend .col, .pt-3;
+
   img {
     border-radius: 50%;
   }
 }
 
+.feature-list-item {
+  align-items: center;
+  transform-origin: right center;
+  transition: all .5s ease;
+  &.active {
+    font-weight: $font-weight-bolder;
+    transform: scale(1.2);
+  }
+  color: $white;
+
+  line-height: 1;
+  svg  {
+    filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, .1));
+  }
+}
+
+#hug-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

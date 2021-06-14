@@ -1,5 +1,6 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
+import Download from '../components/Download';
 
 function TeamMember({ nome, ruolo, image }) {
   return (
@@ -38,6 +39,7 @@ export default function Progetto() {
           </div>
         </div>
       </div>
+      <Download />
     </Layout>
   );
 }

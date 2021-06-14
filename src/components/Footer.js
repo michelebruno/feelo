@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 
 export default function Footer() {
   return (
-    <footer className="container-fluid mt-3 py-2 bg-primary text-white">
+    <footer className="container-fluid py-2 bg-primary text-white">
       <div className="row">
         <div className="col-12">
           <div className="container">

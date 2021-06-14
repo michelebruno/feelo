@@ -25,8 +25,8 @@ function Features({ features, sfondo }) {
             features.map(({ label, icon }, index) => (
               <li
                 onClick={() => swiper.current.slideTo(index + 1)}
-                className={classNames('d-flex small py-1 justify-content-end', {
-                  'text-white': activeSlide === index,
+                className={classNames('d-flex small py-1 justify-content-end feature-list-item', {
+                  active: activeSlide === index,
                 })}
                 key={label}
               >
@@ -38,7 +38,6 @@ function Features({ features, sfondo }) {
         </ul>
       </div>
       <div className="col-7 offset-lg-1 align-self-stretch position-relative">
-
         <div className="features-backgroud" slot="container-start">
           <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
         </div>
