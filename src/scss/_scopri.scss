@@ -16,12 +16,22 @@
 }
 
 .feature-list-item {
+  cursor: pointer;
   align-items: center;
   transform-origin: right center;
+  &.flex-row-reverse {
+    transform-origin: left center;
+
+  }
   transition: all .5s ease;
+  font-size: 1.2em;
   &.active {
     font-weight: $font-weight-bolder;
     transform: scale(1.2);
+  }
+  .feature-icon {
+    transform: scale(1.5);
+
   }
   color: $white;
 
@@ -49,4 +59,10 @@
   width: 150%;
   left: -25%;
   top: 10%;
+}
+
+.filo-people {
+  position: absolute;
+  top: 35%;
+  left: 5%;
 }

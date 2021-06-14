@@ -24,7 +24,7 @@ export default function Download({ className, doesntCover, hug }) {
   return (
     <section
       id="download"
-      className={classNames('row justify-content-between gx-0 clip01 gradient2 pb-2 ',
+      className={classNames('row justify-content-between gx-0 clip10 gradient2 pt-5 pb-2 ',
         {
           'mt-3': doesntCover,
         })}

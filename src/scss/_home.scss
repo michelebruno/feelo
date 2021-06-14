@@ -214,7 +214,13 @@
   left: -5%;
   width: 120%;
 }
-
+#farfalla-giulia {
+  position: absolute;
+  top: 15%;
+  width: 25%;
+  left: 40%;
+  z-index: 2;
+}
 #filo-feeler {
   $width: 46%;
   position: absolute;

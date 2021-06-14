@@ -2,6 +2,7 @@ import { graphql, Link } from 'gatsby';
 import { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import classNames from 'classnames';
+import { ArrowRight16Filled, ArrowRight20Filled } from '@fluentui/react-icons';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
 import { ReactComponent as FiloGiulia } from '../images/filo-giulia-home.svg';
@@ -16,6 +17,7 @@ export default function Home({
     sedutoRosa,
     sfondoVerde,
     sfondoRosa,
+    farfalla,
     avatarRosa,
     doppioAvatar, propongoAttivita,
     propongoFeelo,
@@ -51,8 +53,7 @@ export default function Home({
                   className="btn btn-primary position-relative"
                   style={{ zIndex: 999 }}
                 >
-                  Scarica
-                  Feelo
+                  Scarica Feelo
                 </button>
               </p>
             </div>
@@ -109,13 +110,17 @@ export default function Home({
               </p>
               <Link className="btn btn-outline-primary" to="/scopri">
                 Cos’è un disturbo alimentare?
+                {' '}
+                <ArrowRight16Filled />
               </Link>
             </div>
             <div className="col-12 col-lg-5" id="home-avatarRosa">
               <div className="position-relative w-100 h-100">
+                <div id="farfalla-giulia">
+                  <GatsbyImage alt="Farfalla che vola" image={getImage(farfalla)} />
+                </div>
                 <FiloGiulia id="filo-giulia" />
                 <GatsbyImage alt="Avatar rosa" image={getImage(avatarRosa)} />
-
               </div>
             </div>
           </ClippedSection>
@@ -205,14 +210,13 @@ export const query = graphql`{
       )
     }
   }
-  download: file(relativePath: {eq: "home-download.png"}) {
+  farfalla: file(relativePath: {eq: "farfalla.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-
   sfondoRosa: file(relativePath: {eq: "sfondo-rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
