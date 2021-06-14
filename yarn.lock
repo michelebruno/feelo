@@ -1080,6 +1080,11 @@
   resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-1.1.130.tgz#bc99d60939c681e10c336ff3eb153a1597696283"
   integrity sha512-fsBRH0SJsO82ZEPrJWxkvc0jerG/yZF7cx+cFkGpEyFYxjvdzpCQxqbLt+c2+8Gn9frjbhJZw1ERmZ6La4b06A==
 
+"@fluentui/svg-icons@^1.1.130":
+  version "1.1.130"
+  resolved "https://registry.yarnpkg.com/@fluentui/svg-icons/-/svg-icons-1.1.130.tgz#71f025b27ac2a76dc3f24194c52d7a45642cfb41"
+  integrity sha512-zXUt/xTSFpit8YnbIpvoKprRcxF7i8hwwXpihgzjLElod+hmq2xIKLnVwfV2gBDXN/sFmlwNVcgTAZ53D3/8bQ==
+
 "@fontsource/mansalva@^4.4.2":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@fontsource/mansalva/-/mansalva-4.4.2.tgz#b31d61264841ffe75c346825bf2d3a33a3f27e01"

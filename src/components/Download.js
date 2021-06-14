@@ -31,8 +31,8 @@ export default function Download({ className, doesntCover }) {
                 disturbo alimentare con chi ti vuole bene.
               </p>
               <p>
-                <a href="#" className="btn btn-outline-primary">Android</a>
-                <a href="#" className="btn btn-outline-primary">iOS</a>
+                <a href="#" className="btn btn-outline-primary me-1">Android</a>
+                <a href="#" className="btn btn-outline-primary  me-1">iOS</a>
               </p>
             </div>
             <div className="col-12 col-lg-4 offset-lg-2 mt-n3 text-center position-relative">

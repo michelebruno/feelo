@@ -27,3 +27,16 @@
     @extend .px-2, .py-2 ;
   }
 }
+
+.faq-index-item {
+  @extend .rounded-3, .shadow, .py-2;
+  text-align: center;
+  cursor: pointer;
+  background-color: $white;
+  .icon{
+    margin: auto;
+  }
+  svg {
+    fill: $primary;
+  }
+}
