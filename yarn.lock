@@ -1092,11 +1092,6 @@
   resolved "https://registry.yarnpkg.com/@fluentui/svg-icons/-/svg-icons-1.1.130.tgz#71f025b27ac2a76dc3f24194c52d7a45642cfb41"
   integrity sha512-zXUt/xTSFpit8YnbIpvoKprRcxF7i8hwwXpihgzjLElod+hmq2xIKLnVwfV2gBDXN/sFmlwNVcgTAZ53D3/8bQ==
 
-"@fontsource/mansalva@^4.4.2":
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/mansalva/-/mansalva-4.4.2.tgz#b31d61264841ffe75c346825bf2d3a33a3f27e01"
-  integrity sha512-pT+GAqB6SB6iD6XZ5Tv4/Q9/0kshpFq7tzYyuYMMgvfzhYoBI6kR/wg+Gc8Dn5Vc5DV/zK4dr1+Bk+8kPzbfmw==
-
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

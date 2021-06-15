@@ -18,7 +18,6 @@
   "dependencies": {
     "@fluentui/react-icons": "^1.1.130",
     "@fluentui/svg-icons": "^1.1.130",
-    "@fontsource/mansalva": "^4.4.2",
     "@svgr/webpack": "^5.5.0",
     "bootstrap": "^5.0.1",
     "classnames": "^2.3.1",

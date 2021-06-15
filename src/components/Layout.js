@@ -1,4 +1,3 @@
-import '@fontsource/mansalva';
 import '../scss/style.scss';
 import { Helmet } from 'react-helmet';
 import SwiperCore, {

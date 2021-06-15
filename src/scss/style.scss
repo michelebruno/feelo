@@ -55,7 +55,6 @@ $nav-link-color: $secondary;
 
 $font-size-base: 1.1rem;
 $font-family-sans-serif: proxima-soft, sans-serif;
-$font-family-handwritten: Mansalva, handwritten, proxima-soft;
 $font-weight-bolder: 700;
 
 $line-height-base: 1.35;
@@ -133,11 +132,6 @@ $nav-tabs-link-active-color: $primary;
 
 .btn-outline-primary {
   background-color: $white;
-}
-
-.handwritten {
-  font-family: $font-family-handwritten;
-  font-weight: 500;
 }
 
 .fixed-header {
