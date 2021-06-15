@@ -35,7 +35,7 @@ export default function Home({
       <div className="row  gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
-            <div className="col-12 col-lg-7  text-center pt-3 pb-5">
+            <div className="col-12 col-lg-7 text-center pt-5 pb-5">
               <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
               <p className="lead">
                 L’app pensata per affrontare i
@@ -96,9 +96,9 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection reverse className=" gradient1 clip01">
+          <ClippedSection reverse className="gradient1 clip01" innerClassName="mb-lg-1">
             <div className="col-12 col-lg-1" />
-            <div className="col-12 col-lg-4 offset-lg-1">
+            <div className="col-12 col-lg-4 offset-lg-1 pb-lg-5">
               <h2>Per chi soffre di disturbi alimentari...</h2>
               <p className="lead">
                 Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
@@ -114,7 +114,7 @@ export default function Home({
                 <ArrowRight16Filled />
               </Link>
             </div>
-            <div className="col-12 col-lg-5" id="home-avatarRosa">
+            <div className="col-12 col-lg-5 px-lg-2" id="home-avatarRosa">
               <div className="position-relative w-100 h-100">
                 <div id="farfalla-giulia">
                   <GatsbyImage alt="Farfalla che vola" image={getImage(farfalla)} />
@@ -124,8 +124,8 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient2 clip10">
-            <div className="col-12 col-lg-4 offset-lg-1 pb-4">
+          <ClippedSection className="gradient2 clip10" innerClassName="align-items-stretch">
+            <div className="col-12 col-lg-4 offset-lg-1 pb-lg-5">
               <h2>...e per coloro che gli vogliono bene</h2>
               <p className="lead">
                 Il mio supporto si fonda sulla
@@ -247,14 +247,14 @@ export const query = graphql`{
       )
     }
   }
-  propongoAttivita: file(relativePath: {eq: "giulia-attivita.png"}) {
+  propongoAttivita: file(relativePath: {eq: "giulia-home.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH
       )
     }
   }
-  propongoFeelo: file(relativePath: {eq: "giulia-feelo.png"}) {
+  propongoFeelo: file(relativePath: {eq: "feeler-home.png"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FULL_WIDTH

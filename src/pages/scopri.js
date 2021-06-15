@@ -16,6 +16,8 @@ import { ReactComponent as FiloPeople } from '../images/people-filo-completo.svg
 import Layout from '../components/Layout';
 import Download from '../components/Download';
 import { ReactComponent as FiloDownload } from '../images/filo-download.svg';
+import { ReactComponent as FeeloChat } from '../images/feelo-chaticon.svg';
+import { ReactComponent as FeeloChatFilled } from '../images/feelo-chaticon-filled.svg';
 
 function Features({ features, sfondo, reverse }) {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -100,28 +102,29 @@ export default function Feelo({
     {
       image: giulia.nodes[3],
       label: 'Feelo',
-      icon: <Home24Filled />,
+      icon: <FeeloChat height={24} width={24} />,
+      iconActive: <FeeloChatFilled height={24} width={24} />,
     },
   ];
 
   const featureFeeler = [
     {
-      image: feeler.nodes[2], label: 'Home', icon: <Home24Regular />, iconActive: <Home24Filled />,
+      image: feeler.nodes[3], label: 'Home', icon: <Home24Regular />, iconActive: <Home24Filled />,
     },
     {
-      image: feeler.nodes[4],
+      image: feeler.nodes[0],
       label: 'Attività',
       icon: <TaskListSquareLtr24Regular />,
       iconActive: <TaskListSquareLtr24Filled />,
     },
     {
-      image: feeler.nodes[0], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
+      image: feeler.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
     },
     {
-      image: feeler.nodes[3], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
+      image: feeler.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
     },
     {
-      image: feeler.nodes[1],
+      image: feeler.nodes[4],
       label: 'Informazioni',
       icon: <DocumentCopy24Regular />,
       iconActive: <DocumentCopy24Filled />,
@@ -218,7 +221,10 @@ export const query = graphql`{
       )
     }
   }
-  feeler : allFile(filter: {relativePath: {regex: "/feeler-(.*)/i"}, sourceInstanceName: {eq: "mockups"}} ) {
+  feeler : allFile(
+    filter: {relativePath: {regex: "/feeler-(.*)/i"}, sourceInstanceName: {eq: "mockups"}}
+    sort: {fields: [relativePath], order: ASC}
+  ) {
     nodes {
       childImageSharp {
         gatsbyImageData(

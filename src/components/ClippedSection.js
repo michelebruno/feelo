@@ -1,7 +1,13 @@
 import classNames from 'classnames';
 
 export default function ClippedSection({
-  className, children, reverse, dontClip, justifyCenter, clip10,
+  className,
+  children,
+  reverse,
+  dontClip,
+  justifyCenter,
+  clip10,
+  innerClassName,
 }) {
   return (
     <section className={classNames('container-fluid g-2 hero', {
@@ -13,7 +19,7 @@ export default function ClippedSection({
       <div className="row ">
         <div className="col-12">
           <div className="container position-relative">
-            <div className={classNames('row gx-0', {
+            <div className={classNames('row gx-0', innerClassName, {
               'flex-lg-row-reverse': reverse,
               'justify-content-center': justifyCenter,
             })}

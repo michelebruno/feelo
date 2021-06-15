@@ -24,16 +24,16 @@ export default function Download({ className, doesntCover, hug }) {
   return (
     <section
       id="download"
-      className={classNames('row justify-content-between gx-0 clip10 gradient2  pt-5 pb-1 overflow-hidden',
+      className={classNames('row justify-content-between gx-0 clip10 gradient2 pt-5 pb-5 pb-1 overflow-hidden',
         {
           'mt-3': doesntCover,
         })}
     >
       <div className="pt-4">
         <div className="container">
-          <div className="row position-relative">
+          <div className="row position-relative align-items-center">
 
-            <div className="col-12 col-lg-4 offset-lg-1 pb-5">
+            <div className="col-12 col-lg-4 offset-lg-1">
               <h2 className="h1">Scarica l’App</h2>
               <p className="lead">
                 Inizia il tuo percorso con Feelo che ti aiuterà ad affrontare il
@@ -46,7 +46,7 @@ export default function Download({ className, doesntCover, hug }) {
             </div>
             {hug
               ? (
-                <div className="col-12 col-lg-5 mt-n3 text-center mb-n2" id="hug-container">
+                <div className="col-12 col-lg-5 text-center mb-n5" id="hug-container">
                   <div className="w-100 h-100 position-relative">
                     <FiloHug id="filo-hug" />
 
@@ -58,7 +58,7 @@ export default function Download({ className, doesntCover, hug }) {
                 </div>
               )
               : (
-                <div className="col-12 col-lg-4 offset-lg-2 mt-n3 text-center position-relative">
+                <div className="col-12 col-lg-4 offset-lg-2 text-center position-relative">
                   <FiloDownload id="filo-download" />
                   <GatsbyImage
                     alt="Mockup della schermata iniziale"

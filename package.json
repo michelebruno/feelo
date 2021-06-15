@@ -10,10 +10,10 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
-    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public && gatsby clean"
+    "deploy": " gatsby build --prefix-paths && gh-pages -d public "
   },
   "dependencies": {
     "@fluentui/react-icons": "^1.1.130",

@@ -11,7 +11,7 @@ export default function Testimonianze({ data: { forchetta }, location }) {
       body: <>
         Incontrerai sempre persone che cercheranno di sminuire i tuoi successi. Cerca di non essere
         tu il primo a farlo perché a volte un vincitore è semplicemente un sognatore che non ha mai
-        mollato.Ad oggi posso dire di essere orgogliosa di me stessa!
+        mollato. Ad oggi posso dire di essere orgogliosa di me stessa!
       </>,
     },
     {
@@ -19,21 +19,12 @@ export default function Testimonianze({ data: { forchetta }, location }) {
       body: <>
         Ci vuole tempo, ma il segreto che ho imparato con Feelo è che bisogna dare un significato
         diverso per noi stessi. Il cibo ho imparato ad associarlo all'unione, alla famiglia, ad un
-        té con un’amica, a qualcuno che amo... E spesso quel qualcuno, grazie a questo cambio di
+        té con un’amica, a qualcuno che amo... E quel qualcuno, grazie a questo cambio di
         visione, sono diventata io!
       </>,
     },
     {
       nome: 'Sofia',
-      body: <>
-        Ho sofferto di anoressia e bulimia, ci sono ricaduta ben due volte nella mia vita.
-        Ho capito che conto più io che questa malattia, ma alle volte crollo anche io, ma provo a
-        lottare e mi rialzo. Grazie a Feelo! Lui mi ha aiutato molto a pensarci meno, anche se ho
-        ancora paura di ricaderci definitivamente.
-      </>,
-    },
-    {
-      nome: 'Clarabella',
       body: <>
         Ho sofferto di anoressia e bulimia, ci sono ricaduta ben due volte nella mia vita.
         Ho capito che conto più io che questa malattia, ma alle volte crollo anche io, ma provo a
@@ -72,15 +63,15 @@ export default function Testimonianze({ data: { forchetta }, location }) {
       </header>
       <div className="container">
         <div className="row">
-          <div className="col offset-lg-1 heading-column">
+          <div className="col offset-lg-1 ">
             <h2>Le testimonianze</h2>
           </div>
         </div>
       </div>
       <div className="container-fluid gx-4">
-        <div className="row flex-nowrap gx-4 py-4 px-3 ps-1 " style={{ overflowX: 'scroll', scrollbarWidth: 'none' }}>
+        <div className="row flex-nowrap gx-4 py-2 px-3 ps-1 testimonianze-wrapper">
           {testimonianze.map(({ nome, body }) => (
-            <div key={nome} className="col-6 h-100">
+            <div key={nome} className="col-6 align-self-stretch">
               <Testimonianza nome={nome}>{body}</Testimonianza>
             </div>
           ))}

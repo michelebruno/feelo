@@ -24,6 +24,9 @@
 
   }
   transition: all .5s ease;
+  &:hover{
+    transform: scale(1.05);
+  }
   font-size: 1.2em;
   &.active {
     font-weight: $font-weight-bolder;
