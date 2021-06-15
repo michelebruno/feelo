@@ -20,7 +20,7 @@ export default function Progetto() {
     <Layout page="progetto">
       <header className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-lg-6 text-center heading-column">
+          <div className="col-12 col-xl-6 text-center heading-column">
             <h1>Perché nasce Feelo?</h1>
             <p className="lead">
               L’app Feelo è stata realizzata al fine di supportare coloro che
@@ -31,9 +31,9 @@ export default function Progetto() {
           </div>
         </div>
       </header>
-      <div className="container pt-5">
+      <div className="container pt-xl-5">
         <div className="row justify-content-center">
-          <div className="col-12 col-lg-8 text-center ">
+          <div className="col-12 col-xl-8 text-center ">
             <h2 className="">Il team</h2>
 
           </div>

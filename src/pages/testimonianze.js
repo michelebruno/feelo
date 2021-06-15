@@ -56,7 +56,7 @@ export default function Testimonianze({ data: { forchetta }, location }) {
               trattamento sia del problema alimentare in sé che della sua natura psichica.
             </p>
           </div>
-          <div className="col-5">
+          <div className="col-12 col-lg-5">
             <GatsbyImage alt="Illustrazione che rappresenta il disturbo alimentare" image={getImage(forchetta)} />
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function Testimonianze({ data: { forchetta }, location }) {
       <div className="container-fluid gx-4">
         <div className="row flex-nowrap gx-4 py-2 px-3 ps-1 testimonianze-wrapper">
           {testimonianze.map(({ nome, body }) => (
-            <div key={nome} className="col-6 align-self-stretch">
+            <div key={nome} className="col-8 col-lg-6 align-self-stretch">
               <Testimonianza nome={nome}>{body}</Testimonianza>
             </div>
           ))}

@@ -18,9 +18,10 @@
 
   .accordion-icon {
     transition: all 200ms;
+    color: $gray-500;
   }
 
-  &.open .accordion-icon {
+  &:not(.open) .accordion-icon {
     transform: rotate(-180deg);
   }
   .accordion-body {

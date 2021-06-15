@@ -13,19 +13,16 @@ $spacer: 3rem;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
+  md: 576px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1440px
+  xl: 1440px
 ) !default;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1240px
+  lg: 960px, 
+  xl: 1240px
 );
 
 $link-decoration: none;
@@ -46,9 +43,10 @@ $gray-800: #343a40 !default;
 $gray-900: #101010;
 $black: #000 !default;
 
-
 $primary: #6852F5;
 $secondary: #9E9E9E;
+$disabled : #CAC2FF;
+
 
 $body-bg: #F3F6FD;
 $nav-link-color: $secondary;
@@ -84,10 +82,22 @@ $nav-link-font-weight: $font-weight-bolder;
 $navbar-light-active-color: $primary;
 $nav-link-color: $gray-500;
 $nav-tabs-link-active-color: $primary;
+
+
 // scss-docs-start import-stack
 // Configuration
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "light":      $light,
+  "dark":       $dark
+)  ;
+
+
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
 // Layout & components

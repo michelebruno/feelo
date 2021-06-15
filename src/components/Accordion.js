@@ -9,7 +9,7 @@ export default function Accordion({ question, children }) {
         <div className="col">
           {question}
         </div>
-        <div className="col-auto accordion-icon">
+        <div className="col-auto accordion-icon text-light">
           <ChevronUp24Filled />
         </div>
       </div>

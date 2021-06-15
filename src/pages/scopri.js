@@ -153,7 +153,7 @@ export default function Feelo({
               .
             </p>
           </div>
-          <div className="col-6 ps-5 position-relative mt-n4">
+          <div className="col-6 ps-5 position-relative mt-lg-n4">
             <FiloPeople className="filo-people" />
             <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
             {' '}

@@ -20,7 +20,7 @@ export default function ClippedSection({
         <div className="col-12">
           <div className="container position-relative">
             <div className={classNames('row gx-0', innerClassName, {
-              'flex-lg-row-reverse': reverse,
+              'flex-xl-row-reverse': reverse,
               'justify-content-center': justifyCenter,
             })}
             >

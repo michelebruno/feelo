@@ -32,7 +32,7 @@ export default function Home({
 
   return (
     <Layout page="home">
-      <div className="row  gx-0">
+      <div className="row gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
             <div className="col-12 col-lg-7 text-center pt-5 pb-5">
@@ -57,7 +57,7 @@ export default function Home({
                 </button>
               </p>
             </div>
-            <div className="col-10 d-flex" id="hero-image-wrapper">
+            <div className="col-lg-10 d-flex" id="hero-image-wrapper">
               <FiloHero />
               <div id="home-seduto-rosa">
                 <GatsbyImage alt="Seduto verde" image={getImage(sedutoRosa)} />
@@ -148,8 +148,8 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient1 pt-5">
-            <div className="col-12 py-5">
+          <ClippedSection className="gradient1 pt-lg-5">
+            <div className="col-12 py-lg-5">
               <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                 <iframe
                   src="https://player.vimeo.com/video/520254400?title=0&byline=0"
