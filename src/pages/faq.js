@@ -55,7 +55,7 @@ export default function Faq({ data: { faqs } }) {
         </header>
         <div className="row justify-content-center pb-xl-5 mb-xl-5">
           <div className="col-12 col-xl-8">
-            <div className="row row-cols-2 row-cols-xl-4">
+            <div className="row row-cols-2 row-cols-xl-4 g-2">
               <div className="col">
                 <IndexItem to="info" IconComponent={InfoIcon}>Info generali</IndexItem>
               </div>
@@ -68,6 +68,7 @@ export default function Faq({ data: { faqs } }) {
               <div className="col">
                 <IndexItem to="account" IconComponent={PersonIcon}>Account</IndexItem>
               </div>
+              <div className="col-12" />
             </div>
           </div>
         </div>
