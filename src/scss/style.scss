@@ -275,11 +275,34 @@ $clipped-overlay: 50vh;
   left: 0;
   width: 120%;
 }
-
+.testimonianze-container {
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 15px);
+    padding-left: var(--bs-gutter-x, 15px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 .testimonianze-wrapper {
   &::-webkit-scrollbar {
     display: none;
   }
   overflow-x: scroll;
   scrollbar-width: none;
+}
+
+.testimonianza-item {
+  @include media-breakpoint-up(xl) {
+    p {
+      font-size: $lead-font-size;
+      font-weight: $lead-font-weight;
+    }
+  }
+}
+.testimonianza-aereoplano > .gatsby-image-wrapper {
+  @include media-breakpoint-up(xl) {
+    width: 75%;
+    margin: auto;
+  }
 }

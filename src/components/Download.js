@@ -22,18 +22,21 @@ export default function Download({ className, doesntCover, hug }) {
     }
   }`);
   return (
-    <div className="container-fluid">
+    <div className={classNames(
+      'container-fluid',
+      'clip10 gradient2 overflow-hidden',
+      'py-xl-5',
+      hug ? 'pb-0 pt-3' : 'py-3',
+      {
+        'mt-3': doesntCover,
+      },
+    )}
+    >
 
       <section
         id="download"
         className={classNames(
           'row justify-content-between ',
-          'clip10 gradient2 overflow-hidden',
-          'py-xl-5',
-          hug ? 'pb-0 pt-3' : 'py-3',
-          {
-            'mt-3': doesntCover,
-          },
         )}
       >
         <div className="pt-4 col-12">

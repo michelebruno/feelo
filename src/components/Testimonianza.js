@@ -11,17 +11,22 @@ export default function Testimonianza({ nome, children }) {
   }`);
 
   return (
-    <div className="row px-3 py-3 bg-white rounded-3 shadow h-100">
-      <div className="col-12">
-        <div className="row gx-2">
-          <div className="col-2"><GatsbyImage className="mx-1" image={getImage(aereo)} alt="Aereoplanino di carta" /></div>
-          <div className="col h2">{nome}</div>
+    <div className=" col-11 col-xl-6 align-self-stretch testimonianza-item">
+      <div className="py-3 px-xl-3 bg-white rounded-3 shadow container-fluid gx-2 h-100">
+
+        <div className="row">
+          <div className="col-12">
+            <div className="row  ">
+              <div className="col-3 col-xl-2 testimonianza-aereoplano"><GatsbyImage className=" mx-auto" image={getImage(aereo)} alt="Aereoplanino di carta" /></div>
+              <div className="col h2">{nome}</div>
+            </div>
+          </div>
+          <div className="col pt-1">
+            <p className="mb-0">
+              {children}
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="col pt-1">
-        <p className="lead">
-          {children}
-        </p>
       </div>
     </div>
   );

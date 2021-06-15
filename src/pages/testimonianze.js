@@ -47,7 +47,7 @@ export default function Testimonianze({ data: { forchetta }, location }) {
   return (
     <Layout page="testimonianze">
       <header className="container">
-        <div className="row justify-content-between ">
+        <div className="row justify-content-between flex-column-reverse flex-lg-row-reverse">
           <div className="col-12 col-xl-6 heading-column">
             <h1>Che cos’è un disturbo alimentare?</h1>
             <p className="lead">
@@ -57,7 +57,10 @@ export default function Testimonianze({ data: { forchetta }, location }) {
             </p>
           </div>
           <div className="col-12 col-xl-5">
-            <GatsbyImage alt="Illustrazione che rappresenta il disturbo alimentare" image={getImage(forchetta)} />
+            <GatsbyImage
+              alt="Illustrazione che rappresenta il disturbo alimentare"
+              image={getImage(forchetta)}
+            />
           </div>
         </div>
       </header>
@@ -68,12 +71,10 @@ export default function Testimonianze({ data: { forchetta }, location }) {
           </div>
         </div>
       </div>
-      <div className="container-fluid gx-4">
-        <div className="row flex-nowrap gx-4 py-2 px-3 ps-1 testimonianze-wrapper">
+      <div className="container-fluid  gx-1 gx-xl-4  testimonianze-wrapper">
+        <div className="row flex-nowrap  gx-1  gx-xl-4  py-2 px-xl-3 ps-1">
           {testimonianze.map(({ nome, body }) => (
-            <div key={nome} className="col-8 col-xl-6 align-self-stretch">
-              <Testimonianza nome={nome}>{body}</Testimonianza>
-            </div>
+            <Testimonianza key={nome} nome={nome}>{body}</Testimonianza>
           ))}
         </div>
       </div>
