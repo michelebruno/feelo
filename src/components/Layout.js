@@ -24,7 +24,7 @@ export default function Layout({
         <Navbar />
         {children}
         {!hideFooter && <Footer />}
-        <div className="visually-hidden">
+        <div className="visually-hidden position-absolute">
           <DownloadClip width={0} height={0} />
           <Wave01 width={0} height={0} />
         </div>

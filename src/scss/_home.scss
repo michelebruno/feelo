@@ -60,28 +60,6 @@
 }
 
 
-.testimonianza {
-  .thumbnail {
-    position: relative;
-
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (1) * 100%;
-    }
-
-    > .gatsby-image-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-  }
-
-}
-
 #hero-image-wrapper {
   position: absolute;
   bottom: -40%;
@@ -95,20 +73,80 @@
 
 #home-propongo-rosa {
   position: absolute;
-  width: 68%;
+  width: 120%;
   opacity: .5;
-  right: 0;
+  right: 10%;
   bottom: 0;
-
 }
 
 #home-propongo-verde {
   position: absolute;
   opacity: .5;
-
   top: -45%;
-  width: 68%;
+  width:  120%;
 }
+
+#home-propongo-feelo {
+  position: absolute;
+  transform: scale(.9);
+  left: -30%;
+  bottom: 0%;
+  width: 120%;
+}
+
+#home-propongo-attivita {
+  position: absolute;
+  transform: scale(.9);
+  top: -45%;
+  right: -30%;
+  width: 120%;
+}
+
+@include media-breakpoint-up(xl) {
+  #hero-image-wrapper {
+    position: absolute;
+    bottom: -40%;
+    z-index: 9;
+  }
+
+  #home-propongo-wrapper {
+    position: relative;
+    top: -10%;
+  }
+
+  #home-propongo-rosa {
+    position: absolute;
+    width: 68%;
+    opacity: .5;
+    right: 0;
+    bottom: 0;
+  }
+
+  #home-propongo-verde {
+    position: absolute;
+    opacity: .5;
+
+    top: -45%;
+    width: 68%;
+  }
+
+  #home-propongo-feelo {
+    position: absolute;
+    transform: scale(.9);
+    left: 10%;
+    bottom: 0%;
+    width: 60%;
+  }
+
+  #home-propongo-attivita {
+    position: absolute;
+    transform: scale(.9);
+    top: -45%;
+    right: 10%;
+    width: 60%;
+  }
+}
+
 
 #filo-giulia {
   position: absolute;
@@ -124,25 +162,9 @@
   left: 40%;
   z-index: 2;
 }
-#home-propongo-feelo {
-  position: absolute;
-  transform: scale(.9);
-  left: 10%;
-  bottom: 0%;
-  width: 60%;
-}
-
-#home-propongo-attivita {
-  position: absolute;
-  transform: scale(.9);
-  top: -45%;
-  right: 10%;
-  width: 60%;
-}
 
 #home-doppioavatar {
-  position: absolute;
-  right: -5%;
+   right: -5%;
   top: -25%;
   height: 100%;
 }
@@ -157,8 +179,7 @@
 }
 
 #home-avatarRosa {
-  position: absolute;
-  left: 0;
+   left: 0;
   top: 0%;
 }
 

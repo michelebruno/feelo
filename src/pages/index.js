@@ -81,7 +81,7 @@ export default function Home({
                 dell’Alimentazione.
               </p>
             </div>
-            <div className="col-12 col-xl position-relative" id="home-propongo-wrapper">
+            <div className="col-12 col-xl align-self-stretch py-5" id="home-propongo-wrapper">
               <div id="home-propongo-verde">
                 <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
               </div>
@@ -114,7 +114,7 @@ export default function Home({
                 <ArrowRight16Filled />
               </Link>
             </div>
-            <div className="col-12 col-xl-5 px-xl-2" id="home-avatarRosa">
+            <div className="col-12 col-xl-5 px-xl-2  position-xl-absolute" id="home-avatarRosa">
               <div className="position-relative w-100 h-100">
                 <div id="farfalla-giulia">
                   <GatsbyImage alt="Farfalla che vola" image={getImage(farfalla)} />
@@ -136,7 +136,7 @@ export default function Home({
                 relazioni e il dialogo.
               </p>
             </div>
-            <div className="col-12 col-xl-7" id="home-doppioavatar">
+            <div className="col-12 col-xl-7 position-xl-absolute" id="home-doppioavatar">
               <div className="position-relative w-100 h-100">
                 <FiloFeeler id="filo-feeler" />
                 <GatsbyImage

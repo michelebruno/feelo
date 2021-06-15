@@ -227,13 +227,22 @@ footer {
 $clipped-overlay: 50vh;
 
 .clip01, .clip10 {
-  margin-top: -$clipped-overlay;
-  padding-top: $clipped-overlay;
-  padding-bottom: $clipped-overlay * 1.1;
+  margin-top: -$clipped-overlay / 2;
+  padding-top: $clipped-overlay / 2;
+  padding-bottom: $clipped-overlay * 1.1 / 2;
+  @include media-breakpoint-up(xl) {
+    margin-top: -$clipped-overlay;
+    padding-top: $clipped-overlay;
+    padding-bottom: $clipped-overlay * 1.1;
+  }
+
 }
 
 .has-clipped-next {
-  padding-bottom: $clipped-overlay * 1.1;
+  padding-bottom: $clipped-overlay * 1.1 / 2;
+  @include media-breakpoint-up(xl) {
+    padding-bottom: $clipped-overlay * 1.1;
+  }
 }
 
 .clip01 {
