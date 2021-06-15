@@ -18,7 +18,7 @@ export default function Navbar({ title, fixed }) {
   }
 
   return (
-    <div className={classNames('container', { 'fixed-header': fixed })}>
+    <div id="navbar-wrapper" className={classNames('container', { 'fixed-header': fixed })}>
       <div
         className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-md"
       >

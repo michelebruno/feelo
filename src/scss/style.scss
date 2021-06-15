@@ -131,10 +131,6 @@ $nav-tabs-link-active-color: $primary;
 // scss-docs-end import-stack
 
 
-body {
-  background: linear-gradient(180deg, #E0EAFF 2.12%, #CAC2FF 55.5%);
-}
-
 .btn-outline-primary {
   background-color: $white;
 }
@@ -245,6 +241,24 @@ $clipped-overlay: 50vh;
 .clip10 {
   clip-path: url(#wave-10-1x_svg__wave10);
 }
+
+#navbar-wrapper {
+  position: relative;
+  z-index: 90;
+}
+#page-wrapper {
+  background: linear-gradient(180deg, #E0EAFF 2.12%, #CAC2FF 55.5%);
+}
+
+
+#page-wrapper.home {
+  background: linear-gradient(180deg, #E0EAFF 0%, #6852F5 20.97%);
+}
+
+#page-wrapper.faq {
+  background: linear-gradient( 0, #E0EAFF 50.12%, #CAC2FF 85.5%);
+}
+
 
 .gradient1 {
   background: linear-gradient(180deg, #E0EAFF 4.92%, #B8B8FC 66.62%);

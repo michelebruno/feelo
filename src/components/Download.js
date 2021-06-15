@@ -34,7 +34,7 @@ export default function Download({ className, doesntCover, hug }) {
           <div className="row position-relative">
 
             <div className="col-12 col-lg-4 offset-lg-1 pb-5">
-              <h2>Scarica l’App</h2>
+              <h2 className="h1">Scarica l’App</h2>
               <p className="lead">
                 Inizia il tuo percorso con Feelo che ti aiuterà ad affrontare il
                 disturbo alimentare con chi ti vuole bene.

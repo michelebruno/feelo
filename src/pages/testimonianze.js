@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Download from '../components/Download';
 import Testimonianza from '../components/Testimonianza';
 
-export default function Testimonianze({ data: { forchetta } }) {
+export default function Testimonianze({ data: { forchetta }, location }) {
   const testimonianze = [
     {
       nome: 'Olivia',
@@ -54,7 +54,7 @@ export default function Testimonianze({ data: { forchetta } }) {
   ];
 
   return (
-    <Layout>
+    <Layout page={location.pathname}>
       <header className="container">
         <div className="row justify-content-between ">
           <div className="col-12 col-lg-6 heading-column">
@@ -78,7 +78,7 @@ export default function Testimonianze({ data: { forchetta } }) {
         </div>
       </div>
       <div className="container-fluid gx-4">
-        <div className="row flex-nowrap gx-4 py-4 px-3 ps-1 " style={{ overflowX: 'scroll' }}>
+        <div className="row flex-nowrap gx-4 py-4 px-3 ps-1 " style={{ overflowX: 'scroll', scrollbarWidth: 'none' }}>
           {testimonianze.map(({ nome, body }) => (
             <div key={nome} className="col-6 h-100">
               <Testimonianza nome={nome}>{body}</Testimonianza>

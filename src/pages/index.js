@@ -23,6 +23,7 @@ export default function Home({
     propongoFeelo,
     mockups: { nodes: mockups },
   },
+  location: { pathname },
 }) {
   const [modal, setModal] = useState(false);
 
@@ -31,10 +32,10 @@ export default function Home({
   }
 
   return (
-    <Layout>
-      <div className="row gradient3 gx-0">
+    <Layout page={pathname}>
+      <div className="row  gx-0">
         <div className="col-12">
-          <ClippedSection dontClip justifyCenter className="gradient-3">
+          <ClippedSection dontClip justifyCenter>
             <div className="col-12 col-lg-7  text-center pt-3 pb-5">
               <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
               <p className="lead">
