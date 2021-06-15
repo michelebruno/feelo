@@ -51,7 +51,7 @@ export default function Home({
                 <button
                   onClick={() => document.getElementById('download').scrollIntoView()}
                   className="btn btn-primary position-relative"
-                  style={{ zIndex: 999 }}
+                  style={{ zIndex: 99 }}
                 >
                   Scarica Feelo
                 </button>
@@ -81,7 +81,7 @@ export default function Home({
                 dell’Alimentazione.
               </p>
             </div>
-            <div className="col-12 col-lg position-relative" id="home-propongo-wrapper">
+            <div className="col-12 col-xl position-relative" id="home-propongo-wrapper">
               <div id="home-propongo-verde">
                 <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
               </div>

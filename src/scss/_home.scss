@@ -40,7 +40,7 @@
   width: 150%;
   left: -25%;
 
-  @include media-breakpoint-up("lg") {
+  @include media-breakpoint-up("xl") {
     width: 60%;
     left: 20%;
   }
@@ -51,7 +51,7 @@
   width: 80%;
   left: 10%;
   bottom: -10%;
-  @include media-breakpoint-up("lg") {
+  @include media-breakpoint-up("xl") {
     width: 60%;
     right: 0;
     left: unset;

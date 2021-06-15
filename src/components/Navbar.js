@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { CalendarCancel20Filled, LineHorizontal320Filled } from '@fluentui/react-icons';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
-export default function Navbar({ title, fixed }) {
+export default function Navbar({ title }) {
   const [navbarStatus, setNavbarStatus] = useState(false);
 
   function openNavbar() {
@@ -18,7 +18,7 @@ export default function Navbar({ title, fixed }) {
   }
 
   return (
-    <div id="navbar-wrapper" className={classNames('container', { 'fixed-header': fixed })}>
+    <div id="navbar-wrapper" className={classNames('container')}>
       <div
         className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-md"
       >

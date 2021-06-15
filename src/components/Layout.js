@@ -12,7 +12,7 @@ SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel, Autoplay, EffectF
 
 console.log('Hey, what are you looking for?');
 export default function Layout({
-  children, title, fixedHeader, hideFooter, page,
+  children, title, hideFooter, page,
 }) {
   console.log('Page is: ', page);
 
@@ -21,7 +21,7 @@ export default function Layout({
       <div id="page-wrapper" className={page}>
 
         <Helmet title={title || 'Feelo'} />
-        <Navbar fixed={fixedHeader} />
+        <Navbar />
         {children}
         {!hideFooter && <Footer />}
         <div className="visually-hidden">

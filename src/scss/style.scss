@@ -144,22 +144,14 @@ $theme-colors: (
   background-color: $white;
 }
 
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
 
 .nav-link.active {
   color: $primary;
 }
 
-
 #logo-container {
   height: 36px;
-  @include media-breakpoint-up('lg') {
+  @include media-breakpoint-up('xl') {
     height: 48px;
   }
 }
@@ -176,14 +168,14 @@ $theme-colors: (
  */
 nav.navbar-collapse.show {
   position: fixed;
-  z-index: 9555;
+  z-index: 9999;
   top: 0;
   left: 0;
   min-height: 100vh;
   width: 100vw;
   overflow-y: scroll;
 
-  background: rgba($white, .95);
+  background: rgba($white, .99);
   display: flex;
   align-items: center;
   justify-content: center !important;
@@ -209,7 +201,7 @@ nav.navbar-collapse.show {
 
 
     height: 36px;
-    @include media-breakpoint-up('lg') {
+    @include media-breakpoint-up('xl') {
       height: 48px;
     }
   }
