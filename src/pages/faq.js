@@ -40,13 +40,13 @@ function IndexItem({ IconComponent, children, to }) {
   );
 }
 
-export default function Faq({ data: { faqs }, location: { pathname } }) {
+export default function Faq({ data: { faqs } }) {
   function getCatFaqs(cat) {
     return faqs.group.find((i) => i.fieldValue === cat)?.nodes;
   }
 
   return (
-    <Layout page={pathname}>
+    <Layout page="faq">
       <div className="container">
         <header className="row page-header justify-content-center mb-3">
           <div className="col-12 heading-column">

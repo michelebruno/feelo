@@ -15,6 +15,7 @@ import { ReactComponent as FiloPeopleOver } from '../images/people-filo-over.svg
 import { ReactComponent as FiloPeople } from '../images/people-filo-completo.svg';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
+import { ReactComponent as FiloDownload } from '../images/filo-download.svg';
 
 function Features({ features, sfondo, reverse }) {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -127,7 +128,7 @@ export default function Feelo({
     },
   ];
   return (
-    <Layout>
+    <Layout page="scopri">
 
       <div className="container">
         <header className="row page-header">
@@ -157,7 +158,7 @@ export default function Feelo({
 
           </div>
         </header>
-        <div className="row flex-lg-row-reverse align-items-center">
+        <div className="row flex-lg-row-reverse align-items-center position-relative">
           <div className="col-12 col-lg-1" />
           <div className="col-12 col-lg-4 offset-lg-1">
             <h2>A chi si trova al centro della tempesta...</h2>
@@ -171,6 +172,9 @@ export default function Feelo({
           </div>
           <div className="col-12 col-lg-6">
             <Features features={featureGiulia} sfondo={sfondoRosa} />
+          </div>
+          <div className="col-12 col-lg-3 mx-auto">
+            <FiloDownload id="filo-scopri" />
           </div>
         </div>
         <div className="row align-items-center">

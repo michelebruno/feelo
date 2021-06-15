@@ -54,7 +54,7 @@ export default function Testimonianze({ data: { forchetta }, location }) {
   ];
 
   return (
-    <Layout page={location.pathname}>
+    <Layout page="testimonianze">
       <header className="container">
         <div className="row justify-content-between ">
           <div className="col-12 col-lg-6 heading-column">

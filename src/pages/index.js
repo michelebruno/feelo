@@ -23,7 +23,6 @@ export default function Home({
     propongoFeelo,
     mockups: { nodes: mockups },
   },
-  location: { pathname },
 }) {
   const [modal, setModal] = useState(false);
 
@@ -32,7 +31,7 @@ export default function Home({
   }
 
   return (
-    <Layout page={pathname}>
+    <Layout page="home">
       <div className="row  gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>

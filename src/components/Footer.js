@@ -66,7 +66,7 @@ export default function Footer() {
               </div>
               <div className="col-1 ">
                 <span className="p-1 m-1 bg-white rounded-3 w-auto shadow d-inline-block">
-                  <InstagramIcon />
+                  <InstagramIcon width={24} heigh={24} />
                 </span>
               </div>
             </div>

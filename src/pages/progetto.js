@@ -17,7 +17,7 @@ function TeamMember({ nome, ruolo, image }) {
 
 export default function Progetto() {
   return (
-    <Layout>
+    <Layout page="progetto">
       <header className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-lg-6 text-center heading-column">

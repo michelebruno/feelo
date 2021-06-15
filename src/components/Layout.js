@@ -15,17 +15,21 @@ console.log('Hey, what are you looking for?');
 export default function Layout({
   children, title, fixedHeader, hideFooter, page,
 }) {
-  return (
-    <div id="page-wrapper" className={page !== '/' ? page?.replaceAll('/', '') : 'home'}>
+  console.log('Page is: ', page);
 
-      <Helmet title={title || 'Feelo'} />
-      <Navbar fixed={fixedHeader} />
-      {children}
-      {!hideFooter && <Footer />}
-      <div className="visually-hidden">
-        <DownloadClip width={0} height={0} />
-        <Wave01 width={0} height={0} />
+  if (page !== '') {
+    return (
+      <div id="page-wrapper" className={page}>
+
+        <Helmet title={title || 'Feelo'} />
+        <Navbar fixed={fixedHeader} />
+        {children}
+        {!hideFooter && <Footer />}
+        <div className="visually-hidden">
+          <DownloadClip width={0} height={0} />
+          <Wave01 width={0} height={0} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
