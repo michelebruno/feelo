@@ -135,7 +135,7 @@ export default function Feelo({
 
       <div className="container">
         <header className="row page-header">
-          <div className="col-12 col-lg-6 heading-column">
+          <div className="col-12 col-xl-6 heading-column">
             <h1>
               Al centro la persona,
               {' '}
@@ -153,7 +153,7 @@ export default function Feelo({
               .
             </p>
           </div>
-          <div className="col-6 ps-5 position-relative mt-lg-n4">
+          <div className="col-6 ps-5 position-relative mt-xl-n4">
             <FiloPeople className="filo-people" />
             <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
             {' '}
@@ -161,9 +161,9 @@ export default function Feelo({
 
           </div>
         </header>
-        <div className="row flex-lg-row-reverse align-items-center position-relative">
-          <div className="col-12 col-lg-1" />
-          <div className="col-12 col-lg-4 offset-lg-1">
+        <div className="row flex-xl-row-reverse align-items-center position-relative">
+          <div className="col-12 col-xl-1" />
+          <div className="col-12 col-xl-4 offset-xl-1">
             <h2>A chi si trova al centro della tempesta...</h2>
             <p className="lead">
               Riscopri le tue potenzialità attraverso riflessioni e attività introspettive e
@@ -173,15 +173,15 @@ export default function Feelo({
               . Feelo sarà l’amico che sarà sempre accanto a te e terrà traccia dei tuoi progressi.
             </p>
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-xl-6">
             <Features features={featureGiulia} sfondo={sfondoRosa} />
           </div>
-          <div className="col-12 col-lg-3 mx-auto">
+          <div className="col-12 col-xl-3 mx-auto">
             <FiloDownload id="filo-scopri" />
           </div>
         </div>
         <div className="row align-items-center">
-          <div className="col-12 col-lg-4 offset-lg-1 align-items-center">
+          <div className="col-12 col-xl-4 offset-xl-1 align-items-center">
             <h2>...ai feeler che arrivano in soccorso</h2>
             <p className="lead">
               Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare, tenendo
@@ -189,7 +189,7 @@ export default function Feelo({
               costruttivo in cui ti guiderà.
             </p>
           </div>
-          <div className="col-12 col-lg-6 offset-lg-1">
+          <div className="col-12 col-xl-6 offset-xl-1">
             <Features features={featureFeeler} sfondo={sfondoVerde} reverse />
           </div>
         </div>

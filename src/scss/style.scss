@@ -21,7 +21,7 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px, 
+  lg: 960px,
   xl: 1240px
 );
 
@@ -223,7 +223,7 @@ footer {
 }
 
 .heading-column {
- @extend .pt-lg-5, .mt-2;
+ @extend .pt-xl-5, .mt-2;
 }
 
 $clipped-overlay: 50vh;

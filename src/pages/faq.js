@@ -53,9 +53,9 @@ export default function Faq({ data: { faqs } }) {
             <h1 className="text-center">Domande e risposte frequenti</h1>
           </div>
         </header>
-        <div className="row justify-content-center pb-lg-5 mb-lg-5">
-          <div className="col-12 col-lg-8">
-            <div className="row row-cols-2 row-cols-lg-4">
+        <div className="row justify-content-center pb-xl-5 mb-xl-5">
+          <div className="col-12 col-xl-8">
+            <div className="row row-cols-2 row-cols-xl-4">
               <div className="col">
                 <IndexItem to="info" IconComponent={InfoIcon}>Info generali</IndexItem>
               </div>

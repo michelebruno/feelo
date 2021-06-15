@@ -35,7 +35,7 @@ export default function Home({
       <div className="row gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
-            <div className="col-12 col-lg-7 text-center pt-5 pb-5">
+            <div className="col-12 col-xl-7 text-center pt-5 pb-5">
               <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
               <p className="lead">
                 L’app pensata per affrontare i
@@ -57,7 +57,7 @@ export default function Home({
                 </button>
               </p>
             </div>
-            <div className="col-lg-10 d-flex" id="hero-image-wrapper">
+            <div className="col-xl-10 d-flex" id="hero-image-wrapper">
               <FiloHero />
               <div id="home-seduto-rosa">
                 <GatsbyImage alt="Seduto verde" image={getImage(sedutoRosa)} />
@@ -70,7 +70,7 @@ export default function Home({
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10">
-            <div className="col-12 col-lg-4 pb-5 offset-lg-1">
+            <div className="col-12 col-xl-4 pb-5 offset-xl-1">
               <h2 className="mb-3">Ecco cosa propongo</h2>
               <p className="lead mb-3">
                 Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
@@ -96,9 +96,9 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection reverse className="gradient1 clip01" innerClassName="mb-lg-1">
-            <div className="col-12 col-lg-1" />
-            <div className="col-12 col-lg-4 offset-lg-1 pb-lg-5">
+          <ClippedSection reverse className="gradient1 clip01" innerClassName="mb-xl-1">
+            <div className="col-12 col-xl-1" />
+            <div className="col-12 col-xl-4 offset-xl-1 pb-xl-5">
               <h2>Per chi soffre di disturbi alimentari...</h2>
               <p className="lead">
                 Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
@@ -114,7 +114,7 @@ export default function Home({
                 <ArrowRight16Filled />
               </Link>
             </div>
-            <div className="col-12 col-lg-5 px-lg-2" id="home-avatarRosa">
+            <div className="col-12 col-xl-5 px-xl-2" id="home-avatarRosa">
               <div className="position-relative w-100 h-100">
                 <div id="farfalla-giulia">
                   <GatsbyImage alt="Farfalla che vola" image={getImage(farfalla)} />
@@ -125,7 +125,7 @@ export default function Home({
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10" innerClassName="align-items-stretch">
-            <div className="col-12 col-lg-4 offset-lg-1 pb-lg-5">
+            <div className="col-12 col-xl-4 offset-xl-1 pb-xl-5">
               <h2>...e per coloro che gli vogliono bene</h2>
               <p className="lead">
                 Il mio supporto si fonda sulla
@@ -136,7 +136,7 @@ export default function Home({
                 relazioni e il dialogo.
               </p>
             </div>
-            <div className="col-12 col-lg-7" id="home-doppioavatar">
+            <div className="col-12 col-xl-7" id="home-doppioavatar">
               <div className="position-relative w-100 h-100">
                 <FiloFeeler id="filo-feeler" />
                 <GatsbyImage
@@ -148,8 +148,8 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient1 pt-lg-5">
-            <div className="col-12 py-lg-5">
+          <ClippedSection className="gradient1 pt-xl-5">
+            <div className="col-12 py-xl-5">
               <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                 <iframe
                   src="https://player.vimeo.com/video/520254400?title=0&byline=0"
