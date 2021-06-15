@@ -124,15 +124,6 @@
   left: 40%;
   z-index: 2;
 }
-#filo-feeler {
-  $width: 46%;
-  position: absolute;
-  top: 70%;
-  left: calc(50% - #{$width} / 2 );
-  width: $width;
-  z-index: 5;
-}
-
 #home-propongo-feelo {
   position: absolute;
   transform: scale(.9);
@@ -152,14 +143,23 @@
 #home-doppioavatar {
   position: absolute;
   right: -5%;
-  top: -64%;
+  top: -25%;
   height: 100%;
+}
+
+#filo-feeler {
+  $width: 43%;
+  position: absolute;
+  top: 58%;
+  left: 34%;
+  width: $width;
+  z-index: 5;
 }
 
 #home-avatarRosa {
   position: absolute;
   left: 0;
-  top: -50%;
+  top: 0%;
 }
 
 #home-seduto-rosa {

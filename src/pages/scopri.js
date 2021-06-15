@@ -106,22 +106,22 @@ export default function Feelo({
 
   const featureFeeler = [
     {
-      image: feeler.nodes[2], label: 'Home', icon: <Home24Regular />, iconActive: <Home24Filled />,
+      image: feeler.nodes[3], label: 'Home', icon: <Home24Regular />, iconActive: <Home24Filled />,
     },
     {
-      image: feeler.nodes[4],
+      image: feeler.nodes[0],
       label: 'Attività',
       icon: <TaskListSquareLtr24Regular />,
       iconActive: <TaskListSquareLtr24Filled />,
     },
     {
-      image: feeler.nodes[0], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
+      image: feeler.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
     },
     {
-      image: feeler.nodes[3], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
+      image: feeler.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
     },
     {
-      image: feeler.nodes[1],
+      image: feeler.nodes[4],
       label: 'Informazioni',
       icon: <DocumentCopy24Regular />,
       iconActive: <DocumentCopy24Filled />,
@@ -218,7 +218,10 @@ export const query = graphql`{
       )
     }
   }
-  feeler : allFile(filter: {relativePath: {regex: "/feeler-(.*)/i"}, sourceInstanceName: {eq: "mockups"}} ) {
+  feeler : allFile(
+    filter: {relativePath: {regex: "/feeler-(.*)/i"}, sourceInstanceName: {eq: "mockups"}}
+    sort: {fields: [relativePath], order: ASC}
+  ) {
     nodes {
       childImageSharp {
         gatsbyImageData(
