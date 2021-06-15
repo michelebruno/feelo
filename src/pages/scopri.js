@@ -60,7 +60,7 @@ function Features({ features, sfondo, reverse }) {
                 onClick={() => swiper.current.slideTo(index + 1)}
                 className={classNames('d-flex flex-column-reverse flex-lg-row small py-2 justify-content-end feature-list-item position-relative ', {
                   active: activeSlide === index,
-                  'flex-row-xl-reverse': reverse,
+                  'flex-xl-row-reverse': reverse,
                 })}
                 key={label}
               >

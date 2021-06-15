@@ -19,8 +19,8 @@ export default function Footer() {
         <div className="col-12">
           <div className="container">
             <div className="row">
-              <div className="row justify-content-between text-dark py-1">
-                <div className="col-3 mt-n2">
+              <div className="row row-cols-1 row-cols-lg-4 justify-content-between text-dark py-1">
+                <div className="col mt-n2">
 
                   <span className="text-white d-block mb-1" style={{ width: '3em' }}><GatsbyImage image={getImage(logo)} alt="Logo di Feelo" /></span>
                   <ul className="list-unstyled text-light small">
@@ -29,22 +29,22 @@ export default function Footer() {
                   </ul>
 
                 </div>
-                <div className="col-3">
-                  <h6 className="text-white">Condizioni</h6>
+                <div className="col">
+                  <h6 className="text-white mb-0">Condizioni</h6>
                   <ul className="list-unstyled text-light small">
                     <li>Privacy Policy</li>
                   </ul>
 
                 </div>
-                <div className="col-3">
-                  <h6 className="text-white">Download App</h6>
+                <div className="col">
+                  <h6 className="text-white mb-0">Download App</h6>
                   <ul className="list-unstyled text-light small">
                     <li>Scarica per iPhone</li>
                     <li>Scarica per Android</li>
                   </ul>
                 </div>
-                <div className="col-3">
-                  <h6 className="text-white">Contatti</h6>
+                <div className="col">
+                  <h6 className="text-white mb-0">Contatti</h6>
                   <ul className="list-unstyled text-light small">
                     <li>Supporto</li>
                     <li>info@feelo.com</li>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <div className="w-100 border-bottom border-white" />
               </div>
 
-              <div className="col-11 py-1" style={{ fontSize: '0.8em', lineHeight: 1 }}>
+              <div className="col-10 col-xl-11 py-1" style={{ fontSize: '0.8em', lineHeight: 1 }}>
                 <p className="">
                   Feelo Europe S.A. | Via Giuseppe Candiani, 72 20138 Milano |
                   VAT LU30726739 | società del gruppo Feelo S.p.A
@@ -64,7 +64,7 @@ export default function Footer() {
                   Ⓒ 2021 Feelo. All Rights Reserved.
                 </p>
               </div>
-              <div className="col-1 ">
+              <div className="col-2 col-xl-1 ">
                 <span className="p-1 m-1 bg-white rounded-3 w-auto shadow d-inline-block">
                   <InstagramIcon width={24} heigh={24} />
                 </span>
