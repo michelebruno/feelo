@@ -1,53 +1,67 @@
 
-.features-card {
-  @extend .shadow, .rounded-3, .gx-3, .py-3, .row;
-  justify-content: center;
-  align-items: center;
-  background-color: $white;
-  margin: map-get($spacers, 2) map-get($spacers, 1) map-get($spacers, 4) map-get($spacers, 1);
-}
-
-.why-card {
-  @extend .col, .pt-3;
-
-  img {
-    border-radius: 50%;
-  }
-}
-
 .feature-list-item {
   cursor: pointer;
   align-items: center;
-  transform-origin: right center;
+  transform-origin: center center;
+
+  @include media-breakpoint-up("xl") {
+    transform-origin: right center;
+  }
+
   &.flex-row-reverse {
     transform-origin: left center;
-
   }
+
   transition: all .5s ease;
-  &:hover{
+
+  &:hover {
     transform: scale(1.05);
   }
+
   font-size: 1.2em;
+  color: $white;
+
   &.active {
     font-weight: $font-weight-bolder;
     transform: scale(1.2);
   }
+
   .feature-icon {
     transform: scale(1.5);
-
   }
-  color: $white;
+
 
   line-height: 1;
-  svg  {
+
+  svg {
     filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, .1));
   }
 }
 
+.featurer-slider-wrapper {
+  @include media-breakpoint-down(xl) {
+    overflow-x: hidden;
+  }
+}
+
+.feature-label {
+  @include media-breakpoint-down("lg") {
+    position: absolute;
+    top: 2.2em;
+    transition: opacity .1s ease;
+    opacity: 0;
+    .active & {
+      opacity: 1;
+    }
+  }
+}
+
 #hug-container {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  @include media-breakpoint-up("xl") {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 #filo-hug {
@@ -58,12 +72,17 @@
 }
 
 #filo-scopri {
-  position: absolute;
-  width: 32%;
-  left: 29%;
-  bottom: -20%;
-  transform: rotate(62deg);
+  transform: rotate(27deg);
+  @extend .mb-n3;
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    width: 32%;
+    left: 29%;
+    bottom: -20%;
+    transform: rotate(62deg);
+  }
 }
+
 #filo-download {
   position: absolute;
   width: 150%;

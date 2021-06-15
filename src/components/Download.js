@@ -22,57 +22,65 @@ export default function Download({ className, doesntCover, hug }) {
     }
   }`);
   return (
-    <section
-      id="download"
-      className={classNames('row justify-content-between gx-0 clip10 gradient2 pt-5 pb-5 pb-1 overflow-hidden',
-        {
-          'mt-3': doesntCover,
-        })}
-    >
-      <div className="pt-4">
-        <div className="container">
-          <div className="row position-relative align-items-center">
+    <div className="container-fluid">
 
-            <div className="col-12 col-xl-4 offset-xl-1">
-              <h2 className="h1">Scarica l’App</h2>
-              <p className="lead">
-                Inizia il tuo percorso con Feelo che ti aiuterà ad affrontare il
-                disturbo alimentare con chi ti vuole bene.
-              </p>
-              <p>
-                <a href="#" className="btn btn-outline-primary me-1">Android</a>
-                <a href="#" className="btn btn-outline-primary  me-1">iOS</a>
-              </p>
-            </div>
-            {hug
-              ? (
-                <div className="col-12 col-xl-5 text-center mb-n5" id="hug-container">
-                  <div className="w-100 h-100 position-relative">
-                    <FiloHug id="filo-hug" />
+      <section
+        id="download"
+        className={classNames(
+          'row justify-content-between ',
+          'clip10 gradient2 overflow-hidden',
+          'py-xl-5',
+          hug ? 'pb-0 pt-3' : 'py-3',
+          {
+            'mt-3': doesntCover,
+          },
+        )}
+      >
+        <div className="pt-4 col-12">
+          <div className="container">
+            <div className="row position-relative align-items-center">
 
+              <div className="col-12 col-xl-4 offset-xl-1">
+                <h2 className="h1">Scarica l’App</h2>
+                <p className="lead">
+                  Inizia il tuo percorso con Feelo che ti aiuterà ad affrontare il
+                  disturbo alimentare con chi ti vuole bene.
+                </p>
+                <p>
+                  <a href="#" className="btn btn-outline-primary me-1">Android</a>
+                  <a href="#" className="btn btn-outline-primary  me-1">iOS</a>
+                </p>
+              </div>
+              {hug
+                ? (
+                  <div className="col-12 col-xl-5 text-center  mb-xl-n5" id="hug-container">
+                    <div className="w-100 h-100 position-relative">
+                      <FiloHug id="filo-hug" />
+
+                      <GatsbyImage
+                        image={getImage(abbraccio)}
+                        alt="Abbraccio tra chi sta male e un suo Feeler"
+                      />
+                    </div>
+                  </div>
+                )
+                : (
+                  <div className="col-12 col-xl-4 offset-xl-2 text-center position-relative">
+                    <FiloDownload id="filo-download" />
                     <GatsbyImage
-                      image={getImage(abbraccio)}
-                      alt="Abbraccio tra chi sta male e un suo Feeler"
+                      alt="Mockup della schermata iniziale"
+                      image={getImage(mockup)}
+                      className="mx-auto"
                     />
                   </div>
-                </div>
-              )
-              : (
-                <div className="col-12 col-xl-4 offset-xl-2 text-center position-relative">
-                  <FiloDownload id="filo-download" />
-                  <GatsbyImage
-                    alt="Mockup della schermata iniziale"
-                    image={getImage(mockup)}
-                    className="mx-auto"
-                  />
-                </div>
-              )}
+                )}
+            </div>
           </div>
+
         </div>
 
-      </div>
-
-    </section>
+      </section>
+    </div>
   );
 }
 

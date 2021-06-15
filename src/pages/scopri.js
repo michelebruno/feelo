@@ -25,11 +25,12 @@ function Features({ features, sfondo, reverse }) {
   const swiper = useRef();
 
   return (
-    <div className={classNames('feature-wrapper row', { 'flex-row-reverse': !reverse })}>
-      <div className="col-9 align-self-stretch position-relative">
+    <div className={classNames('feature-wrapper row justify-content-center', { 'flex-row-reverse': !reverse })}>
+      <div className="col-12 col-xl-9 align-self-stretch position-relative featurer-slider-wrapper">
         <div className="features-backgroud" slot="container-start">
           <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
         </div>
+
         <Swiper
           className="mx-auto"
           loop
@@ -51,24 +52,27 @@ function Features({ features, sfondo, reverse }) {
           ))}
         </Swiper>
       </div>
-      <div className="col-3 d-flex flex-column justify-content-center">
-        <ul className="list-unstyled">
+      <div className="col-10 col-xl-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-0 position-relative" style={{ zIndex: 10 }}>
+        <ul className=" d-flex justify-content-between list-unstyled flex-row flex-lg-column">
           {
             features.map(({ label, icon, iconActive }, index) => (
               <li
                 onClick={() => swiper.current.slideTo(index + 1)}
-                className={classNames('d-flex small py-2 justify-content-end feature-list-item', {
+                className={classNames('d-flex flex-column-reverse flex-lg-row small py-2 justify-content-end feature-list-item position-relative ', {
                   active: activeSlide === index,
-                  'flex-row-reverse': reverse,
+                  'flex-row-xl-reverse': reverse,
                 })}
                 key={label}
               >
-                <span className="px-2">{label}</span>
+                <span className={classNames('px-2 py-1 py-xl-0 d-xl-inline feature-label')}>{label}</span>
                 <span className="feature-icon">{activeSlide === index ? iconActive : icon}</span>
               </li>
             ))
           }
         </ul>
+        {/* <h6 className="d-lg-none text-center text-white mb-0 "> */}
+        {/*  {features[activeSlide].label} */}
+        {/* </h6> */}
       </div>
     </div>
   );
@@ -94,16 +98,16 @@ export default function Feelo({
       iconActive: <TaskListSquareLtr24Filled />,
     },
     {
-      image: giulia.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
-    },
-    {
-      image: giulia.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
-    },
-    {
       image: giulia.nodes[3],
       label: 'Feelo',
       icon: <FeeloChat height={24} width={24} />,
       iconActive: <FeeloChatFilled height={24} width={24} />,
+    },
+    {
+      image: giulia.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
+    },
+    {
+      image: giulia.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
     },
   ];
 
@@ -118,16 +122,16 @@ export default function Feelo({
       iconActive: <TaskListSquareLtr24Filled />,
     },
     {
-      image: feeler.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
-    },
-    {
-      image: feeler.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
-    },
-    {
       image: feeler.nodes[4],
       label: 'Informazioni',
       icon: <DocumentCopy24Regular />,
       iconActive: <DocumentCopy24Filled />,
+    },
+    {
+      image: feeler.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
+    },
+    {
+      image: feeler.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
     },
   ];
   return (
@@ -153,7 +157,7 @@ export default function Feelo({
               .
             </p>
           </div>
-          <div className="col-6 ps-5 position-relative mt-xl-n4">
+          <div className="col-12 col-xl-6 px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
             <FiloPeople className="filo-people" />
             <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
             {' '}
@@ -161,7 +165,7 @@ export default function Feelo({
 
           </div>
         </header>
-        <div className="row flex-xl-row-reverse align-items-center position-relative">
+        <div className="row flex-xl-row-reverse align-items-center position-relative py-3 py-lg-0">
           <div className="col-12 col-xl-1" />
           <div className="col-12 col-xl-4 offset-xl-1">
             <h2>A chi si trova al centro della tempesta...</h2>
@@ -180,7 +184,7 @@ export default function Feelo({
             <FiloDownload id="filo-scopri" />
           </div>
         </div>
-        <div className="row align-items-center">
+        <div className="row align-items-center  py-lg-0">
           <div className="col-12 col-xl-4 offset-xl-1 align-items-center">
             <h2>...ai feeler che arrivano in soccorso</h2>
             <p className="lead">
