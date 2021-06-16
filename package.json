@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@fluentui/react-icons": "^1.1.130",
-    "@fluentui/svg-icons": "^1.1.130",
     "@svgr/webpack": "^5.5.0",
     "bootstrap": "^5.0.1",
     "classnames": "^2.3.1",
@@ -37,8 +36,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-leaflet": "^3.2.0",
-    "reactstrap": "^8.9.0",
     "sass": "^1.34.0",
     "swiper": "^6.6.2"
   },
