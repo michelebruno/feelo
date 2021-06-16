@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import Download from '../components/Download';
 import Testimonianza from '../components/Testimonianza';
 
-export default function Testimonianze({ data: { forchetta }, location }) {
+export default function Testimonianze({ data: { forchetta } }) {
   const testimonianze = [
     {
       nome: 'Olivia',
@@ -47,8 +47,8 @@ export default function Testimonianze({ data: { forchetta }, location }) {
   return (
     <Layout page="testimonianze">
       <header className="container">
-        <div className="row justify-content-between flex-column-reverse flex-lg-row-reverse">
-          <div className="col-12 col-xl-6 heading-column">
+        <div className="row justify-content-between   ">
+          <div className="col-12 col-lg-6 heading-column">
             <h1>Che cos’è un disturbo alimentare?</h1>
             <p className="lead">
               I Disturbi del Comportamento Alimentare sono patologie complesse,
@@ -56,7 +56,7 @@ export default function Testimonianze({ data: { forchetta }, location }) {
               trattamento sia del problema alimentare in sé che della sua natura psichica.
             </p>
           </div>
-          <div className="col-12 col-xl-5">
+          <div className="col-12 col-lg ">
             <GatsbyImage
               alt="Illustrazione che rappresenta il disturbo alimentare"
               image={getImage(forchetta)}

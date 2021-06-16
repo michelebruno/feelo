@@ -185,7 +185,7 @@ export default function Feelo({
           </div>
         </div>
         <div className="row align-items-center py-lg-0">
-          <div className="col-12 col-lg-5 offset-xl-1 align-items-center">
+          <div className="col-12 col-lg-5 col-xl-4 offset-xl-1">
             <h2>...ai feeler che arrivano in soccorso</h2>
             <p className="lead">
               Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare, tenendo
@@ -193,7 +193,7 @@ export default function Feelo({
               costruttivo in cui ti guiderà.
             </p>
           </div>
-          <div className="col-12 col-lg-6 offset-lg-1">
+          <div className="col-12 col-lg-6">
             <Features features={featureFeeler} sfondo={sfondoVerde} reverse />
           </div>
         </div>
