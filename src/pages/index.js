@@ -51,7 +51,7 @@ export default function Home({
                 <button
                   onClick={() => document.getElementById('download').scrollIntoView()}
                   className="btn btn-primary position-relative"
-                  style={{ zIndex: 99 }}
+                  style={{ zIndex: 20 }}
                 >
                   Scarica Feelo
                 </button>
