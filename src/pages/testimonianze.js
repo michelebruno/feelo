@@ -71,8 +71,8 @@ export default function Testimonianze({ data: { forchetta }, location }) {
           </div>
         </div>
       </div>
-      <div className="container-fluid  gx-1 gx-xl-4  testimonianze-wrapper">
-        <div className="row flex-nowrap  gx-1  gx-xl-4  py-2 px-xl-3 ps-1">
+      <div className="container-fluid gx-1 gx-xl-4 testimonianze-wrapper">
+        <div className="row flex-nowrap gx-1  gx-xl-4 py-2 px-xl-3 ps-1">
           {testimonianze.map(({ nome, body }) => (
             <Testimonianza key={nome} nome={nome}>{body}</Testimonianza>
           ))}

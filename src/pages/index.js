@@ -1,7 +1,5 @@
 import { graphql, Link } from 'gatsby';
-import { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import classNames from 'classnames';
 import { ArrowRight16Filled } from '@fluentui/react-icons';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
@@ -21,15 +19,8 @@ export default function Home({
     avatarRosa,
     doppioAvatar, propongoAttivita,
     propongoFeelo,
-    mockups: { nodes: mockups },
   },
 }) {
-  const [modal, setModal] = useState(false);
-
-  function toggleModal() {
-    setModal(!modal);
-  }
-
   return (
     <Layout page="home">
       <div className="row gx-0">
