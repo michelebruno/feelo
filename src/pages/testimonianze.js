@@ -46,7 +46,7 @@ export default function Testimonianze({ data: { forchetta } }) {
 
   return (
     <Layout page="testimonianze">
-      <header className="container">
+      <header className="container gx-2">
         <div className="row justify-content-between   ">
           <div className="col-12 col-lg-6 heading-column">
             <h1>Che cos’è un disturbo alimentare?</h1>
@@ -64,7 +64,7 @@ export default function Testimonianze({ data: { forchetta } }) {
           </div>
         </div>
       </header>
-      <div className="container">
+      <div className="container gx-2">
         <div className="row">
           <div className="col offset-xl-1 ">
             <h2>Le testimonianze</h2>

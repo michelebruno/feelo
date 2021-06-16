@@ -46,7 +46,7 @@ export default function Faq({ data: { faqs } }) {
 
   return (
     <Layout page="faq">
-      <div className="container">
+      <div className="container gx-2">
         <header className="row page-header justify-content-center mb-3">
           <div className="col-12 heading-column">
             <h1 className="text-center">Domande e risposte frequenti</h1>

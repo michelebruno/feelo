@@ -157,7 +157,7 @@ export default function Feelo({
   return (
     <Layout page="scopri">
 
-      <div className="container">
+      <div className="container gx-2">
         <header className="row page-header">
           <div className="col-12 col-lg-6 heading-column">
             <h1>

@@ -18,7 +18,7 @@ function TeamMember({ nome, ruolo, image }) {
 export default function Progetto() {
   return (
     <Layout page="progetto">
-      <header className="container">
+      <header className="container gx-2">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-6 text-center heading-column">
             <h1>Perché nasce Feelo?</h1>
@@ -31,7 +31,7 @@ export default function Progetto() {
           </div>
         </div>
       </header>
-      <div className="container pt-xl-5">
+      <div className="container pt-xl-5 gx-2">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-8 text-center ">
             <h2 className="">Il team</h2>
