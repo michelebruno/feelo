@@ -135,7 +135,7 @@ $theme-colors: (
 //@import "~bootstrap/scss/alert";
 //@import "~bootstrap/scss/progress";
 //@import "~bootstrap/scss/list-group";
-//@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/close";
 //@import "~bootstrap/scss/toasts";
 //@import "~bootstrap/scss/modal";
 //@import "~bootstrap/scss/tooltip";
@@ -187,7 +187,7 @@ nav.navbar-collapse.show {
   width: 100vw;
   overflow-y: scroll;
 
-  background: rgba($white, .99);
+  background: $white;
   display: flex;
   align-items: center;
   justify-content: center !important;

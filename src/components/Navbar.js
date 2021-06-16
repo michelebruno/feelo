@@ -10,11 +10,11 @@ export default function Navbar({ title }) {
   const [navbarStatus, setNavbarStatus] = useState(false);
 
   function openNavbar() {
-    setNavbarStatus(true);
+    setNavbarStatus(() => true);
   }
 
   function closeNavbar() {
-    setNavbarStatus(false);
+    setNavbarStatus(() => false);
   }
 
   return (
@@ -42,18 +42,16 @@ export default function Navbar({ title }) {
           : ''}`}
         >
           <Logo className="logo d-md-none" />
-          <div className="col-12 position-absolute d-md-none close-button-container">
+          <div className="col-12 px-1 position-absolute d-md-none close-button-container">
 
             <button
-              className="navbar-toggler"
+              className="navbar-toggler btn-close"
               type="button"
               onClick={closeNavbar}
               aria-controls="navbarNav"
               aria-expanded="false"
               aria-label="Toggle navigation"
-            >
-              <CalendarCancel20Filled />
-            </button>
+            />
           </div>
           <ul className="nav">
             <li className="nav-item">
@@ -82,7 +80,10 @@ export default function Navbar({ title }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="#download" className="btn btn-outline-primary">
+              <Link
+                to="#download"
+                className="btn btn-outline-primary d-none d-lg-inline"
+              >
                 Download
               </Link>
             </li>
