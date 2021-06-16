@@ -35,7 +35,6 @@ export default function Progetto() {
         <div className="row justify-content-center">
           <div className="col-12 col-xl-8 text-center ">
             <h2 className="">Il team</h2>
-
           </div>
         </div>
       </div>

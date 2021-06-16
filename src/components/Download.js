@@ -10,14 +10,14 @@ export default function Download({ className, doesntCover, hug }) {
     mockup: file(relativePath: {eq: "mockup intro app.png"}) {
       childImageSharp{
         gatsbyImageData(
-          layout: FULL_WIDTH
+          layout: CONSTRAINED
         )
       }
     }
     abbraccio: file(relativePath: {eq: "abbraccio.png"}) {
       childImageSharp{
         gatsbyImageData(
-          layout: FULL_WIDTH
+          layout: CONSTRAINED
         )
       }
     }

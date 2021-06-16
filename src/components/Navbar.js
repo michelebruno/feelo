@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { useState } from 'react';
 import { navigate } from 'gatsby-link';
 import classNames from 'classnames';
-import { CalendarCancel20Filled, LineHorizontal320Filled } from '@fluentui/react-icons';
+import { LineHorizontal320Filled } from '@fluentui/react-icons';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar({ title }) {
@@ -82,7 +82,7 @@ export default function Navbar({ title }) {
             <li className="nav-item">
               <Link
                 to="#download"
-                className="btn btn-outline-primary d-none d-lg-inline"
+                className="btn btn-outline-primary d-none d-lg-inline-block"
               >
                 Download
               </Link>

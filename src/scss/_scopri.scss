@@ -3,35 +3,37 @@
   cursor: pointer;
   align-items: center;
   transform-origin: center center;
-
-  @include media-breakpoint-up("xl") {
-    transform-origin: right center;
-  }
+  font-size: 1.2em;
+  color: $white;
+  line-height: 1;
+  transition: all .5s ease;
 
   &.flex-xl-row-reverse {
     transform-origin: left center;
   }
+  transform: scale(.9);
 
-  transition: all .5s ease;
+  @include media-breakpoint-up("xl") {
+    transform-origin: right center;
+    transform: scale(1);
+  }
+
 
   &:hover {
     transform: scale(1.05);
   }
 
-  font-size: 1.2em;
-  color: $white;
-
   &.active {
     font-weight: $font-weight-bolder;
     transform: scale(1.2);
+    @include media-breakpoint-up("xl") {
+      transform-origin: right center;
+    }
   }
 
   .feature-icon {
     transform: scale(1.5);
   }
-
-
-  line-height: 1;
 
   svg {
     filter: drop-shadow(5px 7px 7px rgba(0, 0, 0, .1));

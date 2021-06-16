@@ -87,7 +87,7 @@ export const query = graphql`{
   forchetta: file(relativePath: {eq: "forchetta.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }

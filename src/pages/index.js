@@ -71,7 +71,7 @@ export default function Home({
           </ClippedSection>
           <ClippedSection className="gradient2 clip10 cosapropongosection">
             <div className="col-12 col-xl-4 pb-5 offset-xl-1">
-              <h2 className="mb-3">Ecco cosa propongo</h2>
+              <h2 className="mt-x-3">Ecco cosa propongo</h2>
               <p className="lead mb-3">
                 Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
                 {' '}
@@ -111,7 +111,7 @@ export default function Home({
               <Link className="btn btn-outline-primary" to="/scopri">
                 Cos’è un disturbo alimentare?
                 {' '}
-                <ArrowRight16Filled />
+                <ArrowRight16Filled className="d-none d-lg-inline" />
               </Link>
             </div>
             <div className="col-12 col-xl-5 px-xl-2  position-xl-absolute" id="home-avatarRosa">
@@ -179,7 +179,7 @@ export const query = graphql`{
     nodes {
       childImageSharp {
         gatsbyImageData(
-          layout: FULL_WIDTH
+          layout: CONSTRAINED
         )
       }
     }
@@ -187,77 +187,77 @@ export const query = graphql`{
   doppioAvatar: file(relativePath: {eq: "doppioavatar.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   sedutoRosa: file(relativePath: {eq: "omino_seduto_rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   sedutoVerde: file(relativePath: {eq: "omino_seduto_verde.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   avatarRosa: file(relativePath: {eq: "avatar-rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   landing: file(relativePath: {eq: "home-landing.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   proposta: file(relativePath: {eq: "home-proposta.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   farfalla: file(relativePath: {eq: "farfalla.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   sfondoRosa: file(relativePath: {eq: "sfondo-rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   sfondoVerde: file(relativePath: {eq: "sfondo-verde.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   propongoAttivita: file(relativePath: {eq: "giulia-home.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   propongoFeelo: file(relativePath: {eq: "feeler-home.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }

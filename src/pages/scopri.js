@@ -207,21 +207,21 @@ export const query = graphql`{
   sfondoRosa: file(relativePath: {eq: "sfondo-rosa.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   sfondoVerde: file(relativePath: {eq: "sfondo-verde.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
   persone: file(relativePath: {eq: "persone.png"}) {
     childImageSharp {
       gatsbyImageData(
-        layout: FULL_WIDTH
+        layout: CONSTRAINED
       )
     }
   }
@@ -232,7 +232,7 @@ export const query = graphql`{
     nodes {
       childImageSharp {
         gatsbyImageData(
-          layout: FULL_WIDTH
+          layout: CONSTRAINED
         )
       }
     }
@@ -244,7 +244,7 @@ export const query = graphql`{
     nodes {
       relativePath
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }

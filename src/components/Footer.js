@@ -1,14 +1,12 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { ReactComponent as InstagramIcon } from
-  '../images/instagram.svg';
 
 export default function Footer() {
   const { logo } = useStaticQuery(graphql`{
     logo: file(relativePath: {eq: "favicon.png"}) {
       childImageSharp{
         gatsbyImageData(
-          layout: FULL_WIDTH
+          layout: CONSTRAINED
         )
       }
     }
@@ -19,9 +17,8 @@ export default function Footer() {
         <div className="col-12">
           <div className="container">
             <div className="row">
-              <div className="row row-cols-1 row-cols-lg-4 justify-content-between text-dark py-1">
+              <div className="row row-cols-2 row-cols-lg-4 justify-content-between text-dark py-1 align-items-end align-items-lg-start">
                 <div className="col mt-n2">
-
                   <span className="text-white d-block mb-1" style={{ width: '3em' }}><GatsbyImage image={getImage(logo)} alt="Logo di Feelo" /></span>
                   <ul className="list-unstyled text-light small">
                     <li><Link to="/" className="link-light h6">Home</Link></li>

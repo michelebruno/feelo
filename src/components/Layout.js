@@ -16,8 +16,6 @@ console.log('Hey, what are you looking for?');
 export default function Layout({
   children, title, hideFooter, page,
 }) {
-  console.log('Page is: ', page);
-
   if (page !== '') {
     return (
       <div id="page-wrapper" className={page}>
