@@ -64,6 +64,11 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    transform: scale(1.5) translateY(17%)
+  }
+  @include media-breakpoint-up(xl) {
+    transform: none;
+
   }
 }
 
@@ -81,13 +86,10 @@
     position: absolute;
     width: 32%;
     left: 29%;
-    bottom: -20%;
+    bottom: -10%;
     transform: rotate(62deg);
   }
 
-  @include media-breakpoint-up(xl) {
-    bottom: -10%;
-  }
 }
 
 #filo-download {

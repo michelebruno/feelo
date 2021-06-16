@@ -50,10 +50,10 @@ export default function Home({
             <div className="col-xl-10 d-flex" id="hero-image-wrapper">
               <FiloHero />
               <div id="home-seduto-rosa">
-                <GatsbyImage alt="Seduto verde" image={getImage(sedutoRosa)} />
+                <GatsbyImage alt="Seduto verde" loading="eager" image={getImage(sedutoRosa)} />
               </div>
               <div id="home-seduto-verde" className=" mb-n2 mb-lg-0">
-                <GatsbyImage alt="Seduto verde" image={getImage(sedutoVerde)} />
+                <GatsbyImage alt="Seduto verde" loading="eager" image={getImage(sedutoVerde)} />
               </div>
               <FiloHeroOver />
 
@@ -95,7 +95,7 @@ export default function Home({
             innerClassName="mb-xl-1"
           >
             <div className="col-12 col-xl-1" />
-            <div className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-xl-5">
+            <div className="col-12 col-lg-5 offset-lg-1 col-xl-4 pb-xl-5">
               <h2>Per chi soffre di disturbi alimentari...</h2>
               <p className="lead">
                 Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
@@ -112,7 +112,7 @@ export default function Home({
               </Link>
             </div>
             <div
-              className="col-12 col-lg-6 offset-lg-1 px-lg-2 position-xl-absolute"
+              className="col-12 col-lg-6   px-lg-2 position-xl-absolute"
               id="home-avatarRosa"
             >
               <div className="position-relative w-100 h-100">
@@ -151,7 +151,7 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient1 pt-3 pt-xl-5" fluid>
+          <ClippedSection className="gradient1 pt-3 pt-xl-5" vimeo>
             <div className="col-12 py-xl-5">
               <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                 <iframe

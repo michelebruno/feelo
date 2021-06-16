@@ -1087,6 +1087,11 @@
   resolved "https://registry.yarnpkg.com/@fluentui/react-icons/-/react-icons-1.1.130.tgz#bc99d60939c681e10c336ff3eb153a1597696283"
   integrity sha512-fsBRH0SJsO82ZEPrJWxkvc0jerG/yZF7cx+cFkGpEyFYxjvdzpCQxqbLt+c2+8Gn9frjbhJZw1ERmZ6La4b06A==
 
+"@fluentui/svg-icons@^1.1.130":
+  version "1.1.130"
+  resolved "https://registry.yarnpkg.com/@fluentui/svg-icons/-/svg-icons-1.1.130.tgz#71f025b27ac2a76dc3f24194c52d7a45642cfb41"
+  integrity sha512-zXUt/xTSFpit8YnbIpvoKprRcxF7i8hwwXpihgzjLElod+hmq2xIKLnVwfV2gBDXN/sFmlwNVcgTAZ53D3/8bQ==
+
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

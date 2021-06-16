@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import classNames from 'classnames';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
+import { ReactComponent as Lines } from '../icons/line_horizontal_3_20_filled.svg';
 
 export default function Navbar() {
   const [navbarStatus, setNavbarStatus] = useState(false);
@@ -33,7 +34,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i className="fluent-icons-filled-24">line_horizontal</i>
+            <Lines />
           </button>
         </div>
         <nav className={`col-auto collapse navbar-collapse justify-content-end ${navbarStatus

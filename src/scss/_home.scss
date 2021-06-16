@@ -149,6 +149,20 @@
 #filo-hero_svg__completo {
   z-index: 7;
 }
+
+@include media-breakpoint-up(lg ) {
+
+  #home-propongo-rosa {
+    left: 50%;
+    top: 25%;
+  }
+
+  #home-propongo-verde {
+    top: 45%;
+    right: 20%;
+  }
+}
+
 @include media-breakpoint-up(xl) {
 
 
@@ -164,11 +178,8 @@
   }
 
   #home-propongo-rosa {
-    position: absolute;
-    width: 68%;
-    opacity: .5;
-    right: 0;
-    bottom: 0;
+    top:-35%;
+    left: 30%;
   }
 
   #home-propongo-verde {
@@ -203,6 +214,11 @@
     width: 100%;
   }
 
+
+  #farfalla-giulia {
+    top: 28%;
+    left: 20%;
+  }
 
   #home-avatarRosa {
     transform: scale(1.4);
