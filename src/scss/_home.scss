@@ -70,27 +70,30 @@
   position: relative;
   top: -10%;
 }
-
+.cosapropongosection {
+  overflow-x: hidden;
+}
 #home-propongo-rosa {
   position: absolute;
-  width: 120%;
   opacity: .5;
-  right: 10%;
-  bottom: 0;
+  width: 120%;
+  top: -45%;
+
 }
 
 #home-propongo-verde {
   position: absolute;
+  right: 10%;
+  top: 0;
   opacity: .5;
-  top: -45%;
-  width:  120%;
+  width: 120%;
 }
 
 #home-propongo-feelo {
   position: absolute;
   transform: scale(.9);
   left: -30%;
-  bottom: 0%;
+  top: -30%;
   width: 120%;
 }
 
@@ -125,8 +128,8 @@
   #home-propongo-verde {
     position: absolute;
     opacity: .5;
-
-    top: -45%;
+    right: 30%;
+    top: 0%;
     width: 68%;
   }
 
@@ -155,6 +158,7 @@
   left: -5%;
   width: 120%;
 }
+
 #farfalla-giulia {
   position: absolute;
   top: 15%;
@@ -164,9 +168,14 @@
 }
 
 #home-doppioavatar {
-   right: -5%;
+  right: -5%;
   top: -25%;
   height: 100%;
+
+  & > div {
+    width: 130%;
+    margin-left: -10%;
+  }
 }
 
 #filo-feeler {
@@ -179,7 +188,7 @@
 }
 
 #home-avatarRosa {
-   left: 0;
+  left: 0;
   top: 0%;
 }
 

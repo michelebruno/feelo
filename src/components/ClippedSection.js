@@ -17,7 +17,6 @@ export default function ClippedSection({
           clip10,
           'has-clipped-next': dontClip,
         }, className)}
-      style={{ overflowX: 'hidden' }}
     >
       <div className="row ">
         <div className="col-12">

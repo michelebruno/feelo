@@ -69,7 +69,7 @@ export default function Home({
 
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient2 clip10">
+          <ClippedSection className="gradient2 clip10 cosapropongosection">
             <div className="col-12 col-xl-4 pb-5 offset-xl-1">
               <h2 className="mb-3">Ecco cosa propongo</h2>
               <p className="lead mb-3">
@@ -81,7 +81,7 @@ export default function Home({
                 dell’Alimentazione.
               </p>
             </div>
-            <div className="col-12 col-xl align-self-stretch py-5" id="home-propongo-wrapper">
+            <div className="col-12 col-xl align-self-stretch py-9 py-lg-0 mt-n1" id="home-propongo-wrapper">
               <div id="home-propongo-verde">
                 <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
               </div>
@@ -136,7 +136,7 @@ export default function Home({
                 relazioni e il dialogo.
               </p>
             </div>
-            <div className="col-12 col-xl-7 position-xl-absolute" id="home-doppioavatar">
+            <div className="col-12 col-xl-7 position-xl-absolute mb-n3 mb-xl-0" id="home-doppioavatar">
               <div className="position-relative w-100 h-100">
                 <FiloFeeler id="filo-feeler" />
                 <GatsbyImage

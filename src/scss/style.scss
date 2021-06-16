@@ -11,6 +11,18 @@
 $grid-gutter-width: 30px;
 $spacer: 3rem;
 
+ $spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  7: $spacer * 3.5,
+  9: $spacer * 4.5,
+   10: $spacer* 6,
+) !default;
+
 $grid-breakpoints: (
   xs: 0,
   md: 576px,
