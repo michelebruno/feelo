@@ -33,7 +33,7 @@ module.exports = {
       options: {
         defaults: {
           placeholder: 'blurred',
-          quality: 100,
+          quality: 80,
         },
       },
     },

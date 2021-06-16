@@ -64,6 +64,17 @@
   width: 120%;
 }
 
+@include media-breakpoint-up(lg) {
+
+  #hero-image-wrapper {
+    bottom: -27%;
+  }
+  #home-propongo-wrapper {
+    transform-origin: right top;
+    transform: scale(.6);
+  }
+}
+
 @include media-breakpoint-up(xl) {
 
 
@@ -76,6 +87,7 @@
   #home-propongo-wrapper {
     position: relative;
     top: -10%;
+    transform: none;
   }
 
   #home-propongo-rosa {

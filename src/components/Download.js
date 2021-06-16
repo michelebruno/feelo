@@ -17,13 +17,12 @@ export default function Download({ className, doesntCover, hug }) {
     abbraccio: file(relativePath: {eq: "abbraccio.png"}) {
       childImageSharp{
         gatsbyImageData(
-          layout: CONSTRAINED
+          layout: FULL_WIDTH
         )
       }
     }
   }`);
   return (
-
     <ClippedSection
       className={classNames(
         'container-fluid',
@@ -38,8 +37,7 @@ export default function Download({ className, doesntCover, hug }) {
       <div className="pt-4 col-12">
         <div className="container">
           <div className="row position-relative align-items-center">
-
-            <div className="col-12 col-xl-4 offset-xl-1">
+            <div className="col-12 col-lg-5 col-xl-4 offset-xl-1">
               <h2 className="h1">Scarica l’App</h2>
               <p className="lead">
                 Inizia il tuo percorso con Feelo che ti aiuterà ad affrontare il
@@ -47,15 +45,14 @@ export default function Download({ className, doesntCover, hug }) {
               </p>
               <p>
                 <a href="#" className="btn btn-outline-primary me-1">Android</a>
-                <a href="#" className="btn btn-outline-primary  me-1">iOS</a>
+                <a href="#" className="btn btn-outline-primary me-1">iOS</a>
               </p>
             </div>
             {hug
               ? (
-                <div className="col-12 col-xl-5 text-center  mb-xl-n5" id="hug-container">
+                <div className="col-12 col-lg-5 col-xl-5 text-center mb-xl-n5" id="hug-container">
                   <div className="w-100 h-100 position-relative">
                     <FiloHug id="filo-hug" />
-
                     <GatsbyImage
                       image={getImage(abbraccio)}
                       alt="Abbraccio tra chi sta male e un suo Feeler"
@@ -64,7 +61,7 @@ export default function Download({ className, doesntCover, hug }) {
                 </div>
               )
               : (
-                <div className="col-12 col-xl-4 offset-xl-2 text-center position-relative overflow-hidden">
+                <div className="col-12  col-lg-5 offset-lg-1 col-xl-4 offset-xl-2 text-center position-relative overflow-hidden">
                   <FiloDownload id="filo-download" />
                   <GatsbyImage
                     alt="Mockup della schermata iniziale"
