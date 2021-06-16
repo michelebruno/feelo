@@ -258,13 +258,21 @@ $clipped-overlay: 50vh;
 }
 
 .clip01 {
-  clip-path: url(#wave-01-1x_svg__wave01);
+  clip-path: url(#wave-01-2x_svg__clip);
 }
 
 .clip10 {
-  clip-path: url(#wave-10-1x_svg__wave10);
+  clip-path: url(#wave-10-2x_svg__clip);
 }
+@include media-breakpoint-up(xl) {
+  .clip01 {
+    clip-path: url(#wave-01-1x_svg__clip);
+  }
 
+  .clip10 {
+    clip-path: url(#wave-10-1x_svg__clip);
+  }
+}
 #navbar-wrapper {
   position: relative;
   z-index: 90;
