@@ -84,6 +84,10 @@
     bottom: -20%;
     transform: rotate(62deg);
   }
+
+  @include media-breakpoint-up(xl) {
+    bottom: -10%;
+  }
 }
 
 #filo-download {

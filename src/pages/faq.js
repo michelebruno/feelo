@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby';
-import { Info24Regular } from '@fluentui/react-icons';
 import Layout from '../components/Layout';
 import Accordion from '../components/Accordion';
 import Download from '../components/Download';

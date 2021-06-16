@@ -4,13 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import classNames from 'classnames';
 import { useRef, useState } from 'react';
-import {
-  Book24Filled, Book24Regular,
-  Chat24Filled, Chat24Regular,
-  DocumentCopy24Filled, DocumentCopy24Regular,
-  Home24Filled, Home24Regular,
-  TaskListSquareLtr24Filled, TaskListSquareLtr24Regular,
-} from '@fluentui/react-icons';
 import { ReactComponent as FiloPeopleOver } from '../images/people-filo-over.svg';
 import { ReactComponent as FiloPeople } from '../images/people-filo-completo.svg';
 import Layout from '../components/Layout';
@@ -25,7 +18,9 @@ function Features({ features, sfondo, reverse }) {
   const swiper = useRef();
 
   return (
-    <div className={classNames('feature-wrapper row justify-content-center', { 'flex-row-reverse': !reverse })}>
+    <div className={classNames('feature-wrapper row justify-content-center',
+      { 'flex-row-reverse': !reverse })}
+    >
       <div className="col-12 col-lg-9 align-self-stretch position-relative featurer-slider-wrapper">
         <div className="features-backgroud" slot="container-start">
           <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
@@ -52,20 +47,42 @@ function Features({ features, sfondo, reverse }) {
           ))}
         </Swiper>
       </div>
-      <div className="col-10 col-lg-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-0 position-relative" style={{ zIndex: 10 }}>
+      <div
+        className="col-10 col-lg-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-0 position-relative"
+        style={{ zIndex: 10 }}
+      >
         <ul className=" d-flex justify-content-between list-unstyled flex-row flex-lg-column">
           {
             features.map(({ label, icon, iconActive }, index) => (
               <li
                 onClick={() => swiper.current.slideTo(index + 1)}
-                className={classNames('d-flex flex-column-reverse flex-lg-row small py-2 justify-content-end feature-list-item position-relative ', {
-                  active: activeSlide === index,
-                  'flex-lg-row-reverse': reverse,
-                })}
+                className={classNames(
+                  'd-flex flex-column-reverse flex-lg-row small py-2 justify-content-end feature-list-item position-relative ',
+                  {
+                    active: activeSlide === index,
+                    'flex-lg-row-reverse': reverse,
+                  },
+                )}
                 key={label}
               >
-                <span className={classNames('px-2 py-1 py-lg-0 d-lg-inline feature-label')}>{label}</span>
-                <span className="feature-icon">{activeSlide === index ? iconActive : icon}</span>
+                <span className={classNames(
+                  'px-2 py-1 py-lg-0 d-lg-inline feature-label',
+                )}
+                >
+                  {label}
+                </span>
+                <span className="feature-icon">
+                  {typeof icon === 'string'
+                    ? (
+                      <i className={activeSlide === index
+                        ? 'fluent-icons-filled-24'
+                        : 'fluent-icons-regular-24'}
+                      >
+                        {icon}
+                      </i>
+                    )
+                    : (activeSlide === index ? iconActive : icon)}
+                </span>
               </li>
             ))
           }
@@ -89,13 +106,12 @@ export default function Feelo({
 }) {
   const featureGiulia = [
     {
-      image: giulia.nodes[4], label: 'Home', icon: <Home24Regular />, iconActive: <Home24Filled />,
+      image: giulia.nodes[4], label: 'Home', icon: 'home',
     },
     {
       image: giulia.nodes[0],
       label: 'Attività',
-      icon: <TaskListSquareLtr24Regular />,
-      iconActive: <TaskListSquareLtr24Filled />,
+      icon: 'task_list_square',
     },
     {
       image: giulia.nodes[3],
@@ -104,34 +120,38 @@ export default function Feelo({
       iconActive: <FeeloChatFilled height={24} width={24} />,
     },
     {
-      image: giulia.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
+      image: giulia.nodes[2],
+      label: 'Diario',
+      icon: 'book',
     },
     {
-      image: giulia.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
+      image: giulia.nodes[1],
+      label: 'Chat',
+      icon: 'chat',
     },
   ];
 
   const featureFeeler = [
     {
-      image: feeler.nodes[3], label: 'Home', icon: <Home24Regular />, iconActive: <Home24Filled />,
+      image: feeler.nodes[3], label: 'Home', icon: 'home',
     },
     {
       image: feeler.nodes[0],
       label: 'Attività',
-      icon: <TaskListSquareLtr24Regular />,
-      iconActive: <TaskListSquareLtr24Filled />,
+      icon: 'task_list_square',
     },
     {
       image: feeler.nodes[4],
       label: 'Informazioni',
-      icon: <DocumentCopy24Regular />,
-      iconActive: <DocumentCopy24Filled />,
+      icon: 'document_copy',
     },
     {
-      image: feeler.nodes[2], label: 'Diario', icon: <Book24Regular />, iconActive: <Book24Filled />,
+      image: feeler.nodes[2],
+      label: 'Diario',
+      icon: 'book',
     },
     {
-      image: feeler.nodes[1], label: 'Chat', icon: <Chat24Regular />, iconActive: <Chat24Filled />,
+      image: feeler.nodes[1], label: 'Chat', icon: 'chat',
     },
   ];
   return (
@@ -208,6 +228,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 500
+        quality: 40
       )
     }
   }
@@ -215,6 +237,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 500
+        quality: 40
       )
     }
   }

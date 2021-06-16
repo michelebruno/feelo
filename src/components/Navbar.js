@@ -3,7 +3,6 @@ import { Link, navigate } from 'gatsby';
 import { useState } from 'react';
 
 import classNames from 'classnames';
-import { LineHorizontal320Filled } from '@fluentui/react-icons';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
 export default function Navbar() {
@@ -34,7 +33,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <LineHorizontal320Filled />
+            <i className="fluent-icons-filled-24">line_horizontal</i>
           </button>
         </div>
         <nav className={`col-auto collapse navbar-collapse justify-content-end ${navbarStatus

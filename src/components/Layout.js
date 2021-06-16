@@ -17,9 +17,10 @@ export default function Layout({
   if (page !== '') {
     return (
       <div id="page-wrapper" className={page}>
-        <Helmet title={title || 'Feelo'}>
-          <link rel="stylesheet" href="https://use.typekit.net/kai1avr.css" />
-        </Helmet>
+        <Helmet
+          title={title || 'Feelo'}
+          htmlAttributes={{ lang: 'it' }}
+        />
         <Navbar />
         {children}
         {!hideFooter && <Footer />}

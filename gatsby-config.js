@@ -3,6 +3,7 @@ const googleCredentials = require('./credentials.json');
 module.exports = {
   siteMetadata: {
     title: 'Feelo',
+    lang: 'it',
   },
   pathPrefix: '/feelo',
   plugins: [
@@ -68,14 +69,14 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     typekit: {
-    //       id: 'kai1avr',
-    //     },
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'kai1avr',
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-google-spreadsheet',
       options: {

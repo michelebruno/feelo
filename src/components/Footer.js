@@ -65,6 +65,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wazybr/fluentui-system-icons-font/webfonts/css/fluent-icons-regular-24.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wazybr/fluentui-system-icons-font/webfonts/css/fluent-icons-filled-24.css" />
 
     </footer>
   );

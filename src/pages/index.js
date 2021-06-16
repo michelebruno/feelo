@@ -1,6 +1,5 @@
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { ArrowRight16Filled } from '@fluentui/react-icons';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
 import { ReactComponent as FiloGiulia } from '../images/filo-giulia-home.svg';
@@ -72,7 +71,10 @@ export default function Home({
                 dell’Alimentazione.
               </p>
             </div>
-            <div className="col-12 col-lg align-self-stretch py-9 py-lg-10 py-xl-0 mt-n1" id="home-propongo-wrapper">
+            <div
+              className="col-12 col-lg align-self-stretch py-9 py-lg-10 py-xl-0 mt-n1"
+              id="home-propongo-wrapper"
+            >
               <div id="home-propongo-verde">
                 <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
               </div>
@@ -87,7 +89,11 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection reverse className="gradient1 clip01 overflow-hidden" innerClassName="mb-xl-1">
+          <ClippedSection
+            reverse
+            className="gradient1 clip01 overflow-hidden"
+            innerClassName="mb-xl-1"
+          >
             <div className="col-12 col-xl-1" />
             <div className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-xl-5">
               <h2>Per chi soffre di disturbi alimentari...</h2>
@@ -102,10 +108,13 @@ export default function Home({
               <Link className="btn btn-outline-primary" to="/scopri">
                 Cos’è un disturbo alimentare?
                 {' '}
-                <ArrowRight16Filled className="d-none d-lg-inline" />
+                <i className="fluent-icons-filled-24 d-none d-lg-inline">arrow_right</i>
               </Link>
             </div>
-            <div className="col-12 col-lg-6 offset-lg-1 px-lg-2 position-xl-absolute" id="home-avatarRosa">
+            <div
+              className="col-12 col-lg-6 offset-lg-1 px-lg-2 position-xl-absolute"
+              id="home-avatarRosa"
+            >
               <div className="position-relative w-100 h-100">
                 <div id="farfalla-giulia">
                   <GatsbyImage alt="Farfalla che vola" image={getImage(farfalla)} />
@@ -127,7 +136,10 @@ export default function Home({
                 relazioni e il dialogo.
               </p>
             </div>
-            <div className="col-12 col-lg-7 col-xl-6 offset-xl-1 position-lg-absolute mb-n3 mb-xl-0" id="home-doppioavatar">
+            <div
+              className="col-12 col-lg-7 col-xl-6 offset-xl-1 position-lg-absolute mb-n3 mb-xl-0"
+              id="home-doppioavatar"
+            >
               <div className="position-relative w-100 h-100">
                 <FiloFeeler id="filo-feeler" />
                 <GatsbyImage
@@ -228,6 +240,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 500
+        quality: 40
       )
     }
   }
@@ -235,6 +249,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 500
+        quality: 40
       )
     }
   }
