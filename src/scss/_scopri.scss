@@ -26,7 +26,7 @@
   &.active {
     font-weight: $font-weight-bolder;
     transform: scale(1.2);
-    @include media-breakpoint-up("xl") {
+    @include media-breakpoint-up(lg) {
       transform-origin: right center;
     }
   }
@@ -41,7 +41,7 @@
 }
 
 .featurer-slider-wrapper {
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(lg) {
     overflow-x: hidden;
   }
 }
@@ -59,7 +59,7 @@
 }
 
 #hug-container {
-  @include media-breakpoint-up("xl") {
+  @include media-breakpoint-up(lg) {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -76,7 +76,7 @@
 #filo-scopri {
   transform: rotate(27deg);
   @extend .mb-n3;
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     position: absolute;
     width: 32%;
     left: 29%;

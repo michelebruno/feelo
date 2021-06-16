@@ -26,7 +26,7 @@ function Features({ features, sfondo, reverse }) {
 
   return (
     <div className={classNames('feature-wrapper row justify-content-center', { 'flex-row-reverse': !reverse })}>
-      <div className="col-12 col-xl-9 align-self-stretch position-relative featurer-slider-wrapper">
+      <div className="col-12 col-lg-9 align-self-stretch position-relative featurer-slider-wrapper">
         <div className="features-backgroud" slot="container-start">
           <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
         </div>
@@ -52,7 +52,7 @@ function Features({ features, sfondo, reverse }) {
           ))}
         </Swiper>
       </div>
-      <div className="col-10 col-xl-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-0 position-relative" style={{ zIndex: 10 }}>
+      <div className="col-10 col-lg-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-0 position-relative" style={{ zIndex: 10 }}>
         <ul className=" d-flex justify-content-between list-unstyled flex-row flex-lg-column">
           {
             features.map(({ label, icon, iconActive }, index) => (
@@ -60,11 +60,11 @@ function Features({ features, sfondo, reverse }) {
                 onClick={() => swiper.current.slideTo(index + 1)}
                 className={classNames('d-flex flex-column-reverse flex-lg-row small py-2 justify-content-end feature-list-item position-relative ', {
                   active: activeSlide === index,
-                  'flex-xl-row-reverse': reverse,
+                  'flex-lg-row-reverse': reverse,
                 })}
                 key={label}
               >
-                <span className={classNames('px-2 py-1 py-xl-0 d-xl-inline feature-label')}>{label}</span>
+                <span className={classNames('px-2 py-1 py-lg-0 d-lg-inline feature-label')}>{label}</span>
                 <span className="feature-icon">{activeSlide === index ? iconActive : icon}</span>
               </li>
             ))
@@ -139,7 +139,7 @@ export default function Feelo({
 
       <div className="container">
         <header className="row page-header">
-          <div className="col-12 col-xl-6 heading-column">
+          <div className="col-12 col-lg-6 heading-column">
             <h1>
               Al centro la persona,
               {' '}
@@ -157,7 +157,7 @@ export default function Feelo({
               .
             </p>
           </div>
-          <div className="col-12 col-xl-6 px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
+          <div className="col-12 col-lg px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
             <FiloPeople className="filo-people" />
             <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
             {' '}
@@ -165,9 +165,9 @@ export default function Feelo({
 
           </div>
         </header>
-        <div className="row flex-xl-row-reverse align-items-center position-relative py-3 py-lg-0">
+        <div className="row flex-lg-row-reverse align-items-center position-relative py-3 py-lg-0">
           <div className="col-12 col-xl-1" />
-          <div className="col-12 col-xl-4 offset-xl-1">
+          <div className="col-12 col-lg-5 col-xl-4 offset-lg-1">
             <h2>A chi si trova al centro della tempesta...</h2>
             <p className="lead">
               Riscopri le tue potenzialità attraverso riflessioni e attività introspettive e
@@ -177,15 +177,15 @@ export default function Feelo({
               . Feelo sarà l’amico che sarà sempre accanto a te e terrà traccia dei tuoi progressi.
             </p>
           </div>
-          <div className="col-12 col-xl-6">
+          <div className="col-12 col-lg-6">
             <Features features={featureGiulia} sfondo={sfondoRosa} />
           </div>
-          <div className="col-12 col-xl-3 mx-auto">
+          <div className="col-12 col-lg-3 mx-auto">
             <FiloDownload id="filo-scopri" />
           </div>
         </div>
-        <div className="row align-items-center  py-lg-0">
-          <div className="col-12 col-xl-4 offset-xl-1 align-items-center">
+        <div className="row align-items-center py-lg-0">
+          <div className="col-12 col-lg-5 offset-xl-1 align-items-center">
             <h2>...ai feeler che arrivano in soccorso</h2>
             <p className="lead">
               Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare, tenendo
@@ -193,7 +193,7 @@ export default function Feelo({
               costruttivo in cui ti guiderà.
             </p>
           </div>
-          <div className="col-12 col-xl-6 offset-xl-1">
+          <div className="col-12 col-lg-6 offset-lg-1">
             <Features features={featureFeeler} sfondo={sfondoVerde} reverse />
           </div>
         </div>

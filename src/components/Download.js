@@ -27,7 +27,7 @@ export default function Download({ className, doesntCover, hug }) {
       className={classNames(
         'container-fluid',
         'clip10 gradient2 ',
-        'py-xl-5',
+        'py-lg-5',
         hug ? 'pb-0 pt-3' : 'py-3',
         {
           'mt-3': doesntCover,
@@ -50,7 +50,7 @@ export default function Download({ className, doesntCover, hug }) {
             </div>
             {hug
               ? (
-                <div className="col-12 col-lg-5 col-xl-5 text-center mb-xl-n5" id="hug-container">
+                <div className="col-12  col-lg-5 offset-lg-1  text-center mb-xl-n5" id="hug-container">
                   <div className="w-100 h-100 position-relative">
                     <FiloHug id="filo-hug" />
                     <GatsbyImage
