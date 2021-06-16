@@ -35,7 +35,7 @@ export default function Home({
       <div className="row gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
-            <div className="col-12 col-xl-7 text-center pt-5 pb-5">
+            <div className="col-12 col-xl-7 text-center pt-2 pt-lg-5 pb-3 pb-lg-5">
               <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
               <p className="lead">
                 L’app pensata per affrontare i
@@ -62,7 +62,7 @@ export default function Home({
               <div id="home-seduto-rosa">
                 <GatsbyImage alt="Seduto verde" image={getImage(sedutoRosa)} />
               </div>
-              <div id="home-seduto-verde">
+              <div id="home-seduto-verde" className=" mb-n2 mb-lg-0">
                 <GatsbyImage alt="Seduto verde" image={getImage(sedutoVerde)} />
               </div>
               <FiloHeroOver />
@@ -96,7 +96,7 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection reverse className="gradient1 clip01" innerClassName="mb-xl-1">
+          <ClippedSection reverse className="gradient1 clip01 overflow-hidden" innerClassName="mb-xl-1">
             <div className="col-12 col-xl-1" />
             <div className="col-12 col-xl-4 offset-xl-1 pb-xl-5">
               <h2>Per chi soffre di disturbi alimentari...</h2>
@@ -148,7 +148,7 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient1 pt-xl-5">
+          <ClippedSection className="gradient1 pt-3 pt-xl-5" fluid>
             <div className="col-12 py-xl-5">
               <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
                 <iframe

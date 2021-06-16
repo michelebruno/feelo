@@ -8,6 +8,7 @@ export default function ClippedSection({
   justifyCenter,
   clip10,
   innerClassName,
+  fluid,
 }) {
   return (
     <section
@@ -20,7 +21,7 @@ export default function ClippedSection({
     >
       <div className="row ">
         <div className="col-12">
-          <div className="container position-relative">
+          <div className={classNames('position-relative', fluid ? ' ' : 'container')}>
             <div className={classNames('row gx-0', innerClassName, {
               'flex-xl-row-reverse': reverse,
               'justify-content-center': justifyCenter,

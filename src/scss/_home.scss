@@ -1,15 +1,12 @@
 
-.home-slider {
-  max-height: 100vh;
-
-  .swiper-slide {
-    height: 100vh;
-  }
-
-}
-
 #home-title {
-  font-size: 70px;
+  font-size: 50px;
+  line-height: 1.0;
+  @include media-breakpoint-up(xl) {
+    font-size: 70px;
+    line-height: 1.3;
+
+  }
 }
 
 .hero {
@@ -20,49 +17,11 @@
   }
 }
 
-.hero-section {
-  z-index: 100;
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-
-  & > .row {
-    width: 100%;
-  }
-}
-
-#home-proposta-image {
-  position: absolute;
-  bottom: -10%;
-  width: 150%;
-  left: -25%;
-
-  @include media-breakpoint-up("xl") {
-    width: 60%;
-    left: 20%;
-  }
-}
-
-#home-landing-image {
-  position: absolute;
-  width: 80%;
-  left: 10%;
-  bottom: -10%;
-  @include media-breakpoint-up("xl") {
-    width: 60%;
-    right: 0;
-    left: unset;
-    bottom: 10%;
-  }
-}
 
 
 #hero-image-wrapper {
   position: absolute;
-  bottom: -40%;
+  bottom: -19%;
   z-index: 9;
 }
 
@@ -106,6 +65,8 @@
 }
 
 @include media-breakpoint-up(xl) {
+
+
   #hero-image-wrapper {
     position: absolute;
     bottom: -40%;
@@ -155,7 +116,7 @@
   position: absolute;
   stroke: $white !important;
   bottom: 20%;
-  left: -5%;
+  left: -10%;
   width: 120%;
 }
 
@@ -171,25 +132,28 @@
   right: -5%;
   top: -25%;
   height: 100%;
-
-  & > div {
-    width: 130%;
-    margin-left: -10%;
+  transform: scale(1.2);
+  @include media-breakpoint-up(lg) {
+    transform: none;
   }
 }
 
 #filo-feeler {
-  $width: 43%;
   position: absolute;
-  top: 58%;
-  left: 34%;
-  width: $width;
+  top: 32%;
+  left: 27%;
+  width: 43%;
   z-index: 5;
 }
 
 #home-avatarRosa {
+  @extend .mb-n4, .mb-0, .pt-1;
   left: 0;
   top: 0%;
+  //transform: scale(1.1);
+  @include media-breakpoint-up(lg) {
+    transform: none;
+  }
 }
 
 #home-seduto-rosa {
@@ -203,17 +167,17 @@
   position: relative;
 }
 
-#filo-hero_svg__filo {
+#filo-hero_svg__filo,#filo-hero-over_svg__filo {
   top: 20%;
   position: absolute;
+  transform: rotate(5deg);
+  @include media-breakpoint-up(xl) {
+    transform: none;
+  }
 }
 
-#filo-hero-over_svg__filo {
-  top: 20%;
-  position: absolute;
-}
 
-#filo-hero_svg__trim2, filo-hero_svg__trim1 {
+#filo-hero_svg__trim2, #filo-hero_svg__trim1 {
   position: absolute;
   z-index: 90;
 }
