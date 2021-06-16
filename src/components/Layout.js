@@ -1,8 +1,6 @@
 import '../scss/style.scss';
 import { Helmet } from 'react-helmet';
-import SwiperCore, {
-  Navigation, Pagination, Scrollbar, Mousewheel, Autoplay, Parallax, EffectFade,
-} from 'swiper/core';
+import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { ReactComponent as DownloadClip } from '../images/wave-10-1x.svg';
@@ -10,7 +8,7 @@ import { ReactComponent as Wave01 } from '../images/wave-01-1x.svg';
 import { ReactComponent as Wave102x } from '../images/wave-10-2x.svg';
 import { ReactComponent as Wave012x } from '../images/wave-01-2x.svg';
 
-SwiperCore.use([Pagination, Scrollbar, Navigation, Mousewheel, Autoplay, EffectFade, Parallax]);
+SwiperCore.use([Autoplay, EffectFade]);
 
 console.log('Hey, what are you looking for?');
 export default function Layout({
@@ -19,8 +17,9 @@ export default function Layout({
   if (page !== '') {
     return (
       <div id="page-wrapper" className={page}>
-
-        <Helmet title={title || 'Feelo'} />
+        <Helmet title={title || 'Feelo'}>
+          <link rel="stylesheet" href="https://use.typekit.net/kai1avr.css" />
+        </Helmet>
         <Navbar />
         {children}
         {!hideFooter && <Footer />}

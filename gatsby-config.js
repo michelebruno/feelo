@@ -33,7 +33,7 @@ module.exports = {
       options: {
         defaults: {
           placeholder: 'blurred',
-          quality: 80,
+          quality: 70,
         },
       },
     },
@@ -68,15 +68,14 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'kai1avr',
-        },
-      },
-    },
-
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     typekit: {
+    //       id: 'kai1avr',
+    //     },
+    //   },
+    // },
     {
       resolve: 'gatsby-source-google-spreadsheet',
       options: {

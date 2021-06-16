@@ -8,12 +8,9 @@
   line-height: 1;
   transition: all .5s ease;
 
-  &.flex-xl-row-reverse {
-    transform-origin: left center;
-  }
   transform: scale(.9);
 
-  @include media-breakpoint-up("xl") {
+  @include media-breakpoint-up("lg") {
     transform-origin: right center;
     transform: scale(1);
   }
@@ -29,6 +26,10 @@
     @include media-breakpoint-up(lg) {
       transform-origin: right center;
     }
+  }
+
+  &.flex-lg-row-reverse {
+    transform-origin: left center;
   }
 
   .feature-icon {

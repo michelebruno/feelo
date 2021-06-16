@@ -1,12 +1,12 @@
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
 import { useState } from 'react';
-import { navigate } from 'gatsby-link';
+
 import classNames from 'classnames';
 import { LineHorizontal320Filled } from '@fluentui/react-icons';
 import { ReactComponent as Logo } from '../images/logo-resp.svg';
 
-export default function Navbar({ title }) {
+export default function Navbar() {
   const [navbarStatus, setNavbarStatus] = useState(false);
 
   function openNavbar() {
@@ -20,7 +20,7 @@ export default function Navbar({ title }) {
   return (
     <div id="navbar-wrapper" className={classNames('container')}>
       <div
-        className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-md"
+        className="row justify-content-between align-items-center py-2 navbar-collapse navbar-expand-lg"
       >
         <div id="logo-container" className="col ">
           <Logo className="h-100 text-primary" onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
@@ -41,8 +41,8 @@ export default function Navbar({ title }) {
           ? 'show'
           : ''}`}
         >
-          <Logo className="logo d-md-none" />
-          <div className="col-12 px-1 position-absolute d-md-none close-button-container">
+          <Logo className="logo d-lg-none" />
+          <div className="col-12 px-1 position-absolute d-lg-none close-button-container">
 
             <button
               className="navbar-toggler btn-close"
@@ -80,12 +80,12 @@ export default function Navbar({ title }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
+              <a
                 to="#download"
                 className="btn btn-outline-primary d-none d-lg-inline-block"
               >
                 Download
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>

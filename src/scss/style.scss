@@ -1,5 +1,4 @@
 @import "~swiper/swiper";
-@import "~swiper/components/pagination/pagination";
 @import "~swiper/components/effect-fade/effect-fade";
 
 /*!
@@ -11,7 +10,7 @@
 $grid-gutter-width: 30px;
 $spacer: 3rem;
 
- $spacers: (
+$spacers: (
   0: 0,
   1: $spacer / 4,
   2: $spacer / 2,
@@ -20,19 +19,17 @@ $spacer: 3rem;
   5: $spacer * 3,
   7: $spacer * 3.5,
   9: $spacer * 4.5,
-   10: $spacer* 6,
+  10: $spacer* 6,
 ) !default;
 
 $grid-breakpoints: (
   xs: 0,
-  md: 576px,
   lg: 992px,
   xl: 1440px
 ) !default;
 
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
   lg: 960px,
   xl: 1240px
 );
@@ -264,6 +261,7 @@ $clipped-overlay: 50vh;
 .clip10 {
   clip-path: url(#wave-10-2x_svg__clip);
 }
+
 @include media-breakpoint-up(xl) {
   .clip01 {
     clip-path: url(#wave-01-1x_svg__clip);
@@ -273,6 +271,7 @@ $clipped-overlay: 50vh;
     clip-path: url(#wave-10-1x_svg__clip);
   }
 }
+
 #navbar-wrapper {
   position: relative;
   z-index: 90;
