@@ -257,6 +257,7 @@ export const query = graphql`{
       childImageSharp {
         gatsbyImageData(
           layout: CONSTRAINED
+          width: 600
         )
       }
     }
@@ -268,7 +269,10 @@ export const query = graphql`{
     nodes {
       relativePath
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(
+          layout: CONSTRAINED
+          width: 600
+        )
       }
     }
   }
