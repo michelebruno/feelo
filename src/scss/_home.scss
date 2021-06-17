@@ -78,6 +78,7 @@
   }
 }
 
+
 @keyframes filoGiulia {
   from {
     stroke-dashoffset: 0;
@@ -179,7 +180,7 @@
 
 @include media-breakpoint-up(lg) {
   #hero-image-wrapper {
-    bottom: -27%;
+    bottom: -30%;
   }
   #home-propongo-wrapper {
     transform-origin: right top;
@@ -206,7 +207,7 @@
   }
 
   #home-propongo-wrapper {
-    transform: translateY(-10%);
+    transform: translateY(0%);
   }
 
   #home-propongo-rosa {

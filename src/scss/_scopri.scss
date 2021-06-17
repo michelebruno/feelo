@@ -76,11 +76,13 @@
   width: 120%;
   left: -10%;
   top: 5%;
+  --filolenght: 980;
+  @extend .animatepath;
 }
 
 #filo-scopri {
   transform: rotate(27deg);
-  @extend .mb-n3;
+  @extend .mb-n3, .animatepath;
   @include media-breakpoint-up(lg) {
     position: absolute;
     width: 32%;
@@ -89,6 +91,9 @@
     transform: rotate(62deg);
   }
 
+  --filolenght: 980;
+
+
 }
 
 #filo-download {
@@ -96,6 +101,7 @@
   width: 150%;
   left: -25%;
   top: 10%;
+  @extend .animatepath;
 }
 
 .filo-people {

@@ -57,7 +57,7 @@ export default function Download({ className, doesntCover, hug }) {
                   <Fade bottom>
 
                     <div className="w-100 h-100 position-relative">
-                      <FiloHug id="filo-hug" />
+                      <FiloHug id="filo-hug" className="pt-4" />
                       <GatsbyImage
                         image={getImage(abbraccio)}
                         alt="Abbraccio tra chi sta male e un suo Feeler"

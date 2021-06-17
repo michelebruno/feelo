@@ -37,7 +37,7 @@ export default function Layout({
 
           ]}
         />
-        <Navbar />
+        <Navbar light={page === 'faq'} />
         {children}
         {!hideFooter && <Footer />}
         <div className="visually-hidden position-absolute">

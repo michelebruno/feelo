@@ -28,7 +28,10 @@ export default function Home({
           <ClippedSection dontClip justifyCenter>
             <Fade>
 
-              <div className="col-12 col-xl-7 text-center pt-2 pt-lg-5 pb-3 pb-lg-5  " style={{ opacity: 0 }}>
+              <div
+                className="col-12 col-xl-7 text-center pt-2 pt-lg-4 pb-3 pb-lg-5  "
+                style={{ opacity: 0 }}
+              >
                 <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
                 <p className="lead">
                   L’app pensata per affrontare i
@@ -82,20 +85,20 @@ export default function Home({
               className="col-12 col-lg align-self-stretch py-9 py-lg-10 py-xl-0 mt-n1"
               id="home-propongo-wrapper"
             >
-              <div id="home-propongo-verde">
-                <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
-              </div>
-              <div id="home-propongo-rosa">
-                <GatsbyImage alt="Sfondo" image={getImage(sfondoRosa)} />
-              </div>
-              <div id="home-propongo-feelo">
+              <div>
                 <Fade bottom>
-                  <GatsbyImage alt="Sfondo" image={getImage(propongoFeelo)} />
-                </Fade>
-              </div>
-              <div id="home-propongo-attivita">
-                <Fade bottom>
-                  <GatsbyImage alt="Sfondo" image={getImage(propongoAttivita)} />
+                  <div id="home-propongo-verde">
+                    <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
+                  </div>
+                  <div id="home-propongo-rosa">
+                    <GatsbyImage alt="Sfondo" image={getImage(sfondoRosa)} />
+                  </div>
+                  <div id="home-propongo-feelo">
+                    <GatsbyImage alt="Sfondo" image={getImage(propongoFeelo)} />
+                  </div>
+                  <div id="home-propongo-attivita">
+                    <GatsbyImage alt="Sfondo" image={getImage(propongoAttivita)} />
+                  </div>
                 </Fade>
               </div>
             </div>
@@ -137,7 +140,10 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient2 clip10 overflow-hidden" innerClassName="align-items-stretch">
+          <ClippedSection
+            className="gradient2 clip10 overflow-hidden"
+            innerClassName="align-items-stretch"
+          >
             <Fade bottom>
               <div className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-xl-5">
                 <h2>...e per coloro che gli vogliono bene</h2>

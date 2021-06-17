@@ -23,7 +23,7 @@ export default function ClippedSection({
     >
       <div className="row ">
         <div className="col-12">
-          <div className={classNames('position-relative', vimeo ? 'container-fluid container-lg py-3' : 'container')}>
+          <div className={classNames('position-relative', vimeo ? 'px-0 container-lg py-3' : 'container')}>
             <div className={classNames('row gx-0', innerClassName, {
               'flex-lg-row-reverse': reverse,
               'justify-content-center': justifyCenter,

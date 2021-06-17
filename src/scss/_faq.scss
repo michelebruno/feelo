@@ -40,4 +40,9 @@
   svg {
     fill: $primary;
   }
+
+  transition: all .5s ease;
+  &:hover {
+    background-color: $gray-200;
+   }
 }

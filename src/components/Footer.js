@@ -55,7 +55,7 @@ export default function Footer() {
               <div className="col py-1" style={{ fontSize: '0.8em', lineHeight: 1 }}>
                 <p className="">
                   Feelo Europe S.A. | Via Giuseppe Candiani, 30 20138 Milano |
-                  VAT LU30726739 | società del gruppo Feelo S.p.A
+                  VAT LU30726730 | Società del gruppo Feelo S.p.A
                 </p>
                 <p className="">
                   Ⓒ 2021 Feelo. All Rights Reserved.

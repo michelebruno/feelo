@@ -177,6 +177,23 @@ $theme-colors: (
   }
 }
 
+.animatepath {
+
+  path {
+    stroke-dasharray: var(--filolenght,1000);
+    animation: filo ease-in-out 3s alternate infinite;
+  }
+
+}
+
+@keyframes filo {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: var(--filolenght, 1000);
+  }
+}
 
 /**
  * NAVBAR
@@ -220,6 +237,13 @@ nav.navbar-collapse.show {
       height: 48px;
     }
   }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 @import "home";

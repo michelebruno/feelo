@@ -22,7 +22,7 @@ export default function Progetto({ data: { pics } }) {
     { nome: 'Carmine Russo', ruolo: 'Customer Care', image: pics.nodes[2] },
     { nome: 'Arianna Priori', ruolo: 'Marketing', image: pics.nodes[0] },
     { nome: 'Michele Bruno', ruolo: 'Tech', image: pics.nodes[5] },
-    { nome: 'Virginia Leccisotti', ruolo: 'Medico specialista in scienze dell’alimentazione', image: pics.nodes[6] },
+    { nome: 'Virginia Leccisotti', ruolo: 'Medico in scienze dell’alimentazione', image: pics.nodes[6] },
     { nome: 'Barbara Roncalli', ruolo: 'Counselor familiare', image: pics.nodes[1] },
     { nome: 'Gresi Balliu', ruolo: 'Educatore', image: pics.nodes[4] },
   ];
@@ -43,15 +43,15 @@ export default function Progetto({ data: { pics } }) {
           </div>
         </Fade>
       </header>
-      <div className="container pt-3 pt-xl-5 gx-2">
+      <div className="container py-3 pt-xl-5 gx-2">
         <div className="row justify-content-center">
           <Fade>
             <div className="col-12 col-xl-8 text-center ">
-              <h2 className="">Il team</h2>
+              <h2 className="pb-1">Il team</h2>
             </div>
           </Fade>
           <div className="col-12 col-xl-8">
-            <div className="row justify-content-center row-cols-2 row-cols-lg-4 gy-2">
+            <div className="row justify-content-center row-cols-2 row-cols-lg-4 gy-2 gy-lg-3">
               {team.map(({ image, nome, ruolo }) => (
                 <div className="col">
                   <TeamMember image={image} nome={nome} ruolo={ruolo} />

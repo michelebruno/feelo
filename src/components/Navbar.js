@@ -44,14 +44,7 @@ export default function Navbar() {
           <Logo className="logo d-lg-none" />
           <div className="col-12 px-1 position-absolute d-lg-none close-button-container">
 
-            <button
-              className="navbar-toggler btn-close"
-              type="button"
-              onClick={closeNavbar}
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            />
+            <button type="button" className="navbar-toggler text-black-50" aria-label="Close" onClick={closeNavbar}>X</button>
           </div>
           <ul className="nav">
             <li className="nav-item">
