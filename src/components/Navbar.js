@@ -81,7 +81,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                to="#download"
+                href="#download"
                 className="btn btn-outline-primary d-none d-lg-inline-block"
               >
                 Download
