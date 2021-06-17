@@ -101,7 +101,7 @@
   width: 150%;
   left: -25%;
   top: 10%;
-  @extend .animatepath;
+  @extend .animatepath, .pt-3;
 }
 
 .filo-people {
