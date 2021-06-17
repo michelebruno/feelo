@@ -1,6 +1,7 @@
 import '../scss/style.scss';
 import { Helmet } from 'react-helmet';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
+import { graphql, useStaticQuery } from 'gatsby';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { ReactComponent as DownloadClip } from '../images/wave-10-1x.svg';
@@ -14,12 +15,25 @@ console.log('Hey, what are you looking for?');
 export default function Layout({
   children, title, hideFooter, page,
 }) {
+  const { site } = useStaticQuery(graphql`query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title 
+        defaultDescription: description 
+      }
+    }
+  }`);
   if (page !== '') {
     return (
       <div id="page-wrapper" className={page}>
         <Helmet
           title={title || 'Feelo'}
           htmlAttributes={{ lang: 'it' }}
+          meta={[
+            { name: 'google-site-verification', content: 'aAR3h5FI3ovbAyEBh5hlqqrU5mzM1B7hUT03lxcRMB8' },
+            { name: 'description', content: site.siteMetadata.defaultDescription },
+
+          ]}
         />
         <Navbar />
         {children}

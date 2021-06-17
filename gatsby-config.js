@@ -4,13 +4,15 @@ module.exports = {
   siteMetadata: {
     title: 'Feelo',
     lang: 'it',
+    siteUrl: 'https://michelebruno.github.io/feelo/',
+    description: 'L’app pensata per affrontare i Disturbi Alimentari insieme a chi ti vuole bene.',
   },
   pathPrefix: '/feelo',
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-sitemap',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
