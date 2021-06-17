@@ -18,7 +18,6 @@
 }
 
 
-
 #hero-image-wrapper {
   position: absolute;
   bottom: -19%;
@@ -28,9 +27,11 @@
 #home-propongo-wrapper {
   position: relative;
 }
+
 .cosapropongosection {
   overflow-x: hidden;
 }
+
 #home-propongo-rosa {
   position: absolute;
   opacity: .5;
@@ -70,6 +71,21 @@
   bottom: 20%;
   left: -10%;
   width: 120%;
+
+  path {
+    stroke-dasharray: 989;
+    animation: filoGiulia ease-in-out 3s alternate infinite;
+  }
+}
+
+@keyframes filoGiulia {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 989;
+
+  }
 }
 
 #farfalla-giulia {
@@ -78,6 +94,16 @@
   width: 25%;
   left: 40%;
   z-index: 2;
+  animation: farfalla 4s ease-in-out alternate infinite;
+}
+
+@keyframes farfalla {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateY(15%);
+  }
 }
 
 #home-doppioavatar {
@@ -96,6 +122,25 @@
   left: 27%;
   width: 43%;
   z-index: 5;
+
+  path {
+    stroke-dasharray: 488;
+    animation: filoFeeler 4s ease-in-out  infinite;
+  }
+
+}
+
+
+@keyframes filoFeeler {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 488;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 #home-avatarRosa {
@@ -119,7 +164,7 @@
   position: relative;
 }
 
-#filo-hero_svg__filo,#filo-hero-over_svg__filo {
+#filo-hero_svg__filo, #filo-hero-over_svg__filo {
   top: 20%;
   position: absolute;
   transform: rotate(5deg);
@@ -129,16 +174,11 @@
 }
 
 
-#filo-hero_svg__trim2, #filo-hero_svg__trim1 {
-  position: absolute;
-  z-index: 90;
-}
-
 #filo-hero_svg__completo {
   z-index: 7;
 }
 
-@include media-breakpoint-up(lg ) {
+@include media-breakpoint-up(lg) {
 
   #hero-image-wrapper {
     bottom: -27%;
@@ -168,11 +208,11 @@
   }
 
   #home-propongo-wrapper {
-     transform: translateY(-10%);
+    transform: translateY(-10%);
   }
 
   #home-propongo-rosa {
-    top:-35%;
+    top: -35%;
     left: 30%;
   }
 
@@ -210,8 +250,8 @@
 
 
   #farfalla-giulia {
-    top: 28%;
-    left: 20%;
+    top: 19%;
+    left: 27%;
   }
 
   #home-avatarRosa {
@@ -221,6 +261,6 @@
 
   #home-doppioavatar {
     transform: scale(1.4) translateX(10%);
-    }
+  }
 
 }
