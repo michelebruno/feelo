@@ -63,18 +63,6 @@
   width: 120%;
 }
 
-@include media-breakpoint-up(lg) {
-
-  #hero-image-wrapper {
-    bottom: -27%;
-  }
-  #home-propongo-wrapper {
-    transform-origin: right top;
-    transform: scale(.6);
-  }
-}
-
-
 
 #filo-giulia {
   position: absolute;
@@ -152,6 +140,14 @@
 
 @include media-breakpoint-up(lg ) {
 
+  #hero-image-wrapper {
+    bottom: -27%;
+  }
+  #home-propongo-wrapper {
+    transform-origin: right top;
+    transform: scale(.6) translateY(18%);
+  }
+
   #home-propongo-rosa {
     left: 50%;
     top: 25%;
@@ -165,7 +161,6 @@
 
 @include media-breakpoint-up(xl) {
 
-
   #hero-image-wrapper {
     position: absolute;
     bottom: -40%;
@@ -173,8 +168,7 @@
   }
 
   #home-propongo-wrapper {
-    position: relative;
-    transform: translateY(-10%);
+     transform: translateY(-10%);
   }
 
   #home-propongo-rosa {

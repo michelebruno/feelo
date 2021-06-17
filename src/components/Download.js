@@ -26,13 +26,14 @@ export default function Download({ className, doesntCover, hug }) {
     <ClippedSection
       className={classNames(
         'container-fluid',
-        'clip10 gradient2 ',
+        'clip10 gradient2 overflow-hidden',
         'py-lg-5',
         hug ? 'pb-0 pt-3' : 'py-3',
         {
           'mt-3': doesntCover,
         },
       )}
+      id="download"
     >
       <div className="pt-4 col-12">
         <div className="container">
@@ -61,7 +62,9 @@ export default function Download({ className, doesntCover, hug }) {
                 </div>
               )
               : (
-                <div className="col-12  col-lg-5 offset-lg-1 col-xl-4 offset-xl-2 text-center position-relative overflow-hidden">
+                <div className="col-12 col-lg-6 offset-lg-1 col-xl-4 offset-xl-2
+                text-center position-relative overflow-hidden"
+                >
                   <FiloDownload id="filo-download" />
                   <GatsbyImage
                     alt="Mockup della schermata iniziale"

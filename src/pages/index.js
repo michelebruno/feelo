@@ -60,9 +60,11 @@ export default function Home({
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10 cosapropongosection">
-            <div className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-5 pb-lg-0 pb-xl-5">
+            <div
+              className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-5 pb-lg-0 pb-xl-5 d-flex flex-column justify-content-center"
+            >
               <h2 className="mt-x-3">Ecco cosa propongo</h2>
-              <p className="lead mb-3">
+              <p className="lead mb-3 mb-lg-5">
                 Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
                 {' '}
                 <strong>imparare a sostenersi a vicenda</strong>
@@ -105,10 +107,9 @@ export default function Home({
                 </strong>
                 .
               </p>
-              <Link className="btn btn-outline-primary" to="/scopri">
+              <Link className="btn btn-outline-primary d-inline-flex" to="/scopri">
                 Cos’è un disturbo alimentare?
-                {' '}
-                <i className="fluent-icons-filled-24 d-none d-lg-inline">arrow_right</i>
+                <i className="ms-1 fluent-icons-filled-24 d-none d-lg-inline">arrow_right</i>
               </Link>
             </div>
             <div
@@ -191,6 +192,7 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 1000
       )
     }
   }
@@ -198,6 +200,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 800
+        quality: 100
       )
     }
   }
@@ -205,6 +209,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 800
+        quality: 100
       )
     }
   }
@@ -258,6 +264,7 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 1000
       )
     }
   }
@@ -265,6 +272,8 @@ export const query = graphql`{
     childImageSharp {
       gatsbyImageData(
         layout: CONSTRAINED
+        width: 1000
+
       )
     }
   }

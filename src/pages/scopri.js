@@ -48,10 +48,10 @@ function Features({ features, sfondo, reverse }) {
         </Swiper>
       </div>
       <div
-        className="col-10 col-lg-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-0 position-relative"
+        className="col-10 col-lg-3 d-flex flex-column justify-content-center align-content-center mt-n3 mt-lg-0 position-relative"
         style={{ zIndex: 10 }}
       >
-        <ul className=" d-flex justify-content-between list-unstyled flex-row flex-lg-column">
+        <ul className=" d-flex justify-content-between list-unstyled flex-row flex-lg-column mb-0">
           {
             features.map(({ label, icon, iconActive }, index) => (
               <li

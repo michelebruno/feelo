@@ -9,6 +9,7 @@ export default function ClippedSection({
   clip10,
   innerClassName,
   vimeo,
+  id,
 }) {
   return (
     <section
@@ -18,6 +19,7 @@ export default function ClippedSection({
           clip10,
           'has-clipped-next': dontClip,
         }, className)}
+      id={id}
     >
       <div className="row ">
         <div className="col-12">

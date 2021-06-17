@@ -64,11 +64,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: scale(1.5) translateY(17%)
+    transform: scale(1.4) translateY(23%) translateX(-5%);
   }
   @include media-breakpoint-up(xl) {
     transform: none;
-
   }
 }
 

@@ -1,4 +1,3 @@
-import '../scss/style.scss';
 import { Helmet } from 'react-helmet';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
 import { graphql, useStaticQuery } from 'gatsby';
