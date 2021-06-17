@@ -87,7 +87,7 @@ export default function Faq({ data: { faqs } }) {
 }
 
 export const query = graphql`{
-  faqs: allSheetsFaq {
+  faqs: allFaqCsv {
     group(field: category) {
       nodes {
         answer

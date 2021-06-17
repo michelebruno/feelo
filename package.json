@@ -16,7 +16,6 @@
     "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public && gatsby clean "
   },
   "dependencies": {
-    "@fluentui/react-icons": "^1.1.130",
     "@fluentui/svg-icons": "^1.1.130",
     "@svgr/webpack": "^5.5.0",
     "animate.css": "^4.1.1",
@@ -32,7 +31,6 @@
     "gatsby-plugin-svgr": "^3.0.0-beta.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.5.0",
-    "gatsby-source-google-spreadsheet": "^2.0.0",
     "gatsby-transformer-csv": "^3.6.0",
     "gatsby-transformer-sharp": "^3.5.0",
     "react": "^17.0.2",
