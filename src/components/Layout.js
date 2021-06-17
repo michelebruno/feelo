@@ -1,12 +1,15 @@
 import { Helmet } from 'react-helmet';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper/core';
 import { graphql, useStaticQuery } from 'gatsby';
+import config from 'react-reveal/globals';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { ReactComponent as DownloadClip } from '../images/wave-10-1x.svg';
 import { ReactComponent as Wave01 } from '../images/wave-01-1x.svg';
 import { ReactComponent as Wave102x } from '../images/wave-10-2x.svg';
 import { ReactComponent as Wave012x } from '../images/wave-01-2x.svg';
+
+// config({ ssrFadeout: true });
 
 SwiperCore.use([Autoplay, EffectFade]);
 

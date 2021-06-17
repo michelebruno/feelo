@@ -1,5 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Fade from 'react-reveal/Fade';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
 import { ReactComponent as FiloGiulia } from '../images/filo-giulia-home.svg';
@@ -25,28 +26,31 @@ export default function Home({
       <div className="row gx-0">
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
-            <div className="col-12 col-xl-7 text-center pt-2 pt-lg-5 pb-3 pb-lg-5">
-              <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
-              <p className="lead">
-                L’app pensata per affrontare i
-                {' '}
-                <strong className="fw-bold">Disturbi Alimentari</strong>
-                <wbr />
-                <br />
-                {' '}
-                insieme a chi ti
-                vuole bene.
-              </p>
-              <p>
-                <button
-                  onClick={() => document.getElementById('download').scrollIntoView()}
-                  className="btn btn-primary position-relative"
-                  style={{ zIndex: 20 }}
-                >
-                  Scarica Feelo
-                </button>
-              </p>
-            </div>
+            <Fade>
+
+              <div className="col-12 col-xl-7 text-center pt-2 pt-lg-5 pb-3 pb-lg-5  " style={{ opacity: 0 }}>
+                <h1 className="text-primary fw-bold" id="home-title">Ciao, io sono Feelo</h1>
+                <p className="lead">
+                  L’app pensata per affrontare i
+                  {' '}
+                  <strong className="fw-bold">Disturbi Alimentari</strong>
+                  <wbr />
+                  <br />
+                  {' '}
+                  insieme a chi ti
+                  vuole bene.
+                </p>
+                <p>
+                  <button
+                    onClick={() => document.getElementById('download').scrollIntoView()}
+                    className="btn btn-primary position-relative"
+                    style={{ zIndex: 20 }}
+                  >
+                    Scarica Feelo
+                  </button>
+                </p>
+              </div>
+            </Fade>
             <div className="col-xl-10 d-flex" id="hero-image-wrapper">
               <FiloHero />
               <div id="home-seduto-rosa">
@@ -56,23 +60,24 @@ export default function Home({
                 <GatsbyImage alt="Seduto verde" loading="eager" image={getImage(sedutoVerde)} />
               </div>
               <FiloHeroOver />
-
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10 cosapropongosection">
-            <div
-              className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-5 pb-lg-0 pb-xl-5 d-flex flex-column justify-content-center"
-            >
-              <h2 className="mt-x-3">Ecco cosa propongo</h2>
-              <p className="lead mb-3 mb-lg-5">
-                Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
-                {' '}
-                <strong>imparare a sostenersi a vicenda</strong>
-                {' '}
-                durante il trattamento di un Disturbo
-                dell’Alimentazione.
-              </p>
-            </div>
+            <Fade bottom>
+              <div
+                className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-5 pb-lg-0 pb-xl-5 d-flex flex-column justify-content-center"
+              >
+                <h2 className="mt-x-3">Ecco cosa propongo</h2>
+                <p className="lead mb-3 mb-lg-5">
+                  Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
+                  {' '}
+                  <strong>imparare a sostenersi a vicenda</strong>
+                  {' '}
+                  durante il trattamento di un Disturbo
+                  dell’Alimentazione.
+                </p>
+              </div>
+            </Fade>
             <div
               className="col-12 col-lg align-self-stretch py-9 py-lg-10 py-xl-0 mt-n1"
               id="home-propongo-wrapper"
@@ -84,10 +89,14 @@ export default function Home({
                 <GatsbyImage alt="Sfondo" image={getImage(sfondoRosa)} />
               </div>
               <div id="home-propongo-feelo">
-                <GatsbyImage alt="Sfondo" image={getImage(propongoFeelo)} />
+                <Fade bottom>
+                  <GatsbyImage alt="Sfondo" image={getImage(propongoFeelo)} />
+                </Fade>
               </div>
               <div id="home-propongo-attivita">
-                <GatsbyImage alt="Sfondo" image={getImage(propongoAttivita)} />
+                <Fade bottom>
+                  <GatsbyImage alt="Sfondo" image={getImage(propongoAttivita)} />
+                </Fade>
               </div>
             </div>
           </ClippedSection>
@@ -97,23 +106,26 @@ export default function Home({
             innerClassName="mb-xl-1"
           >
             <div className="col-12 col-xl-1" />
-            <div className="col-12 col-lg-5 offset-lg-1 col-xl-4 pb-xl-5">
-              <h2>Per chi soffre di disturbi alimentari...</h2>
-              <p className="lead">
-                Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
-                {' '}
-                <strong>
-                  ti guiderò nella scoperta di te stesso per affrontare le tue paure
-                </strong>
-                .
-              </p>
-              <Link className="btn btn-outline-primary d-inline-flex" to="/scopri">
-                Cos’è un disturbo alimentare?
-                <i className="ms-1 fluent-icons-filled-24 d-none d-lg-inline">arrow_right</i>
-              </Link>
-            </div>
+            <Fade bottom>
+
+              <div className="col-12 col-lg-5 offset-lg-1 col-xl-4 pb-xl-5">
+                <h2>Per chi soffre di disturbi alimentari...</h2>
+                <p className="lead">
+                  Esiste una stretta relazione tra pensieri, emozioni e comportamenti per questo
+                  {' '}
+                  <strong>
+                    ti guiderò nella scoperta di te stesso per affrontare le tue paure
+                  </strong>
+                  .
+                </p>
+                <Link className="btn btn-outline-primary d-inline-flex" to="/scopri">
+                  Cos’è un disturbo alimentare?
+                  <i className="ms-1 fluent-icons-filled-24 d-none d-lg-inline">arrow_right</i>
+                </Link>
+              </div>
+            </Fade>
             <div
-              className="col-12 col-lg-6   px-lg-2 position-xl-absolute"
+              className="col-12 col-lg-6 px-lg-2 position-xl-absolute"
               id="home-avatarRosa"
             >
               <div className="position-relative w-100 h-100">
@@ -125,18 +137,20 @@ export default function Home({
               </div>
             </div>
           </ClippedSection>
-          <ClippedSection className="gradient2 clip10" innerClassName="align-items-stretch">
-            <div className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-xl-5">
-              <h2>...e per coloro che gli vogliono bene</h2>
-              <p className="lead">
-                Il mio supporto si fonda sulla
-                {' '}
-                <strong>terapia cognitivo comportamentale</strong>
-                {' '}
-                che promuove le
-                relazioni e il dialogo.
-              </p>
-            </div>
+          <ClippedSection className="gradient2 clip10 overflow-hidden" innerClassName="align-items-stretch">
+            <Fade bottom>
+              <div className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-xl-5">
+                <h2>...e per coloro che gli vogliono bene</h2>
+                <p className="lead">
+                  Il mio supporto si fonda sulla
+                  {' '}
+                  <strong>terapia cognitivo comportamentale</strong>
+                  {' '}
+                  che promuove le
+                  relazioni e il dialogo.
+                </p>
+              </div>
+            </Fade>
             <div
               className="col-12 col-lg-7 col-xl-6 offset-xl-1 position-lg-absolute mb-n3 mb-xl-0"
               id="home-doppioavatar"
@@ -274,7 +288,6 @@ export const query = graphql`{
       gatsbyImageData(
         layout: CONSTRAINED
         width: 1000
-
       )
     }
   }

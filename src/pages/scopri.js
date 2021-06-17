@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Fade from 'react-reveal/Fade';
 
 import classNames from 'classnames';
 import { useRef, useState } from 'react';
@@ -25,7 +26,6 @@ function Features({ features, sfondo, reverse }) {
         <div className="features-backgroud" slot="container-start">
           <GatsbyImage alt="Sfondo" image={getImage(sfondo)} />
         </div>
-
         <Swiper
           className="mx-auto"
           loop
@@ -159,63 +159,80 @@ export default function Feelo({
 
       <div className="container gx-2">
         <header className="row page-header">
-          <div className="col-12 col-lg-6 heading-column">
-            <h1>
-              Al centro la persona,
-              {' '}
-              <wbr />
-              <br />
-              {' '}
-              non il disturbo
-            </h1>
-            <p className="lead ">
-              Con contenuti dedicati, supporto le persone che soffrono di Disturbi Alimentari e i
-              propri cari, spostando il focus dalla malattia ai pensieri positivi, con l’obiettivo
-              di
-              {' '}
-              <strong>costruire un dialogo verso un percorso di guarigione</strong>
-              .
-            </p>
-          </div>
-          <div className="col-12 col-lg px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
-            <FiloPeople className="filo-people" />
-            <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
-            {' '}
-            <FiloPeopleOver className="filo-people" />
+          <Fade left>
 
-          </div>
+            <div className="col-12 col-lg-6 heading-column">
+              <h1>
+                Al centro la persona,
+                {' '}
+                <wbr />
+                <br />
+                {' '}
+                non il disturbo
+              </h1>
+              <p className="lead ">
+                Con contenuti dedicati, supporto le persone che soffrono di Disturbi Alimentari e i
+                propri cari, spostando il focus dalla malattia ai pensieri positivi, con l’obiettivo
+                di
+                {' '}
+                <strong>costruire un dialogo verso un percorso di guarigione</strong>
+                .
+              </p>
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="col-12 col-lg px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
+              <FiloPeople className="filo-people" />
+              <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
+              {' '}
+              <FiloPeopleOver className="filo-people" />
+
+            </div>
+          </Fade>
         </header>
         <div className="row flex-lg-row-reverse align-items-center position-relative py-3 py-lg-0">
-          <div className="col-12 col-xl-1" />
-          <div className="col-12 col-lg-5 col-xl-4 offset-lg-1">
-            <h2>A chi si trova al centro della tempesta...</h2>
-            <p className="lead">
-              Riscopri le tue potenzialità attraverso riflessioni e attività introspettive e
-              coltiva le tue relazioni grazie alle
-              {' '}
-              <b>attività condivise</b>
-              . Feelo sarà l’amico che sarà sempre accanto a te e terrà traccia dei tuoi progressi.
-            </p>
-          </div>
-          <div className="col-12 col-lg-6">
-            <Features features={featureGiulia} sfondo={sfondoRosa} />
-          </div>
+          <Fade right>
+            <div className="col-12 col-xl-1" />
+            <div className="col-12 col-lg-5 col-xl-4 offset-lg-1">
+              <h2>A chi si trova al centro della tempesta...</h2>
+              <p className="lead">
+                Riscopri le tue potenzialità attraverso riflessioni e attività introspettive e
+                coltiva le tue relazioni grazie alle
+                {' '}
+                <b>attività condivise</b>
+                . Feelo sarà l’amico che sarà sempre accanto a te e terrà traccia dei tuoi
+                progressi.
+              </p>
+            </div>
+          </Fade>
+          <Fade left>
+            <div className="col-12 col-lg-6">
+              <Features features={featureGiulia} sfondo={sfondoRosa} />
+            </div>
+          </Fade>
           <div className="col-12 col-lg-3 mx-auto">
             <FiloDownload id="filo-scopri" />
           </div>
+
         </div>
         <div className="row align-items-center py-lg-0">
-          <div className="col-12 col-lg-5 col-xl-4 offset-xl-1">
-            <h2>...ai feeler che arrivano in soccorso</h2>
-            <p className="lead">
-              Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare, tenendo
-              traccia degli avanzamenti del tuo caro, che potrai supportare grazie al dialogo
-              costruttivo in cui ti guiderà.
-            </p>
-          </div>
-          <div className="col-12 col-lg-6">
-            <Features features={featureFeeler} sfondo={sfondoVerde} reverse />
-          </div>
+          <Fade left>
+
+            <div className="col-12 col-lg-5 col-xl-4 offset-xl-1">
+              <h2>...ai feeler che arrivano in soccorso</h2>
+              <p className="lead">
+                Feelo ti aiuterà a comprendere al meglio gli aspetti del disturbo alimentare,
+                tenendo
+                traccia degli avanzamenti del tuo caro, che potrai supportare grazie al dialogo
+                costruttivo in cui ti guiderà.
+              </p>
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="col-12 col-lg-6">
+              <Features features={featureFeeler} sfondo={sfondoVerde} reverse />
+            </div>
+          </Fade>
         </div>
       </div>
       <Download hug />

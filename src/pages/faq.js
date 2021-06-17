@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 import Layout from '../components/Layout';
 import Accordion from '../components/Accordion';
 import Download from '../components/Download';
@@ -11,7 +12,9 @@ function Group({ faqs, title, id }) {
   return (faqs
     ? (
       <section id={id}>
+
         <h2 className="text-center">{title}</h2>
+
         <ul className="list-unstyled">
           {faqs.map(({ question, answer }) => (
             <Accordion
@@ -28,9 +31,11 @@ function Group({ faqs, title, id }) {
   );
 }
 
-function IndexItem({ IconComponent, children, to }) {
+function IndexItem({
+  IconComponent, children, to, ...props
+}) {
   return (
-    <div className="faq-index-item" onClick={() => document.getElementById(to)?.scrollIntoView()}>
+    <div className="faq-index-item" onClick={() => document.getElementById(to)?.scrollIntoView()} {...props}>
       <div className="icon w-50">
         <IconComponent className="w-100 h-100" />
       </div>
@@ -48,31 +53,37 @@ export default function Faq({ data: { faqs } }) {
     <Layout page="faq">
       <div className="container gx-2">
         <header className="row page-header justify-content-center mb-3">
-          <div className="col-12 heading-column">
-            <h1 className="text-center">Domande e risposte frequenti</h1>
-          </div>
+          <Fade>
+            <div className="col-12 heading-column">
+              <h1 className="text-center">Domande e risposte frequenti</h1>
+            </div>
+          </Fade>
         </header>
         <div className="row justify-content-center pb-lg-5 mb-xl-5">
           <div className="col-12 col-lg-10 col-xl-8">
             <div className="row row-cols-2 row-cols-lg-4 g-2">
-              <div className="col">
-                <IndexItem to="info" IconComponent={InfoIcon}>Info generali</IndexItem>
-              </div>
-              <div className="col">
-                <IndexItem to="attivita" IconComponent={TaskListIcon}>Attività</IndexItem>
-              </div>
-              <div className="col">
-                <IndexItem to="feeler" IconComponent={PeopleIcon}>Feeler</IndexItem>
-              </div>
-              <div className="col">
-                <IndexItem to="account" IconComponent={PersonIcon}>Account</IndexItem>
-              </div>
+
+              <Fade cascade>
+
+                <div className="col">
+                  <IndexItem to="info" IconComponent={InfoIcon}>Info generali</IndexItem>
+                </div>
+                <div className="col">
+                  <IndexItem to="attivita" IconComponent={TaskListIcon}>Attività</IndexItem>
+                </div>
+                <div className="col">
+                  <IndexItem to="feeler" IconComponent={PeopleIcon}>Feeler</IndexItem>
+                </div>
+                <div className="col">
+                  <IndexItem to="account" IconComponent={PersonIcon}>Account</IndexItem>
+                </div>
+
+              </Fade>
               <div className="col-12" />
             </div>
           </div>
         </div>
         <div className="row justify-content-center">
-
           <div className="col-12 col-lg-10 col-xl-8">
             <Group id="info" title="Info generali" faqs={getCatFaqs('feelo')} />
             <Group id="attivita" title="Attività" faqs={getCatFaqs('attività')} />

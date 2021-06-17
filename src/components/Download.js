@@ -1,6 +1,7 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import classNames from 'classnames';
+import Fade from 'react-reveal/Fade';
 import { ReactComponent as FiloHug } from '../images/filo-hug.svg';
 import { ReactComponent as FiloDownload } from '../images/filo-download.svg';
 import ClippedSection from './ClippedSection';
@@ -17,7 +18,8 @@ export default function Download({ className, doesntCover, hug }) {
     abbraccio: file(relativePath: {eq: "abbraccio.png"}) {
       childImageSharp{
         gatsbyImageData(
-          layout: FULL_WIDTH
+          layout: CONSTRAINED
+          width: 1000
         )
       }
     }
@@ -52,25 +54,30 @@ export default function Download({ className, doesntCover, hug }) {
             {hug
               ? (
                 <div className="col-12  col-lg-5 offset-lg-1  text-center mb-xl-n5" id="hug-container">
-                  <div className="w-100 h-100 position-relative">
-                    <FiloHug id="filo-hug" />
-                    <GatsbyImage
-                      image={getImage(abbraccio)}
-                      alt="Abbraccio tra chi sta male e un suo Feeler"
-                    />
-                  </div>
+                  <Fade bottom>
+
+                    <div className="w-100 h-100 position-relative">
+                      <FiloHug id="filo-hug" />
+                      <GatsbyImage
+                        image={getImage(abbraccio)}
+                        alt="Abbraccio tra chi sta male e un suo Feeler"
+                      />
+                    </div>
+                  </Fade>
                 </div>
               )
               : (
                 <div className="col-12 col-lg-6 offset-lg-1 col-xl-4 offset-xl-2
                 text-center position-relative overflow-hidden"
                 >
-                  <FiloDownload id="filo-download" />
-                  <GatsbyImage
-                    alt="Mockup della schermata iniziale"
-                    image={getImage(mockup)}
-                    className="mx-auto"
-                  />
+                  <Fade bottom>
+                    <FiloDownload id="filo-download" />
+                    <GatsbyImage
+                      alt="Mockup della schermata iniziale"
+                      image={getImage(mockup)}
+                      className="mx-auto"
+                    />
+                  </Fade>
                 </div>
               )}
           </div>

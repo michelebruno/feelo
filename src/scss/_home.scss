@@ -94,7 +94,7 @@
   width: 25%;
   left: 40%;
   z-index: 2;
-  animation: farfalla 4s ease-in-out alternate infinite;
+  animation: farfalla 3s ease-in-out alternate infinite;
 }
 
 @keyframes farfalla {
@@ -102,7 +102,7 @@
     transform: none;
   }
   to {
-    transform: translateY(15%);
+    transform: translateY(25%);
   }
 }
 
@@ -146,7 +146,7 @@
 #home-avatarRosa {
   @extend .mb-n4, .mb-0, .pt-1;
   left: 0;
-  top: 0%;
+  top: 0;
   //transform: scale(1.1);
   @include media-breakpoint-up(lg) {
     transform: none;
@@ -173,13 +173,11 @@
   }
 }
 
-
 #filo-hero_svg__completo {
   z-index: 7;
 }
 
 @include media-breakpoint-up(lg) {
-
   #hero-image-wrapper {
     bottom: -27%;
   }
@@ -250,7 +248,7 @@
 
 
   #farfalla-giulia {
-    top: 19%;
+    top: 13%;
     left: 27%;
   }
 

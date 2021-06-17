@@ -1,5 +1,6 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 import Layout from '../components/Layout';
 import Download from '../components/Download';
 import Testimonianza from '../components/Testimonianza';
@@ -47,28 +48,37 @@ export default function Testimonianze({ data: { forchetta } }) {
   return (
     <Layout page="testimonianze">
       <header className="container gx-2">
-        <div className="row justify-content-between   ">
-          <div className="col-12 col-lg-6 heading-column">
-            <h1>Che cos’è un disturbo alimentare?</h1>
-            <p className="lead">
-              I Disturbi del Comportamento Alimentare sono patologie complesse,
-              determinate da condizioni di disagio psicologico ed emotivo, che quindi richiedono un
-              trattamento sia del problema alimentare in sé che della sua natura psichica.
-            </p>
-          </div>
-          <div className="col-12 col-lg ">
-            <GatsbyImage
-              alt="Illustrazione che rappresenta il disturbo alimentare"
-              image={getImage(forchetta)}
-            />
-          </div>
+
+        <div className="row justify-content-between">
+          <Fade left>
+            <div className="col-12 col-lg-6 heading-column">
+              <h1>Che cos’è un disturbo alimentare?</h1>
+              <p className="lead">
+                I Disturbi del Comportamento Alimentare sono patologie complesse,
+                determinate da condizioni di disagio psicologico ed emotivo, che quindi richiedono
+                un
+                trattamento sia del problema alimentare in sé che della sua natura psichica.
+              </p>
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="col-12 col-lg ">
+              <GatsbyImage
+                alt="Illustrazione che rappresenta il disturbo alimentare"
+                image={getImage(forchetta)}
+              />
+            </div>
+          </Fade>
         </div>
       </header>
       <div className="container gx-2">
         <div className="row">
-          <div className="col offset-xl-1 ">
-            <h2>Le testimonianze</h2>
-          </div>
+          <Fade>
+            <div className="col offset-xl-1 ">
+
+              <h2>Le testimonianze</h2>
+            </div>
+          </Fade>
         </div>
       </div>
       <div className="container-fluid gx-1 gx-xl-4 testimonianze-wrapper">
