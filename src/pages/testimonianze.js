@@ -64,6 +64,7 @@ export default function Testimonianze({ data: { forchetta } }) {
           <Fade right>
             <div className="col-12 col-lg ">
               <GatsbyImage
+                loading="eager"
                 alt="Illustrazione che rappresenta il disturbo alimentare"
                 image={getImage(forchetta)}
               />

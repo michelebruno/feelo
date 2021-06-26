@@ -1,5 +1,5 @@
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import Fade from 'react-reveal/Fade';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
@@ -57,10 +57,10 @@ export default function Home({
             <div className="col-xl-10 d-flex" id="hero-image-wrapper">
               <FiloHero />
               <div id="home-seduto-rosa">
-                <GatsbyImage alt="Seduto verde" loading="eager" image={getImage(sedutoRosa)} />
+                <StaticImage alt="Seduto verde" loading="eager" src="../images/omino_seduto_rosa.png" />
               </div>
               <div id="home-seduto-verde" className=" mb-n2 mb-lg-0">
-                <GatsbyImage alt="Seduto verde" loading="eager" image={getImage(sedutoVerde)} />
+                <StaticImage alt="Seduto verde" loading="eager" src="../images/omino_seduto_verde.png" />
               </div>
               <FiloHeroOver />
             </div>

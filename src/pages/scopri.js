@@ -30,6 +30,7 @@ function Features({ features, sfondo, reverse }) {
           className="mx-auto"
           loop
           autoplay
+          lazy={{ loadPrevNext: true }}
           effect="fade"
           fadeEffect={{ crossFade: true }}
           onSwiper={(s) => swiper.current = s}
@@ -183,8 +184,7 @@ export default function Feelo({
           <Fade right>
             <div className="col-12 col-lg px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
               <FiloPeople className="filo-people" />
-              <GatsbyImage alt="Persone illustrate" image={getImage(persone)} />
-              {' '}
+              <GatsbyImage alt="Persone illustrate" image={getImage(persone)} loading="eager" />
               <FiloPeopleOver className="filo-people" />
 
             </div>
