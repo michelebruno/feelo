@@ -308,25 +308,25 @@ $clipped-overlay: 50vh;
 }
 
 #page-wrapper {
-  background: linear-gradient(180deg, #E0EAFF 2.12%, #CAC2FF 55.5%);
+  background:#E0EAFF  url("../images/gradient-pagewrapper.png") repeat-x;
 }
 
 
 #page-wrapper.home {
-  background: linear-gradient(180deg, #E0EAFF 0%, #6852F5 20.97%);
+  background:#E0EAFF  url("../images/gradient-home.png") repeat-x;
 }
 
 #page-wrapper.faq {
-  background: linear-gradient(0, #E0EAFF 50.12%, #CAC2FF 85.5%);
+  background: #000 url('./../images/gradient-faq.png') round;
 }
 
 
 .gradient1 {
-  background: linear-gradient(180deg, #E0EAFF 4.92%, #B8B8FC 66.62%);
+  background: #000 url('./../images/gradient1.png') round;
 }
 
 .gradient2 {
-  background: linear-gradient(180deg, #E0EAFF 0%, #CAC2FF 86.94%);
+  background: #000 url('./../images/gradient2.png') round;
 }
 
 .gradient3 {
