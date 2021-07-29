@@ -1,5 +1,7 @@
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import {
+  GatsbyImage, getImage, getSrc, getSrcSet,
+} from 'gatsby-plugin-image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Fade from 'react-reveal/Fade';
 
@@ -40,9 +42,13 @@ function Features({ features, sfondo, reverse }) {
         >
           {features.map(({ image, label }) => (
             <SwiperSlide key={label}>
-              <GatsbyImage
+              <img
+                className="img-fluid"
                 alt={'Mockup dell\'applicazione'}
-                image={getImage(image)}
+                width={getImage(image)?.width}
+                height={getImage(image)?.height}
+                src={getSrc(image)}
+                srcSet={getSrcSet(image)}
               />
             </SwiperSlide>
           ))}
@@ -160,9 +166,9 @@ export default function Feelo({
 
       <div className="container gx-2">
         <header className="row page-header">
-          <Fade left>
 
-            <div className="col-12 col-lg-6 heading-column">
+          <div className="col-12 col-lg-6 heading-column">
+            <Fade left>
               <h1>
                 Al centro la persona,
                 {' '}
@@ -179,16 +185,15 @@ export default function Feelo({
                 <strong>costruire un dialogo verso un percorso di guarigione</strong>
                 .
               </p>
-            </div>
-          </Fade>
-          <Fade right>
-            <div className="col-12 col-lg px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
+            </Fade>
+          </div>
+          <div className="col-12 col-lg-6 px-2 ps-xl-5 pe-xl-0 position-relative mt-xl-n4">
+            <Fade right>
               <FiloPeople className="filo-people" />
               <GatsbyImage alt="Persone illustrate" image={getImage(persone)} loading="eager" />
               <FiloPeopleOver className="filo-people" />
-
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </header>
         <div className="row flex-lg-row-reverse align-items-center position-relative py-3 py-lg-0">
           <Fade right>

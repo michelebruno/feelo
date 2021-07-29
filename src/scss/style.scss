@@ -11,8 +11,8 @@ $spacer: 3rem;
 
 $spacers: (
   0: 0,
-  1: $spacer / 4,
-  2: $spacer / 2,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
@@ -178,12 +178,10 @@ $theme-colors: (
 }
 
 .animatepath {
-
   path {
     stroke-dasharray: var(--filolenght,1000);
     animation: filo ease-in-out 3s alternate infinite;
   }
-
 }
 
 @keyframes filo {
@@ -266,9 +264,9 @@ footer {
 $clipped-overlay: 50vh;
 
 .clip01, .clip10 {
-  margin-top: -$clipped-overlay / 2;
-  padding-top: $clipped-overlay / 2;
-  padding-bottom: $clipped-overlay * 1.1 / 2;
+  margin-top: -$clipped-overlay * 0.5;
+  padding-top: $clipped-overlay * 0.5;
+  padding-bottom: $clipped-overlay * 1.1 * 0.5;
   @include media-breakpoint-up(xl) {
     margin-top: -$clipped-overlay;
     padding-top: $clipped-overlay;
@@ -278,7 +276,7 @@ $clipped-overlay: 50vh;
 }
 
 .has-clipped-next {
-  padding-bottom: $clipped-overlay * 1.1 / 2;
+  padding-bottom: $clipped-overlay * 1.1 * 0.5;
   @include media-breakpoint-up(xl) {
     padding-bottom: $clipped-overlay * 1.1;
   }

@@ -1,4 +1,6 @@
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import {
+  GatsbyImage, getImage, getSrc, getSrcSet,
+} from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import classNames from 'classnames';
 import Fade from 'react-reveal/Fade';
@@ -12,6 +14,7 @@ export default function Download({ className, doesntCover, hug }) {
       childImageSharp{
         gatsbyImageData(
           layout: CONSTRAINED
+          width: 800
         )
       }
     }
@@ -58,10 +61,7 @@ export default function Download({ className, doesntCover, hug }) {
 
                     <div className="w-100 h-100 position-relative">
                       <FiloHug id="filo-hug" className="pt-4" />
-                      <GatsbyImage
-                        image={getImage(abbraccio)}
-                        alt="Abbraccio tra chi sta male e un suo Feeler"
-                      />
+                      <img src={getSrc(abbraccio)} srcSet={getSrcSet(abbraccio)} alt="Abbraccio tra chi sta male e un suo Feeler" className="img-fluid" />
                     </div>
                   </Fade>
                 </div>
@@ -72,11 +72,7 @@ export default function Download({ className, doesntCover, hug }) {
                 >
                   <Fade bottom>
                     <FiloDownload id="filo-download" />
-                    <GatsbyImage
-                      alt="Mockup della schermata iniziale"
-                      image={getImage(mockup)}
-                      className="mx-auto"
-                    />
+                    <img src={getSrc(mockup)} srcSet={getSrcSet(mockup)} alt="Mockup della schermata iniziale" className="img-fluid mx-auto" />
                   </Fade>
                 </div>
               )}

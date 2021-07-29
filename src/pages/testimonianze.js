@@ -1,4 +1,6 @@
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import {
+  GatsbyImage, getImage, getSrc, getSrcSet,
+} from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/Layout';
@@ -62,12 +64,18 @@ export default function Testimonianze({ data: { forchetta } }) {
             </div>
           </Fade>
           <Fade right>
-            <div className="col-12 col-lg ">
-              <GatsbyImage
-                loading="eager"
-                alt="Illustrazione che rappresenta il disturbo alimentare"
-                image={getImage(forchetta)}
-              />
+            <div className="col-12 col-lg-6 ">
+              <picture>
+                {getImage(forchetta).images.sources.map(({ sizes, srcSet, type }) => <source type={type} srcSet={srcSet} sizes={sizes} key={type} />)}
+                <img
+                  alt="Illustrazione che rappresenta il disturbo alimentare"
+                  className="img-fluid"
+                  src={getSrc(forchetta)}
+                  srcSet={getSrcSet(forchetta)}
+                  width={getImage(forchetta)?.width}
+                  height={getImage(forchetta)?.height}
+                />
+              </picture>
             </div>
           </Fade>
         </div>

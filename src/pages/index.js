@@ -1,5 +1,7 @@
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import {
+  GatsbyImage, getImage, getSrc, getSrcSet, StaticImage,
+} from 'gatsby-plugin-image';
 import Fade from 'react-reveal/Fade';
 import { ReactComponent as FiloHero } from '../images/filo-hero.svg';
 import { ReactComponent as FiloHeroOver } from '../images/filo-hero-over.svg';
@@ -27,7 +29,6 @@ export default function Home({
         <div className="col-12">
           <ClippedSection dontClip justifyCenter>
             <Fade>
-
               <div
                 className="col-12 col-xl-7 text-center pt-2 pt-lg-4 pb-3 pb-lg-5  "
                 style={{ opacity: 0 }}
@@ -43,11 +44,11 @@ export default function Home({
                   insieme a chi ti
                   vuole bene.
                 </p>
-                <p>
+                <p className="pb-2">
                   <button
                     onClick={() => document.getElementById('download').scrollIntoView()}
                     className="btn btn-primary position-relative"
-                    style={{ zIndex: 20 }}
+                    style={{ zIndex: 999 }}
                   >
                     Scarica Feelo
                   </button>
@@ -56,20 +57,45 @@ export default function Home({
             </Fade>
             <div className="col-xl-10 d-flex" id="hero-image-wrapper">
               <FiloHero />
-              <div id="home-seduto-rosa">
-                <StaticImage alt="Seduto verde" loading="eager" src="../images/omino_seduto_rosa.png" />
+              <div id="home-seduto-rosa" className="position-relative">
+                <picture
+                  className="img-fluid"
+                >
+                  {getImage(sedutoRosa).images.sources.map(({ sizes, srcSet, type }) => <source type={type} srcSet={srcSet} sizes={sizes} key={type} />)}
+                  <img
+                    className="img-fluid"
+                    alt="Seduto rosa"
+                    src={getSrc(sedutoRosa)}
+                    srcSet={getSrcSet(sedutoRosa)}
+                    width={getImage(sedutoRosa)?.width}
+                    height={getImage(sedutoRosa)?.height}
+                  />
+                </picture>
               </div>
               <div id="home-seduto-verde" className=" mb-n2 mb-lg-0">
-                <StaticImage alt="Seduto verde" loading="eager" src="../images/omino_seduto_verde.png" />
+                <picture
+                  className="img-fluid"
+                >
+                  {getImage(sedutoVerde).images.sources.map(({ sizes, srcSet, type }) => <source type={type} srcSet={srcSet} sizes={sizes} key={type} />)}
+                  <img
+                    className="img-fluid"
+                    alt="Seduto verde"
+                    src={getSrc(sedutoVerde)}
+                    srcSet={getSrcSet(sedutoVerde)}
+                    width={getImage(sedutoVerde)?.width}
+                    height={getImage(sedutoVerde)?.height}
+                  />
+                </picture>
               </div>
               <FiloHeroOver />
             </div>
           </ClippedSection>
           <ClippedSection className="gradient2 clip10 cosapropongosection">
-            <Fade bottom>
-              <div
-                className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-5 pb-lg-0 pb-xl-5 d-flex flex-column justify-content-center"
-              >
+
+            <div
+              className="col-12 col-lg-5 col-xl-4 offset-xl-1 pb-5 pb-lg-0 pb-xl-5 d-flex flex-column justify-content-center"
+            >
+              <Fade bottom>
                 <h2 className="mt-x-3">Ecco cosa propongo</h2>
                 <p className="lead mb-3 mb-lg-5">
                   Vi mostrerò come il lavoro di squadra possa rivelarsi una strategia vincente per
@@ -79,25 +105,46 @@ export default function Home({
                   durante il trattamento di un Disturbo
                   dell’Alimentazione.
                 </p>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
+
             <div
-              className="col-12 col-lg align-self-stretch py-9 py-lg-10 py-xl-0 mt-n1"
+              className="col-12 col-lg-7 col-xl-6 offset-xl-1 align-self-stretch py-9 py-lg-10 py-xl-0 mt-n1"
               id="home-propongo-wrapper"
             >
               <div>
                 <Fade bottom>
                   <div id="home-propongo-verde">
-                    <GatsbyImage alt="Sfondo" image={getImage(sfondoVerde)} />
+                    <img
+                      className="img-fluid"
+                      src={getSrc(sfondoVerde)}
+                      srcSet={getSrcSet(sfondoVerde)}
+                      alt="Sfondo"
+                    />
                   </div>
                   <div id="home-propongo-rosa">
-                    <GatsbyImage alt="Sfondo" image={getImage(sfondoRosa)} />
+                    <img
+                      className="img-fluid"
+                      src={getSrc(sfondoRosa)}
+                      srcSet={getSrcSet(sfondoRosa)}
+                      alt="Sfondo"
+                    />
                   </div>
                   <div id="home-propongo-feelo">
-                    <GatsbyImage alt="Sfondo" image={getImage(propongoFeelo)} />
+                    <img
+                      className="img-fluid"
+                      src={getSrc(propongoFeelo)}
+                      srcSet={getSrcSet(propongoFeelo)}
+                      alt="Sfondo"
+                    />
                   </div>
                   <div id="home-propongo-attivita">
-                    <GatsbyImage alt="Sfondo" image={getImage(propongoAttivita)} />
+                    <img
+                      className="img-fluid"
+                      src={getSrc(propongoAttivita)}
+                      srcSet={getSrcSet(propongoAttivita)}
+                      alt="Sfondo"
+                    />
                   </div>
                 </Fade>
               </div>
